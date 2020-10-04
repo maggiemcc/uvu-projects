@@ -1,0 +1,22 @@
+
+    nav li {float: left; width: 25%;}
+
+    nav ul li a {
+        border: none;
+        border-right: 1px solid black;
+        padding: .8rem 1rem;
+    }
+    
+    main figure.microscope {
+        float: right; 
+        width: 48%; 
+        margin-left: 2%;
+        padding-bottom: .5rem;
+    }
+
+    div.news {
+        clear: both;
+        column-count: 2;
+        column-rule: 1px solid #ddd;
+    }
+    

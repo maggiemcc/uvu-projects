@@ -1,0 +1,26 @@
+     /*----- HEADER -----*/
+
+    header {padding: 1rem $gutter;}
+    
+    header h1 {
+        margin: 0;
+        font-size: 2rem; 
+        font-weight: 700; 
+        margin-top: .3rem;
+    }
+
+    header h2 {
+        margin: 0; 
+        font-weight: 400; 
+        font-size: 1.2rem;}
+
+
+     /*----- NAVIGATION -----*/
+    
+    nav ul li a {
+        border: none;
+        border-right: 1px solid black;
+        padding: .8rem 1rem;
+    }
+
+    

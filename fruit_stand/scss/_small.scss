@@ -1,0 +1,111 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    /* background-color: rgb(186, 223, 247); */
+    display: grid;
+    grid-template-columns: 125px auto;
+}
+header img {height: 100px;}
+header h1 {
+    margin: 0; 
+    font-family: 'Dosis', sans-serif; 
+    font-size: 1.4rem; 
+    font-weight: 800; 
+    margin-top: 1.5rem;
+}
+header h2 {margin: 0; font-weight: 600; font-size: .8rem;}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: darken($menuColor, 13%);
+    font-weight: 600;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+}
+nav ul li a {
+    display: block;
+    background-color: $menuColor;
+    color: #fff;
+    border-left: 1.9px solid #000;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+
+nav ul li.active a {
+    background-color: lighten($menuColor, 100%);
+    color: #000;
+}
+
+nav ul li a:hover {
+    background-color: rgb(21, 124, 0);
+    color: #fff;
+}
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+}
+main h1 {font-family: 'Dosis', sans-serif; font-weight: 800;}
+
+div.produceGallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.produceGallery figure {
+    flex-basis: 46%;
+    margin: 1rem 2%;
+}
+
+div.produceGallery figure img {
+    width: 100%;
+}
+
+div.produceGallery figure figcaption {
+    font-family: 'Dosis', sans-serif; 
+    font-weight: 400;
+    text-align: center;
+}
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: darken($menuColor, 13%);
+    color: #fff;
+    padding: .5rem 2%;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

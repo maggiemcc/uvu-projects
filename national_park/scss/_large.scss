@@ -1,0 +1,31 @@
+
+
+    header, nav, main, footer {
+        max-width: 60rem;
+        margin: auto;
+    }
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+div#headerWrapper {
+    background-image: url(../images/headerRepeat.png);
+}
+
+header {
+    background-image: url(../images/headerLarge.jpg);
+}
+
+header h1 {text-shadow: 2px 2px 4px #000;}
+header h2 {text-shadow: 2px 2px 2px #000;}
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- MAIN --------------*/
+main figure.bear {width: 33%;}
+
+/*----------- FOOTER --------------*/
+    

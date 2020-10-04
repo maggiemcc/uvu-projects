@@ -1,0 +1,149 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    // font-family: Verdana, sans-serif;
+    font-family: 'Volkhov', serif;
+}
+
+
+/*----------- HEADER --------------*/
+
+header {
+    background-image: url(../images/headerSmall.jpg);
+    background-repeat: no-repeat;
+    padding: 2.8rem 0 2.8rem 2%;
+}
+header h1 {margin: 0;font-size: 2rem; font-weight: 700; color: #fff; text-shadow: 2px 2px 3px #000;}
+header h2 {margin: 0; font-weight: 400; color: #fff; text-shadow: 2px 2px 3px #000;}
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+    background-color: darken($mainColor, 25%);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+
+    
+}
+nav ul li a {
+    display: block;
+    background-color: $mainColor;
+    color: #fff;
+    border-left: 1px solid #fff;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+}
+nav ul li.active a {
+    background-color: #fff;
+    color: #000;
+}
+/*----------- MAIN --------------*/
+div#mainWrapper {
+    background-color: rgb(231, 231, 231);
+}
+
+main {
+    background-color: #fff;
+    padding: 0 2%;
+    min-height: 10rem;
+    padding-bottom: 2%;
+}
+
+main h1 {
+    margin: 0; 
+    padding-top: 2rem; 
+    font-size: 2rem; 
+    font-weight: 700;
+}
+main h2 {
+    margin: 0; 
+    padding: 1rem 0; 
+    font-size: 1.5rem; 
+    font-weight: 400;
+}
+main p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding-bottom: 2%;
+}
+
+
+
+/*---BEAR ANIMATION---*/
+main div#bear img {
+    width: 4rem;
+    position: relative;
+    animation: mymoves 12s 4;
+    margin: 0;
+}
+
+@keyframes mymoves {
+    0% {left:0px; transform: scaleX(1);}
+    45% {left:199px; transform: scaleX(1);}
+    46% {left:200px; transform: scaleX(-1);}
+    100% {left:0px; transform: scaleX(-1);}
+}
+
+
+/*---BEAR IMAGE---*/
+main figure.bear {
+    float: right;
+    margin: 2%;
+}
+
+main figure.bear img {width: 100%;}
+
+
+
+/*---MAP---*/
+
+iframe.mymap {
+    border: 1px solid #666;
+    width: 100%;
+    // margin-left: 2%;
+    height: 300px;
+}
+
+
+
+/*----------- FOOTER --------------*/
+div#footerWrapper {
+    background-color: darken($mainColor, 25%);
+}
+footer {
+    padding: 1.2rem 2%;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,117 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+}
+
+/*----------- HEADER --------------*/
+header {
+    padding: .6rem $gutter;
+    background-color: $backgroundColor;
+}
+
+header figure.logo {
+    float: left;
+    margin: 0 $gutter 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    margin-top: .8rem;
+}
+header h2 {
+    margin: 0; 
+    font-weight: 400; 
+    font-size: .8rem;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    font-weight: 600;
+    background-color: darken($menuColor, 13%);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {float: left; width: 25%;}
+nav ul li a {
+    display: block;
+    background-color: darken($menuColor, 8%);
+    color: $font2Color;
+    border-left: 1.9px solid $fontColor;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+
+nav ul li.active a {
+    background-color: $menuColor;
+    color: $font2Color;
+}
+
+nav ul li a:hover {
+    background-color: lighten($backgroundColor, 20%);
+    color: $fontColor;
+}
+
+
+/* main rules */
+main{
+    padding-bottom: $gutter;
+    min-height: 10rem;
+}
+
+main picture.hero {width: 100%; margin: 0;}
+main picture.hero img {width: 100%;}
+
+main h2 {
+    font-size: 2rem;
+    color: darken($menuColor, 8%);
+    padding: $gutter 0 0 $gutter;
+    margin: 0;
+}
+
+picture.founder img {
+    width: 50%;
+    float: right;
+    margin: 1rem $gutter;
+}
+
+main p {
+    margin: 0;
+    padding: .5rem 0 0 $gutter;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+/* footer */
+footer {
+    background-color: darken($menuColor, 8%);
+    text-align: center;
+    padding: 1rem $gutter;
+    color: $font2Color;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

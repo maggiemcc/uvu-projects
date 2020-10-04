@@ -1,0 +1,117 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-size: $regularWeight;
+}
+
+/* header rules */
+div#headerWrapper {
+    background-color: $primaryColor;
+}
+
+header {
+    
+    padding: 1rem $gutter;
+}
+
+header img {
+    float: left; 
+    padding-right: 15px;
+}
+
+header h1 {
+	margin: 1.5rem 0 0 0; 
+    font-size: 2rem;
+    font-weight: $heavyWeight;
+}
+
+header h2{
+	margin: 0; 
+	font-size: 1.2rem; 
+	font-weight: $regularWeight;
+}
+
+/* nav rules */
+div#navWrapper {
+    background-color: $secondaryColor;
+}
+
+nav ul {margin: 0; padding: 0;}
+nav li {float: left; width: 50%;}
+nav li {list-style-type: none;}
+nav li.active {background-color: #580101; color: white;}
+nav a {
+    display: block;
+    padding: .8rem 0; /*44px min*/
+    color: #eee;
+    text-align: center;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: rgb(255, 255, 255); 
+    color: #111;
+    font-weight: $heavyWeight;
+}
+
+nav ul li:first-child a {border-right: none;}
+
+
+/* main rules */
+div#mainWrapper {
+    background-color: rgb(231, 231, 231);
+}
+
+main{
+    background-color: white;
+    display: block;
+    padding: $gutter;
+    min-height: 10rem;
+}
+
+main figure.hero {width: 100%; margin: 0;}
+main figure.hero img {width: 100%;}
+
+main h1 {
+    font-size: 2rem;
+    color: $secondaryColor;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+main figure.microscope {
+    // width: 50%;
+    margin: 0 $gutter 0 $gutter;
+    float: right;
+}
+
+main figure.microscope img {width: 100%;}
+main figure.microscope figcaption {
+    text-align: center;
+    font-size: .5rem;
+}
+
+
+/* footer */
+div#footerWrapper {
+    background-color: $secondaryColor;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem $gutter;
+    color: white;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
