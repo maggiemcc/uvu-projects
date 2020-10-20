@@ -1,0 +1,156 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {font-family: Arial, Helvetica, sans-serif;}
+/*-------- HEADER --------*/
+
+header {
+    padding: .5rem 2%;
+    background-color: $main-background-color;
+    display: grid;
+}
+
+header img {height: 85px;}
+
+header h1 {
+    margin: $margin;
+    font-size: 2rem; 
+    font-weight: 800; 
+    margin-top: .6rem;
+}
+header h2 {margin: 0; font-weight: 600; font-size: .8rem;}
+
+
+/*-------- NAV --------*/
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    color: $main-text-color;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+nav {
+    background-color: $nav-footer-color;
+    color: $main-text-color;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: $padding;
+    margin: $margin;
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: $main-text-color;
+    border-top: $border;
+}
+
+nav ul li.active a {background-color: $sec-background-color;}
+nav ul li a:hover {background-color: $sec-background-color;}
+nav ul.hide {display: none;}
+
+
+/*-------- MAIN --------*/
+main {
+    min-height: 10rem;
+    background-color: $main-background-color;
+    margin: $margin auto;
+    padding: 2% $padding;
+}
+
+div.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+
+    span {
+        display: block;
+        font-weight: 600;
+        text-align: center;
+        font-size: .75rem;
+    }
+
+    .teaser, .lead {padding: .5rem 2vw;}
+    .teaser img, .lead img {width: 100%;}
+    .lead {grid-column: 1/span 2;}
+}
+
+
+
+/*-------- FOOTER --------*/
+
+footer {
+    background-color: $nav-footer-color;
+    color: $main-text-color;
+    text-align: center;
+    padding-bottom: .5rem;
+}
+
+/*-------- FOOTER COLUMNS --------*/
+footer .footerLinks{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #000;
+
+}
+.column {padding: $padding 2vw;}
+
+@for $i from 1 through 12 {
+    $w:($i/12) * 100%;
+    .small-#{$i} {flex-basis: $w;}
+}
+
+.lookhere {
+    padding: 1rem 2%;
+    margin: $margin;
+}
+
+.category {
+   height: 100%;
+   padding: 1rem $padding;
+}
+
+footer h3 {padding: $padding; margin: $margin;}
+
+.footerLinks ul {
+    list-style-type: none;
+    text-align: center;
+    padding: $padding;
+    margin: $margin;
+}
+
+.footerLinks ul li {
+    padding: $padding;
+    margin: $margin;
+    padding: .3rem $padding;
+}
+
+.footerLinks ul li a {
+    text-decoration: none;
+    color: $main-text-color;
+    padding: $padding;
+    text-align: center;
+}
+
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
