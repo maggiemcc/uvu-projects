@@ -1,0 +1,17 @@
+header, nav, main, footer {
+    max-width: 64rem;
+    margin: auto;
+}
+
+
+nav ul li a {
+    padding: .6rem 1rem;
+}
+
+
+/*-------- MAIN --------*/ 
+
+.card-hover {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1%;
+}

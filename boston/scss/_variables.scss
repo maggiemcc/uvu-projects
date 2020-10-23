@@ -1,0 +1,34 @@
+$main-background-color: #fff;
+$sec-background-color: #000;
+$nav-footer-color: rgb(85, 1, 1);
+
+$border: 1px solid rgba(255, 255, 255, 0.5);
+
+$white-text: #fff;
+$black-text: #000;
+
+@mixin main-gradient {
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4c4c4c+0,131313+100 */
+  background: #4c4c4c; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #4c4c4c 0%,
+    #131313 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #4c4c4c 0%,
+    #131313 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #4c4c4c 0%,
+    #131313 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+}
+$wrapper-color: rgba(0, 0, 0, 0.1);
+$background-gradient: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+$padding: 0;
+$margin: 0;
