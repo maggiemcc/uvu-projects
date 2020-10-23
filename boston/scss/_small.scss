@@ -118,7 +118,7 @@ picture img {
   padding: .3rem 2%;
 }
 
-.card-hover #card {
+.card-hover .card {
   display: block;
   width: 100%;
   height: 300px;
@@ -130,7 +130,7 @@ picture img {
   margin-bottom: 3%;
 }
 
-#card .content {
+.card .content {
     height: 100%;
     border: 3px solid #fff; 
     padding-top: 5%;
@@ -138,10 +138,10 @@ picture img {
 
 
 
-.card-hover #card img {
+.card-hover .card img {
   height: 30%;}
 
-.card-hover #card:hover {
+.card-hover .card:hover {
   background-color: none;
   text-shadow: 0px 0px 10px #000;
 
@@ -150,27 +150,27 @@ picture img {
   }
 }
 
-#card:nth-child(1) {
+.card:nth-child(1) {
   background-color: rgb(71, 1, 1);
 }
-#card:nth-child(2) {
+.card:nth-child(2) {
   background-color: rgb(32, 71, 1);
 }
-#card:nth-child(3) {
+.card:nth-child(3) {
   background-color: rgb(1, 23, 71);
 }
-#card:nth-child(4) {
+.card:nth-child(4) {
   background-color: rgb(71, 1, 62);
 }
 
-#card:nth-child(1):hover {
+.card:nth-child(1):hover {
   background: $background-gradient,
     url(../hover-images/hotel.jpg);
   background-size: cover;
   background-position: center;
 }
 
-#card:nth-child(2):hover {
+.card:nth-child(2):hover {
   background: $background-gradient,
     url(../hover-images/red-line.jpg);
   background-size: cover;
@@ -178,14 +178,14 @@ picture img {
 
 }
 
-#card:nth-child(3):hover {
+.card:nth-child(3):hover {
   background: $background-gradient,
     url(../hover-images/city.jpg);
   background-size: cover;
   background-position: center;
 }
 
-#card:nth-child(4):hover {
+.card:nth-child(4):hover {
   background: $background-gradient,
     url(../hover-images/restaurant.jpg);
   background-size: cover;
