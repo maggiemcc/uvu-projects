@@ -1,0 +1,210 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {font-family: 'Markazi Text', serif;}
+/*-------- HEADER --------*/
+.headerWrapper {background-color:$sec-backround;}
+
+header {
+    padding: .6rem 2%;
+}
+
+header figure.logo {
+    float: left;
+    margin: 0 2% 0 0;
+}
+
+header img {width: 85px;}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    margin-top: 1rem;
+    color: $white-text;
+}
+
+
+/*-------- NAV --------*/
+.navWrapper {background-color: $nav-background;}
+
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    color: $white-text;
+}
+
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
+
+#hamburgerBtn.open span:nth-child(1) {display: none;}
+#hamburgerBtn.open span:nth-child(2) {display: block;}
+
+#primaryNav {
+    height: 0;
+    overflow: hidden;
+}
+
+#primaryNav.open {
+    height: auto;
+}
+
+
+#primaryNav li.parent > a::after {
+    content: "\25BC";
+    font-size: .7rem;
+    padding-top: .16rem;
+    color: rgba(0,0,0,0.53);
+    float: right;
+}
+
+
+#primaryNav li ul {
+    display: none;
+}
+
+#primaryNav li:hover ul {
+    display: block;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color:$white-text;
+    border-top: 1px solid rgba(0,0,0,.9);
+}
+
+nav ul li.active a {background-color: rgba(0,0,0,1);}
+nav ul li a:hover {background-color: rgba(255,255,255,0.65); color:$black-text;}
+
+nav ul.hide {display: none;}
+
+
+
+/*-------- MAIN --------*/
+.mainWrapper {background-color: rgb(228, 228, 228);}
+
+main {
+    min-height: 25rem;
+    background-color: white;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+main h1 {font-size: 2.5rem;}
+
+
+/*----- FORM -----*/
+form fieldset {
+    margin: 2rem 0;
+    border: 5.5px double $field-background;
+    border-radius: 2px;
+}
+
+form legend {
+    color: $orange-text;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: $field-background;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+form label.top input, form label.top select {
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: 1px solid $black-text;
+    border-radius: 3px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgba(0,0,0,0.05);
+}
+
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    color: #555;
+}
+
+
+form input.submitBtn {
+    border: 2px solid $black-text;
+    background-color: $nav-background;
+    color: $white-text;
+    border-radius: 16px;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2.5rem 2%;
+    width: 96%;
+    max-width: 20rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+form input.submitBtn:hover {
+    background-color: rgb(7, 128, 3);
+}
+
+
+
+form label.top input:required {
+    border-left: rgb(179, 1, 1) solid 6px;
+    border-radius: 10px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+    border-radius: 10px;
+}
+
+main .thanks {padding: 0 2%;}
+
+main hr {margin-bottom: 2rem;}
+
+main .thanks h3 {padding: .5rem 0; margin: 0; font-weight: 700;}
+main .thanks p {margin: 0; font-style: italic; font-size: 1.3rem;}
+
+
+/*-------- FOOTER --------*/
+.footerWrapper {background-color: $sec-backround;}
+
+
+footer {
+    color: $white-text;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
