@@ -1,0 +1,84 @@
+
+
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+
+/*----------- NAVIGATION --------------*/
+nav button {display: none;}
+nav ul.hide {display: block;}
+
+nav ul {
+    margin: 0 0 0 2vw;
+    padding: 0;
+}
+
+nav ul > li {
+    float: left;
+    list-style: none;
+    border-right: none;
+    border-left: 1px solid rgba(0,0,0,0.5);
+}
+
+nav ul > li:first-child {border-left: none;}
+
+nav ul li a {
+    display: block;
+    background: none;
+    font-size: 1rem;
+    padding: 1em 1em;
+    text-decoration: none;
+    -webkit-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+    border: none;
+}
+
+#primaryNav {overflow: visible;}
+
+
+#primaryNav .parent li  {
+    display: block;
+    border-left: none;
+}
+
+#primaryNav .parent li a  {min-width: 12em;}
+
+#primaryNav li.parent > a::after {padding-top: .2rem; margin-left: .6rem;}
+
+nav ul li ul {
+    z-index:998;
+    position: absolute;
+    background-color: $nav-background;
+    left:-999em;
+    width: 12em;
+}
+
+nav ul li ul li {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.5)
+}
+
+
+nav ul li ul li:first-child {
+    border: none;
+}
+
+nav ul li:hover ul {
+    left: auto;
+    margin-left: 0;
+}
+
+
+
+
+
+/*----------- MAIN --------------*/
+
+
+
+/*----------- FOOTER --------------*/
+    
