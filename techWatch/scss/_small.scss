@@ -1,0 +1,165 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div.pageWrapper {
+  display: grid;
+  grid-template-areas:
+    "hamburger"
+    "header"
+    "content"
+    "footer"
+    "navigation";
+  grid-template-columns: 100%;
+}
+
+/*----------- BODY --------------*/
+body {
+  font-size: 16px;
+  font-family: "Trispace", sans-serif;
+  background-color: $filler-background-color;
+}
+
+/*----------- HEADER --------------*/
+header {
+  grid-area: header;
+  background-color: $main-background-color;
+  color: $white-text;
+  padding: 0.5rem $padding-2;
+
+  img {height: 100px;}
+}
+
+/*----------- NAVIGATION --------------*/
+a.myjump {
+  display: block;
+  width: 60px;
+  color: $white-text;
+  font-size: 1.7rem;
+  padding: 0.4rem;
+  text-decoration: none;
+  padding-left: $padding-2;
+}
+
+nav {
+  grid-area: navigation;
+  background-color: darken($main-background-color, 100%);
+  height: 100vh;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: $no-padding;
+  margin: $no-margin;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  flex-basis: 100%;
+}
+
+nav ul li a {
+  display: block;
+  color: $white-text;
+  padding: 0.5rem $no-padding;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+nav ul li.active a {
+  background-color: rgba(255, 255, 255, 1);
+  color: $black-text;
+}
+
+nav ul li a:hover {
+  background-color: lighten($main-background-color, 10%);
+  color: $white-text;
+  font-weight: 700;
+}
+
+/*----------- HAMBURGER --------------*/
+div#hamburger {
+  grid-area: hamburger;
+  background-color: $black-text;
+  font-weight: bold;
+}
+
+div#hamburger a {color: $white-text;}
+
+/*----------- MAIN --------------*/
+main {
+  grid-area: content;
+  padding: $no-padding $padding-2;
+  padding-bottom: $padding-2;
+  min-height: 10rem;
+  background-color: $sec-background-color;
+  color: $black-text;
+
+  h1 {
+    font-weight: 800;
+    font-size: 1.36rem;
+    margin: $no-margin;
+    padding: $no-padding;
+    padding-top: 1rem;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: $no-margin;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    margin: $no-margin;
+    padding: 0.5rem $no-padding;
+  }
+}
+
+main .appleRow,
+main .windowsRow,
+main .samsungRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1.5rem $no-margin;
+
+  .columnOne {
+    order: 1;
+    padding-bottom: .5rem;
+  }
+
+  .columnTwo {order: 3;}
+  .columnThree {order: 2;}
+
+  img {width: 100%;}
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+  grid-area: footer;
+  background-color: $main-background-color;
+  color: $white-text;
+  padding: 0.8rem $padding-2;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,34 @@
+/*----------- BODY --------------*/
+div.pageWrapper {
+  grid-template-areas:
+    "header"
+    "navigation"
+    "content"
+    "footer";
+  grid-template-columns: auto;
+  max-width: 64rem;
+  margin: auto;
+}
+
+/*----------- HEADER --------------*/
+
+/*----------- NAVIGATION --------------*/
+nav ul {padding-left: 1%;}
+
+nav ul li {
+  flex-basis: auto;
+
+  a {padding: 0.6rem 1rem;}
+}
+
+/*----------- MAIN --------------*/
+main .appleRow,
+main .samsungRow {
+  grid-template-columns: 1fr 50% 1fr;
+}
+
+main .windowsRow {
+  grid-template-columns: 1fr 1fr 50%;
+}
+
+/*----------- FOOTER --------------*/
