@@ -1,25 +1,25 @@
 [   {
     "name":"Southern Serenade",
-    "photo":"images/serenade.jpg",
-    "address":["1555 North Canyon Dr.","Lexington, VA 88765"],
+    "photo":"images/bali.jpg",
+    "address":["1514 Ocean View DR."," Bali, Indonesia 80351"],
     "phone":"1-307-886-1234"
     },
     {
-    "name":"The Grand America Hotel",
-    "photo":"images/serenade.jpg",
-    "address":["555 Main St.","Salt Lake City UT, 84111"],
-    "phone":"1-307-886-1234"
+    "name":"The Sweet Escape",
+    "photo":"images/mexico2.jpg",
+    "address":["175 North Main St."," El Porvenir, Mexico, 32790"],
+    "phone":"+52-800-555-5678"
     },
     {
-    "name":"Four Seasons",
-    "photo":"images/serenade.jpg",
-    "address":["2019 Pennsylvania Ave","Washington, DC 20125"],
-    "phone":"1-303-389-2000"
+    "name":"The Ao Nang Hotel",
+    "photo":"images/thailand.jpg",
+    "address":["1500 Ao Nang Ave"," Ao Nang,Thailand 81000"],
+    "phone":"+66-303-248-2020"
     },
     {
-    "name":"Hyatt Place Washington",
-    "photo":"images/serenade.jpg",
-    "address":["1555 North Canyon Dr.","Lexington VA 88765"],
-    "phone":"1-202-828-2500"
+    "name":"Valley View Hotel",
+    "photo":"images/mexico.jpg",
+    "address":["155 Main St."," Nuevo Vallarta, Mexico 63735"],
+    "phone":"+52-800-555-1234"
     }
 ]

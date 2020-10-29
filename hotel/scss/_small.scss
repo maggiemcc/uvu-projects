@@ -8,21 +8,99 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- BODY --------------*/
 body {
     font-size: 16px;
-    font-family: Verdana, sans-serif;
+    font-family: 'Grenze', serif;
 }
 
 
 /*----------- HEADER --------------*/
 header {
-    padding: .5rem 2%;
-    background-color: #ddd;
+    padding: 1rem 2%;
+    background-color: $main-color;
 }
-header h1 {margin: 0;}
-header h2 {margin: 0; font-weight: normal;}
+
+header h1 {
+    font-weight: 700;
+    margin: 0; 
+    color: $main-text;
+}
+
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+    font-weight: 700;
+}
+
+#myCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    padding: 0;
+    margin: 0;
+
+    .hotelCard {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        border: 3px solid #000;
+        border-radius: 3px 3px 3px 3px;
+
+        .imageInfo {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            position: relative;
+            background-color: #000;
+
+            img {width: 100%; padding: 0; margin: 0;}
+            figcaption {
+                position: absolute; 
+                bottom: 0;
+                background-color: $main-color;
+                background-color: rgba(0, 0, 0, .5);
+                color: #fff;
+                width: 100%;
+                padding: .5rem 2vw;
+                font-size: 1.5rem;
+            }
+        }  
+
+        .hotelInfo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: #fff;
+        padding: .5rem 2%;
+        font-weight: 300;
+
+            span i {
+            float: left;
+            font-size: 1.3rem;
+            color: $main-color;
+
+            }
+
+            span p {
+            padding: 0;
+            margin: 0;
+            padding-left: 1.6rem;
+            font-size: 1.1rem;
+            font-weight: 400;
+            }
+        }   
+    }
+
+}
+
+
+.spacer {width: 100%; padding: 5rem 0;}
+
 
 /*----------- NAVIGATION --------------*/
 nav {
-    background-color: #666;
+    background-color: $main-color;
+    margin: 0;
+    padding: 0;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -37,20 +115,18 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-nav ul li {
-    flex-basis: 33.3%;
-}
-nav ul li a span {
-    display: block;
-}
+nav ul li {flex-basis: 33.4%;}
+
+nav ul li a span {display: block;}
+
 
 nav ul li a {
     display: block;
     width: 100%;
     text-transform: uppercase;
-    background-color: #444;
-    color: #fff;
-    border-left: 1px solid #777;
+    background-color: $main-color;
+    color: $main-text;
+    border-left: 1px solid $main-text;
     padding: .5rem 0;
     text-decoration: none;
     font-size: .9rem;
@@ -58,124 +134,18 @@ nav ul li a {
 }
 nav ul li:first-child a {border-left: none;}
 
-nav ul li a:hover {
-    background-color: #eee;
-    color: #333;
-}
+
+nav ul li a i {font-size: 1.5rem;}
+
 nav ul li.active a {
-    background-color: #000;
-    color: #fff;
-}
-/*----------- MAIN --------------*/
-main {
-    padding: 0 2%;
-    min-height: 10rem;
+    background-color: rgba(0,0,0,1);
+    color: $main-text;
 }
 
-#myCards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 2%;
-    grid-row-gap: 2%;
-
-    .hotelCard {
-        border: 2px solid #000;
-        border-radius: 3px;
-
-    .imageInfo {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        position: relative;
-
-        img {width: 100%; padding: 0; margin: 0;}
-        figcaption {
-            position: absolute; 
-            bottom: 0;
-            background-color: rgb(0,0,0);
-            color: #fff;
-            width: 100%;
-            padding: .5rem 2vw;
-        }
-    }  
-
-    .hotelInfo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #fff;
-    padding: .5rem 2%;
-
-    span i {
-    float: left;
-    font-size: 1.3rem;
-    color: rgb(167, 0, 0);
-    }
-
-    span p {
-    padding: 0;
-    margin: 0;
-    padding-left: 1.6rem;
-    font-size: .7rem;
-    // line-height: 1rem;
-    }
-}   
+nav ul li a:hover {
+    background-color: rgba(0,0,0,0.55);
+    color: $main-text;
 }
-
-}
-
-// div#inventoryWrapper {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     background-color: rgb(221, 221, 221);
-// }
-
-// section {padding: 2%; margin: 0; background-color: #ddd;}
-
-// figure {position: relative; padding: 0; margin: 0;}
-// figure img {width: 100%;}
-// figcaption {
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-//     background-color: rgb(0,0,0,);
-//     color: white;
-//     padding: .3rem 2%;
-// }
-
-// section .info {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     border: 2px solid black;
-//     border-radius: 0 0 3px 3px;
-//     background-color: #fff;
-//     padding: .5rem 2%;
-// }
-
-// .info span i {
-//     float: left;
-//     font-size: 1.3rem;
-//     color: rgb(167, 0, 0);
-// }
-
-// .info span p {
-//     padding: 0;
-//     margin: 0;
-//     padding-left: 1.6rem;
-//     font-size: .8rem;
-//     line-height: 1rem;
-// }
-
-
-
-
-/*----------- FOOTER --------------*/
-// footer {
-//     background-color: #ddd;
-//     padding: .5rem 2%;
-//     text-align: center;
-// }
-
-.spacer {width: 100%; padding: 2.5rem 2%;}
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/
