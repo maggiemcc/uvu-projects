@@ -76,10 +76,11 @@ hr {border: 2px solid $main-color; margin: 1rem $margin;}
         grid-template-columns: 1fr 1fr;
         grid-column-gap: $padding-2;
         background-color: #fff;
-        padding: .5rem $padding-2;
+        padding: .5rem 2vw;
         font-weight: 300;
         border: 2px solid $body-text;
         border-radius: 0px 0px 3px 3px;
+
         
 
             span i {float: left; font-size: 1rem; color: $main-color;}
