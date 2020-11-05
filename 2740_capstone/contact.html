@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="Maggie McCausland">
+
+
+    <title>Welcome: Maverick Horseback Riding</title>
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!-- STYLE SHEETS -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <!-- HEADER HERE -->
+    <header>
+        <img src="images/logo.png" alt="logo">
+        <div>
+            <h1>Maverick Horseback Riding</h1>
+            <h2>Ride the Way You Want</h2>
+        </div>
+    </header>
+
+
+    <!-- NAVIGATION HERE -->
+    <div class="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776;</button>
+            <ul id="primaryNav" class="hide">
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="horses.html">Horses</a></li>
+                <li><a href="book.html">Book a Ride</a></li>
+                <li class="active"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- CONTENT HERE -->
+    <div class="mainWrapper">
+        <main>
+            <picture class="hero">
+                <source media="(max-width: 450px)" srcset="images/heros/hero450.jpg">
+                <source media="(max-width: 600px)" srcset="images/heros/hero600.jpg">
+                <source media="(max-width: 750px)" srcset="images/heros/hero750.jpg">
+                <source media="(max-width: 900px)" srcset="images/heros/hero900.jpg">
+                <source media="(max-width: 1050px)" srcset="images/heros/hero1050.jpg">
+
+                <!-- Image from Unsplash -->
+                <img src="images/heros/hero1100.jpg" alt="The default if no other match is found">
+            </picture>
+
+            <div class="textContent">
+                <h1>Contact Us</h1>
+            </div>
+
+            <div class="letter">
+                <p>Dear Reader,</p>
+                <p>Our prices vary by service.  If you are looking for pricing information, or you would like to book a trail ride or a horsemanship experience, please visit <a hfref="#">Ride Prices and Schedules</a>. You may book from this page as well.</p>
+                <p>Call or text us at 512-230-8413.  If you listen to the voicemail, we will always have an update on emergency contacts.</p>
+                <p>Email us at maverickhorsebackriding@gmail.com</p>
+                <p>Thanks!</p>
+                <p>-The Maverick Riding Team</p>
+            </div>
+
+
+            <div class="videoSection">
+                <h1>Video</h1>
+                <div class="video">
+                    <iframe class="ridingVideo" src="https://www.youtube.com/embed/D1X9cBV1-C4"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+            <div class="blogSection">
+                    <h1>The Blog</h1>
+
+                    <div class="card-hover">
+                        
+                        <div class="card">
+                            <div class="content">
+                                <h3>Back in the Saddle</h3>
+                                <p class="disappear">[…]</p>
+                                <div class="hoverContent">
+                                    <p>
+                                        From the very first, infamous buffalo ride back in Hutto, to the now beloved
+                                        Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
+                                        may have never dreamed it may come to be. It’s a place where all around
+                                        knowledged people can come, wether you know how to ride or not, and […]
+                                    </p>
+                                    <div class="button"><a href="#"><button type="button">Read More</button></a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="content">
+                                <h3>The Children's</h3>
+                                <p class="disappear">[…]</p>
+
+                                <div class="hoverContent">
+                                    <p>
+                                        Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences we offer, horseback
+                                        riding lessons at Maverick Ranch are… well… not the same as horseback riding lessons other places. What
+                                        we don’t do: Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship (ask about our
+                                        developing cross country course) What […]
+                                    </p>
+                                    <div class="button"><a href="#"><button type="button">Read More</button></a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="content">
+                                <h3>An Update For</h3>
+                                <p class="disappear">[…]</p>
+
+                                <div class="hoverContent">
+                                    <p>
+                                        Dear Mavericks, The world has been spinning and we here at Mavericks are rolling right along with it.
+                                        Life offers many ups and downs for us all. For so many folks in the world right now, there are a lot of
+                                        downs. Isn’t it wild we all share this? Mavericks was conceived some 13 years […]
+                                    </p>
+                                    <div class="button"><a href="#"><button type="button">Read More</button></a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- end card-hover -->
+
+                    <button type="button">View More Posts</button>
+            </div>  <!-- end blogSection-->
+
+        </main>
+    </div>
+
+    <!-- FOOTER HERE -->
+    <div class="footerWrapper">
+        <footer>
+            <h1>Follow Us On</h1>
+
+            <div class="social">
+                <a><ion-icon name="logo-facebook"></ion-icon></a>
+                <a><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+            
+            <p>&copy; 2020 &bull; Maggie McCausland &bull; 10661046</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+
+</html>
