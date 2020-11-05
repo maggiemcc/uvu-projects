@@ -1,0 +1,73 @@
+/*-------- HEADER --------*/
+header h1 {
+  font-size: 2rem;
+  margin-top: 0.8rem;
+}
+header h2 {
+  font-size: 1.5rem;
+}
+
+/*-------- NAV --------*/
+// nav {
+//   background-color: #fff;
+// }
+
+nav button {
+  display: none;
+}
+nav ul.hide {
+  display: block;
+}
+
+nav ul {
+  margin-left: 2%;
+}
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  border: none;
+  border-right: $border;
+  padding: 0.8rem 1rem;
+  color: #000;
+}
+
+nav ul li:last-child a {
+  border-right: none;
+}
+
+/*-------- MAIN --------*/
+.videoSection {
+  .video {
+    width: 70%;
+    height: 500px;
+  }
+}
+
+.box {
+  button {
+    width: 35%;
+  }
+}
+
+.blogs p {
+      min-height: 215px;
+      text-align: left;
+}
+
+
+@for $i from 1 through 12 {
+    $w:($i/12) * 100%;
+    .medium-#{$i} {flex-basis: $w;}
+}
+
+
+/*----- FOOTER COLUMNS --------*/
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

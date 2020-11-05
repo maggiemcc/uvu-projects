@@ -1,0 +1,332 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Crimson Text", serif;
+}
+
+/*-------- HEADER --------*/
+header {
+  padding: 0.5rem 2%;
+  background-color: $main-background-color;
+  display: grid;
+  grid-template-columns: 100px auto;
+}
+
+header img {
+  width: 100%;
+}
+
+header h1 {
+  margin: $margin;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.3rem;
+}
+header h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/*-------- NAV --------*/
+nav button {
+  margin: 0.2rem 2%;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+.navWrapper {
+  background-color: #fff;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: $padding;
+  margin: $margin;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.8rem 2%;
+  text-decoration: none;
+  color: #000;
+  border-top: $border;
+}
+
+nav ul li.active a {
+  background-color: rgb(1, 94, 131);
+  color: #fff;
+}
+nav ul li a:hover {
+  background-color: rgba(1, 94, 131, 0.55);
+  color: #fff;
+}
+nav ul.hide {
+  display: none;
+}
+
+/*-------- MAIN --------*/
+.mainWrapper {
+  background-color: rgb(224, 224, 224);
+}
+
+main {
+  min-height: 10rem;
+  margin: $margin auto;
+  background-color: #fff;
+}
+
+main picture.hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+main picture.hero img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.textContent {
+  padding: 2% 2%;
+  margin: 0;
+  background-color: #fff;
+}
+
+main {
+  h1 {
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 30px;
+    max-width: 600px;
+    position: relative;
+  }
+
+  h1:before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    background: #000;
+    left: 0;
+    top: 50%;
+    position: absolute;
+  }
+  h1:after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    background: #000;
+    right: 0;
+    top: 50%;
+    position: absolute;
+  }
+
+  h3 {
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.letter {
+  padding: 1rem 5%;
+
+  a {
+    color: rgb(1, 94, 131);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.2rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.videoSection {
+  background-color: rgba(26, 92, 0, 0.205);
+  margin: 0 auto;
+  padding: 1rem 2%;
+  padding-bottom: 5%;
+
+  .video {
+    border: 1px solid #000;
+    margin: 0 auto;
+    justify-content: center;
+    width: 90%;
+    height: 300px;
+    text-align: center;
+
+    .ridingVideo {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.blogSection {
+  background-image: url(../images/heros/hero1100.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+//   align-items: center;
+  display: flex;
+//   justify-content: center;
+//   height: 100%;
+  width: 100%;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  padding: 2% 2%;
+  padding-bottom: 5%;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    height: 2.5rem;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.932);
+    width: 35%;
+    width: 75%;
+    // border: 2px solid #000;
+    border: none;
+    border-radius: 3px;
+    margin: auto;
+  }
+
+  button:hover {
+    background-color: #000;
+    color: white;
+  }
+}
+
+.blogs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #000;
+
+  .post {
+    background-color: #fff;
+    background-color: transparent;
+    border-radius: 3px;
+    margin-bottom: 3%;
+    color: #fff;
+
+    .postText {
+        border-radius: 2px 2px 0 0;
+        background-color: rgba(0,0,0,.75);
+        padding: 5% 5%;
+    }
+
+    h3 {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    p {
+    //   min-height: 180px;
+      text-align: left;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      height: 2.5rem;
+      color: #fff;
+      background-color: rgb(1, 94, 131);
+      width: 100%;
+      border: none;
+      margin-top: .5rem;
+      border-radius: 3px;
+    
+    }
+
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.column {
+  padding: 0 2vw;
+}
+
+@for $i from 1 through 12 {
+  $w: ($i/12) * 100%;
+  .small-#{$i} {
+    flex-basis: $w;
+  }
+}
+
+/*-------- FOOTER --------*/
+.footerWrapper {
+  background-color: $sec-background-color;
+  background-color: #fff;
+}
+
+footer {
+  color: $main-text-color;
+  color: #000;
+  text-align: center;
+  padding: .8rem 2%;
+
+  h1 {
+      font-size: 1.2rem;
+  }
+}
+
+
+footer .social a {
+    font-size: 2.5rem;
+    margin: 2% .5rem;
+    color: rgb(1, 94, 131);
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
