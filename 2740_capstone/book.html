@@ -40,9 +40,9 @@
         <nav class="clearfix">
             <button onclick="toggleMenu()">&#9776;</button>
             <ul id="primaryNav" class="hide">
-                <li class="active"><a href="index.html">Welcome</a></li>
+                <li><a href="index.html">Welcome</a></li>
                 <li><a href="#">Lessons</a></li>
-                <li><a href="book.html">Book a Ride</a></li>
+                <li class="active"><a href="book.html">Book a Ride</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
@@ -62,45 +62,6 @@
                 <!-- Image from Unsplash -->
                 <img src="images/heros/hero1100.jpg" alt="The default if no other match is found">
             </picture>
-
-
-
-            <div class="slider">
-                <picture>
-                    <source srcset="images/heros/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="images/heros/hero1050.jpg" media="(min-width: 28.12rem)">
-                    <img src="images/heros/hero1050.jpg" alt="slider">
-                </picture>
-        
-                <picture>
-                    <source srcset="images/heros/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="images/heros/hero1050.jpg" media="(min-width: 28.12rem)">
-                    <img src="images/heros/hero1050.jpg" alt="slider">
-                </picture>
-        
-                <picture>
-                    <source srcset="images/heros/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="images/heros/hero1050.jpg" media="(min-width: 28.12rem)">
-                    <img src="images/heros/hero1050.jpg" alt="slider">
-                </picture>
-        
-                <picture>
-                    <source srcset="images/heros/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="images/heros/hero1050.jpg" media="(min-width: 28.12rem)">
-                    <img src="images/heros/hero1050.jpg" alt="slider">
-                </picture>
-        
-                <picture>
-                    <source srcset="slider-images/bunker-hill-small.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="slider-images/bunker-hill-large.jpg" media="(min-width: 28.12rem)">
-                    <img src="slider-images/bunker-hill-large.jpg" alt="slider">
-                </picture>
-            </div>
-
-
-
-
-
 
             <div class="textContent">
                 <h1>Welcome</h1>
@@ -256,25 +217,6 @@
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-
-        <!-- JQUERY -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type="text/javascript" src="slick/slick.min.js"></script>
-    
-        <script>
-            $(document).ready(function () {
-                $('.slider').slick({
-                    dots: true,
-                    arrows: false,
-                    infinite: true,
-                    speed: 1000,
-                    cssEase: 'ease-out',
-                    autoplay: true,
-                    autoplaySpeed: 5000
-                });
-            });
-        </script>
-    
 </body>
 
 </html>
