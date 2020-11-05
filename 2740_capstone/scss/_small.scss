@@ -181,6 +181,132 @@ main {
   }
 }
 
+
+
+
+/*-------- BOOK/FORM --------*/
+.trails {
+  padding: .5rem 5%;
+  margin: 0 auto;
+
+  a {
+    color: rgb(1, 94, 131);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.2rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.signupForm {
+  padding: .5rem 5%;
+  margin: 0 auto;
+
+
+
+  fieldset {
+    background-color: #fff;
+    margin: 2rem 0;
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 2%;
+
+    p {
+      width: 100%;
+      max-width: 50%;
+    }
+  }
+
+  legend {
+    color: rgb(1, 94, 131);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0 2%;
+    padding: 0 3%;
+  }
+
+  label.top, div {
+    display: block;
+    padding-top: 1rem;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+
+  }
+
+  div span {
+    font-weight: 700;
+  }
+  
+}
+
+form select, form textarea {
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: .75rem;
+  width: 100%;
+  max-width: 20rem;
+}
+
+
+form label.top input, form label.top select {
+  -webkit-appearance: none;
+  display: block;
+  font-size: 1rem;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: .75rem;
+  color: #555;
+  width: 100%;
+  max-width: 20rem;
+  background-color: rgba(0,0,0,0.05);
+}
+
+form label.sbs {
+  display: block;
+  padding: .75rem 0;
+  color: rgb(68, 68, 68);
+}
+
+
+
+
+form input.submitBtn {
+  border: 2px solid #000;
+  background-color: rgb(1, 94, 131);
+  color: #fff;
+  border-radius: 16px;
+  padding: .75rem 1.5rem;
+  margin: 0 0 2.5rem 2%;
+  width: 96%;
+  max-width: 20rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+form input.submitBtn:hover {
+  background-color: rgb(7, 128, 3);
+}
+
+
+
+form label.top input:required {
+  border-left: rgb(179, 1, 1) solid 6px;
+  border-radius: 10px;
+}
+
+form label.top input:required:valid {
+  border-left: green solid 6px;
+  border-radius: 10px;
+}
+
+
+
 /*-------- gallery--------*/
 section.gallery figure {
   width: 100%;
