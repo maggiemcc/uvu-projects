@@ -38,12 +38,34 @@
     <!-- NAVIGATION HERE -->
     <div class="navWrapper">
         <nav class="clearfix">
-            <button onclick="toggleMenu()">&#9776;</button>
+    
+            <button id="hamburgerBtn" onclick="toggleMenu()">
+                <span>&#9776; OPEN</span>
+                <span>&otimes; CLOSE</span>
+            </button>
+    
             <ul id="primaryNav" class="hide">
                 <li><a href="index.html">Welcome</a></li>
-                <li><a href="horses.html">Horses</a></li>
+                <li><a href="gallery.html">Gallery</a> </li>
                 <li><a href="book.html">Book a Ride</a></li>
                 <li class="active"><a href="contact.html">Contact Us</a></li>
+                <li class="parent" ><a href="#">More</a>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Boarding</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">Meet the Horses</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Horses</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">General Services</a></li>
+                        <li><a href="#">Things to do Nearby</a></li>
+                        <li><a href="#">2020 and Beyond</a></li>
+                        <li><a href="#">FAQS</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
@@ -77,11 +99,47 @@
             </div>
 
 
+            <div class="signupForm">
+
+            <form method="get" action="thanks.html">
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <label class="top">Name* <input type="text" name="fname" required></label>
+                    <label class="top">Phone Number <input type="tel" name="phone" placeholder="1235551234" pattern="[0-9-. ]{10,14}"></label>
+                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+
+                    <p>Question*</p>
+                    <textarea class="userinfo" name="celebrating" required></textarea>
+            
+                </fieldset>
+            
+                <input type="submit" value="Book My Ride" class="submitBtn">
+            
+            </form>
+        </div>
+
+
+
+
+
+
             <div class="videoSection">
                 <h1>Video</h1>
                 <div class="video">
-                    <iframe class="ridingVideo" src="https://www.youtube.com/embed/D1X9cBV1-C4"
-                        allowfullscreen></iframe>
+                        <iframe
+                        class="ridingVideo"
+                        src="https://www.youtube.com/embed/Y8Wp3dafaMQ"
+                        srcdoc="
+                        <style>*{padding:0;margin:0;overflow:hidden}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                        <a href=https://www.youtube.com/embed/D1X9cBV1-C4?autoplay=1><img src=images/video_image.jpg alt='Maverick Horseback RV3 1'>
+                            <span>▶</span>
+                        </a>"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        title="Maverick Horseback RV3 1">
+                        </iframe>
+
                 </div>
             </div>
 
@@ -124,7 +182,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card" id="card-span">
                             <div class="content">
                                 <h3>An Update For Guests</h3>
                                 <p class="disappear">[…]</p>
@@ -142,7 +200,14 @@
 
                     </div> <!-- end card-hover -->
 
-                    <button type="button">View More Posts</button>
+                    <div class="morePosts">
+
+                        <div class="search">
+                            <div class="inputField"><input type="text" name="search" placeholder="Search.."></div>
+                        </div>
+
+                        <div class="viewMore"><button type="button">View More Posts</button></div>
+                    </div>
             </div>  <!-- end blogSection-->
 
         </main>

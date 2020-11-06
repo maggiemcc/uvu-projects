@@ -8,36 +8,92 @@ header h2 {
 }
 
 /*-------- NAV --------*/
-// nav {
-//   background-color: #fff;
-// }
-
-nav button {
-  display: none;
-}
-nav ul.hide {
-  display: block;
-}
+nav button {display: none;}
+nav ul.hide {display: block;}
 
 nav ul {
-  margin-left: 2%;
+    margin: 0 0 0 2vw;
+    padding: 0;
 }
-nav ul li {
-  float: left;
+
+nav ul > li {
+    float: left;
+    list-style: none;
+    border-right: none;
+    border-left: 1px solid #000;
 }
+
+nav ul > li:first-child {border-left: none;}
 
 nav ul li a {
-  border: none;
-  border-right: $border;
-  padding: 0.8rem 1rem;
-  color: #000;
+    display: block;
+    background: none;
+    font-size: 1rem;
+    padding: 1em 1em;
+    text-decoration: none;
+    -webkit-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+    border: none;
 }
 
-nav ul li:last-child a {
-  border-right: none;
+#primaryNav {overflow: visible;}
+
+
+#primaryNav .parent li  {
+    display: block;
+    border-left: none;
+}
+
+#primaryNav .parent li a  {min-width: 12em;}
+
+#primaryNav li.parent > a::after {padding-top: .2rem; margin-left: .6rem;}
+
+nav ul li ul {
+    z-index:998;
+    position: absolute;
+    background-color: #fff;
+    left:-999em;
+    width: 12em;
+}
+
+nav ul li ul li {
+    border: none;
+    border-top: 1px solid #000;
+}
+
+nav ul li ul {
+  border: none;
+  border: 1px solid #000;
+}
+
+
+nav ul li ul li:first-child {
+    border: none;
+}
+
+nav ul li:hover ul {
+    left: auto;
+    margin-left: 0;
 }
 
 /*-------- MAIN --------*/
+.signupForm {
+fieldset {
+
+  p {
+    width: 100%;
+    max-width: 60%;
+  }
+}
+
+.agreement {
+  width: 100%;
+  max-width: 60%;
+}
+}
+
+
+
 .videoSection {
   .video {
     width: 70%;
@@ -50,24 +106,51 @@ nav ul li:last-child a {
 .card-hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
-   grid-column-gap: 1%;
-  grid-row-gap: 1%;
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+
+
+  #card-span {grid-column: 1/span 2;}
+
 
   .card {
     width: 100%;
-    height: 530px;
+    height: 550px;
     padding: 5%;
-    margin-bottom: 3%;
+    // margin-bottom: 3%;
     border-radius: 3px;
 
+
     .content {
-      height: 100%;
-      padding: 6% 2%;
+      // height: 100%;
+      // padding: 6% 2%;
 
       p {
+        font-size: 1.1rem;
         padding: 2%;
       }
     }
+  }
+}
+
+
+.blogSection {
+
+  button {
+    width: 50%;
+  }
+
+  .morePosts {
+    padding: 2%;
+
+  .search{
+    input[type=text] {
+      width: 30%;
+    }
+    
+    input[type=text]:focus {width: 50%;}
+  }
+
   }
 }
 

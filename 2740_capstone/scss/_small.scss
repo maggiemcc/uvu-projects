@@ -40,46 +40,75 @@ header h2 {
 }
 
 /*-------- NAV --------*/
-nav button {
-  margin: 0.2rem 2%;
-  background-color: transparent;
-  border: none;
-  color: #000;
-  font-size: 1.6rem;
-  outline: none;
-}
-
 .navWrapper {
   background-color: #fff;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
 }
 
+nav button {
+  margin: .2rem 2%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
+
+#hamburgerBtn.open span:nth-child(1) {display: none;}
+#hamburgerBtn.open span:nth-child(2) {display: block;}
+
+#primaryNav {
+  height: 0;
+  overflow: hidden;
+}
+
+#primaryNav.open {height: auto;}
+
+#primaryNav li.parent > a::after {
+  content: "\25BC";
+  font-size: .7rem;
+  padding-top: .16rem;
+  color: rgba(0,0,0,0.53);
+  float: right;
+}
+
+#primaryNav li ul {
+  display: none;
+}
+
+#primaryNav li:hover ul {
+  display: block;
+}
+
+
 nav ul {
   list-style-type: none;
-  padding: $padding;
-  margin: $margin;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li a {
   display: block;
-  padding: 0.8rem 2%;
+  padding: .8rem 2%;
   text-decoration: none;
   color: #000;
-  border-top: $border;
+  border-top: 1px solid #000;
 }
 
-nav ul li.active a {
-  background-color: rgb(1, 94, 131);
-  color: #fff;
-}
+nav ul li.active a {background-color: rgb(1, 94, 131); color: #fff;}
 nav ul li a:hover {
-  background-color: rgba(1, 94, 131, 0.55);
-  color: #fff;
+  background-color: rgb(1, 50, 70); color: #fff;
 }
-nav ul.hide {
-  display: none;
-}
+
+nav ul.hide {display: none;}
+
+
+
+
 
 /*-------- MAIN --------*/
 .mainWrapper {
@@ -120,6 +149,19 @@ main picture.hero img {
   background-color: #fff;
 }
 
+.gallery {
+  padding: 1.2rem 0;
+}
+
+
+.gallery h4 {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2% 4%;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
 /*-------- page h1 titles --------*/
 
 main {
@@ -135,7 +177,7 @@ main {
   h1:before {
     content: "";
     display: block;
-    width: 130px;
+    width: 25%;
     height: 5px;
     background: #000;
     left: 0;
@@ -146,6 +188,7 @@ main {
     content: "";
     display: block;
     width: 130px;
+    width: 25%;
     height: 5px;
     background: #000;
     right: 0;
@@ -216,7 +259,7 @@ main {
 
     p {
       width: 100%;
-      max-width: 50%;
+      max-width: 90%;
     }
   }
 
@@ -241,6 +284,11 @@ main {
 
   div span {
     font-weight: 700;
+  }
+
+  .agreement {
+    width: 100%;
+    max-width: 90%;
   }
   
 }
@@ -276,6 +324,7 @@ form label.sbs {
 
 
 
+
 form input.submitBtn {
   border: 2px solid #000;
   background-color: rgb(1, 94, 131);
@@ -307,6 +356,8 @@ form label.top input:required:valid {
 
 
 
+
+
 /*-------- gallery--------*/
 section.gallery figure {
   width: 100%;
@@ -331,19 +382,32 @@ section.gallery figure img {
   padding-bottom: 5%;
 
   .video {
-    border: 1px solid #000;
+    border: 2px solid #000;
+    background-color: #000;
+    border-radius: 3px;
     margin: 0 auto;
-    justify-content: center;
+    // justify-content: center;
     width: 90%;
     height: 300px;
-    text-align: center;
+    // text-align: center;
 
     .ridingVideo {
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    iframe {
+      padding:0;
+      margin:0;
+      overflow: hidden;
       width: 100%;
       height: 100%;
+
     }
   }
 }
+
+
 
 /*-------- BLOG --------*/
 .blogSection {
@@ -357,11 +421,12 @@ section.gallery figure img {
   line-height: 1;
 
   button {
-    width: 45%;
+    width: 80%;
     background-color: rgb(1, 94, 131);
+    font-weight: 700;
     color: #fff;
     padding: 0.8rem 0;
-    margin: 0.5rem 0;
+    // margin: 0.5rem 0;
     border: none;
     border-radius: 3px;
   }
@@ -371,27 +436,69 @@ section.gallery figure img {
     color: #fff;
     cursor: pointer;
   }
+
+  .morePosts {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5% 2%;
+
+    .viewMore {
+      margin: 0;
+      padding: .5rem 0;
+    }
+
+  .search{
+    margin: 0;
+    padding: .5rem 0;
+
+
+    input[type=text] {
+      width: 150px;
+      width: 40%;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url('../images/search-outline.svg');
+      background-position: 5px 5px; 
+      background-size: 30px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+    
+    input[type=text]:focus {width: 80%;}
+  }
+
+  }
 }
+
 
 .card-hover {
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: .5rem;
+
   .card {
     display: block;
     width: 100%;
     height: 470px;
     text-align: center;
     text-decoration: none;
-    padding: 5%;
+    padding: 5% 5%;
     transition: all 0.5s ease-in;
     color: #fff;
-    margin-bottom: 3%;
     border-radius: 3px;
+
 
     .content {
       height: 100%;
       border: 3px solid #fff;
       border-radius: 3px;
-      padding: 6% 6%;
+      padding: 3%;
 
       h3,
       .disappear {
@@ -401,8 +508,7 @@ section.gallery figure img {
       }
 
       p {
-        font-size: 1.2rem;
-        padding: 2%;
+        font-size: 1.3rem;
         text-align: left;
       }
     }
@@ -462,10 +568,12 @@ section.gallery figure img {
 }
 
 .card:hover {
-  background-color: rgb(1, 94, 131);
+  background-color:  rgb(2, 89, 124);
+
   background-image: none;
 
   text-shadow: 1px 1px 2px #000;
+  font-weight: 400;
 
   .hoverContent {
     display: block;
@@ -476,6 +584,8 @@ section.gallery figure img {
     color: white;
   }
 }
+
+
 
 /*-------- FOOTER --------*/
 .footerWrapper {

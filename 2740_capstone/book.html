@@ -38,12 +38,34 @@
     <!-- NAVIGATION HERE -->
     <div class="navWrapper">
         <nav class="clearfix">
-            <button onclick="toggleMenu()">&#9776;</button>
+
+            <button id="hamburgerBtn" onclick="toggleMenu()">
+                <span>&#9776; OPEN</span>
+                <span>&otimes; CLOSE</span>
+            </button>
+
             <ul id="primaryNav" class="hide">
                 <li><a href="index.html">Welcome</a></li>
-                <li><a href="horses.html">Horses</a></li>
+                <li><a href="gallery.html">Gallery</a> </li>
                 <li class="active"><a href="book.html">Book a Ride</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li class="parent"><a href="#">More</a>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Boarding</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">Meet the Horses</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Horses</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">General Services</a></li>
+                        <li><a href="#">Things to do Nearby</a></li>
+                        <li><a href="#">2020 and Beyond</a></li>
+                        <li><a href="#">FAQS</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
@@ -68,9 +90,15 @@
             </div>
 
             <div class="trails">
-                <p>Read about our notorious Lockhart Rides, 15 miles outside of Austin on the TRAILS page. <a>Click HERE</a>.</p>
+                <p>Read about our notorious Lockhart Rides, 15 miles outside of Austin on the TRAILS page. <a>Click
+                        HERE</a>.</p>
 
-                <p>Rides vary in level of complexity.  Keep posted for info on Bluff Top Trail openings for the most laid-back and leisurely experience.  This fall, our Ranch Ride is lightly instructional with some decent elevation changes and some light trotting on some rides.  Riders should be prepared to get a bit of a workout.  Looking for more?  Read about the extremely popular Horsemanship Trail and Barbecue Ride to downtown Lockhart!  May God bless Texas, where horses are a legal, fantastic, environmentally-friendly form of transportation.  Yee yee!</p>
+                <p>Rides vary in level of complexity. Keep posted for info on Bluff Top Trail openings for the most
+                    laid-back and leisurely experience. This fall, our Ranch Ride is lightly instructional with some
+                    decent elevation changes and some light trotting on some rides. Riders should be prepared to get a
+                    bit of a workout. Looking for more? Read about the extremely popular Horsemanship Trail and Barbecue
+                    Ride to downtown Lockhart! May God bless Texas, where horses are a legal, fantastic,
+                    environmentally-friendly form of transportation. Yee yee!</p>
 
                 <p>#keeplockhartcountry IG @maverick_horseback_riding</p>
             </div>
@@ -78,189 +106,212 @@
             <div class="signupForm">
 
 
-            <form method="get" action="thanks.html">
-                <fieldset>
-                    <legend>The Ride</legend>
+                <form method="get" action="thanks.html">
+                    <fieldset>
+                        <legend>The Ride</legend>
 
-                    <div>Pick a Ride</div>
-                    <select name="rideOption" required>
-                        <option value="">Please Select</option>
-                        <option value="ranch">Ranch Ride</option>
-                        <option value="private">Private Rider, Park, BBQ, or Horsemanship Ride</option>
-                        <option value="childrens">The Chrildren's Introduction to Horsemanship on the Trail</option>
-                        <option value="private ranch">Private Ranch Ride</option>
-                        <option value="one hour">One Hour Private Ride</option>
-                        <option value="group">Group Horsemanship Trail Ride</option>
-                    </select>
+                        <div>Pick a Ride*</div>
+                        <select name="rideOption" required>
+                            <option value="">Please Select</option>
+                            <option value="ranch">Ranch Ride</option>
+                            <option value="private">Private Rider, Park, BBQ, or Horsemanship Ride</option>
+                            <option value="childrens">The Chrildren's Introduction to Horsemanship on the Trail</option>
+                            <option value="private ranch">Private Ranch Ride</option>
+                            <option value="one hour">One Hour Private Ride</option>
+                            <option value="group">Group Horsemanship Trail Ride</option>
+                        </select>
 
-                    <label class="top">Pick a Date<input type="date" name="rideDate" required></label>
+                        <label class="top">Pick a Date*<input type="date" name="rideDate" required></label>
 
-                    <div>Pick a Time</div>
-                    <label class="sbs" required><input type="radio" name="time" value="morning"> 10:00am Ride</label>
-                    <label class="sbs"><input type="radio" name="time" value="afternoon"> 1:15pm Ride</label>
+                        <div>Pick a Time*</div>
+                        <label class="sbs" required><input type="radio" name="time" value="morning"> 10:00am
+                            Ride</label>
+                        <label class="sbs"><input type="radio" name="time" value="afternoon"> 1:15pm Ride</label>
 
-                </fieldset>
+                    </fieldset>
 
 
-                <fieldset>
-                    <legend>Rider</legend>
-                    <h2>ATTENTION:</h2>
+                    <fieldset>
+                        <legend>Rider</legend>
+                        <h2>ATTENTION:</h2>
 
-                    <p>Women 185+ lbs. and men 210+ lbs. Please CALL us before finishing the booking: 512-230-8413.</p>
+                        <p>Women 185+ lbs. and men 210+ lbs. Please CALL us before finishing the booking: 512-230-8413.
+                        </p>
                         <p>Thank you.</p>
 
-                    <div><span>PLEASE READ CAREFULLY*</span></div>
-                        <label><input type="checkbox" name="size" value="agreement" required/> By selecting this box I understand that if I misrepresent my abilities, age, or weight by over 10 lbs, I may be prohibited from participating in the riding portion of the experience, and I will not be rewarded a refund.</label>
+                        <div class="agreement">
+                        <div><span>PLEASE READ CAREFULLY*</span></div>
+                        <label ><input type="checkbox" name="size" value="agreement" required /> By selecting this box I
+                            understand that if I misrepresent my abilities, age, or weight by over 10 lbs, I may be
+                            prohibited from participating in the riding portion of the experience, and I will not be
+                            rewarded a refund.</label>
+                        </div>
 
-                    <label class="top">First Name* <input type="text" name="fname" required></label>
+                        <label class="top">First Name* <input type="text" name="fname" required></label>
 
-                    <div>Select a height*</div>
-                    <select name="hightOption" required>
-                        <option value="">Please Select</option>
-                        <option value="under">under 4'</option>
-                        <option value="four">4'1"</option>
-                        <option value="four two">4'2"</option>
-                        <option value="four three">4'3"</option>
-                        <option value="four four">4'4"</option>
-                        <option value="four five">4'5"</option>
-                        <option value="four six">4'6"</option>
-                        <option value="four seven">4'7"</option>
-                        <option value="four eight">4'8"</option>
-                        <option value="four nine">4'9"</option>
-                        <option value="four ten">4'10"</option>
-                        <option value="four eleven">4'11"</option>
+                        <div>Select a height*</div>
+                        <select name="hightOption" required>
+                            <option value="">Please Select</option>
+                            <option value="under">under 4'</option>
+                            <option value="four">4'1"</option>
+                            <option value="four two">4'2"</option>
+                            <option value="four three">4'3"</option>
+                            <option value="four four">4'4"</option>
+                            <option value="four five">4'5"</option>
+                            <option value="four six">4'6"</option>
+                            <option value="four seven">4'7"</option>
+                            <option value="four eight">4'8"</option>
+                            <option value="four nine">4'9"</option>
+                            <option value="four ten">4'10"</option>
+                            <option value="four eleven">4'11"</option>
 
-                        <option value="five">5</option>
-                        <option value="five">5"1</option>
-                        <option value="five two">5'2"</option>
-                        <option value="five three">5'3"</option>
-                        <option value="five four">5'4"</option>
-                        <option value="five five">5'5"</option>
-                        <option value="five six">5'6"</option>
-                        <option value="five seven">5'7"</option>
-                        <option value="five eight">5'8"</option>
-                        <option value="five nine">5'9"</option>
-                        <option value="five ten">5'10"</option>
-                        <option value="five eleven">5'11"</option>
+                            <option value="five">5</option>
+                            <option value="five">5"1</option>
+                            <option value="five two">5'2"</option>
+                            <option value="five three">5'3"</option>
+                            <option value="five four">5'4"</option>
+                            <option value="five five">5'5"</option>
+                            <option value="five six">5'6"</option>
+                            <option value="five seven">5'7"</option>
+                            <option value="five eight">5'8"</option>
+                            <option value="five nine">5'9"</option>
+                            <option value="five ten">5'10"</option>
+                            <option value="five eleven">5'11"</option>
 
-                        <option value="six">6'</option>
-                        <option value="six one">6'1"</option>
-                        <option value="six two">6'2"</option>
-                        <option value="six three">6'3"</option>
-                        <option value="six four">6'4"</option>
-                        <option value="six five">6'5"</option>
-                        <option value="six six">6'6"</option>
-                        <option value="six seven">6'7"</option>
-                        <option value="six eight">6'8"</option>
-                        <option value="six nine">6'9"</option>
-                        <option value="six ten">6'10"</option>
-                        <option value="six eleven">6'11"</option>
+                            <option value="six">6'</option>
+                            <option value="six one">6'1"</option>
+                            <option value="six two">6'2"</option>
+                            <option value="six three">6'3"</option>
+                            <option value="six four">6'4"</option>
+                            <option value="six five">6'5"</option>
+                            <option value="six six">6'6"</option>
+                            <option value="six seven">6'7"</option>
+                            <option value="six eight">6'8"</option>
+                            <option value="six nine">6'9"</option>
+                            <option value="six ten">6'10"</option>
+                            <option value="six eleven">6'11"</option>
 
-                        <option value="seven">7'</option>
-                        <option value="over">Over 7'</option>
-                    </select>
+                            <option value="seven">7'</option>
+                            <option value="over">Over 7'</option>
+                        </select>
 
-                    <div>Please write your weight in pounds*</div>
-                    <textarea class="userinfo" name="children" placeholder="150lbs" required></textarea>
+                        <div>Please write your weight in pounds*</div>
+                        <textarea class="userinfo" name="children" placeholder="150lbs" required></textarea>
 
-                    <div>Riding Experience</div>
-                    <label class="sbs"><input type="radio" name="experience" value="beginner"> Beginner</label>
-                    <label class="sbs"><input type="radio" name="experience" value="intermediate"> Intermediate</label>
-                    <label class="sbs"><input type="radio" name="experience" value="advanced"> Advanced</label>
+                        <div>Riding Experience</div>
+                        <label class="sbs"><input type="radio" name="experience" value="beginner"> Beginner</label>
+                        <label class="sbs"><input type="radio" name="experience" value="intermediate">
+                            Intermediate</label>
+                        <label class="sbs"><input type="radio" name="experience" value="advanced"> Advanced</label>
 
-                </fieldset>
-
-
-                <fieldset>
-                    <legend>Additional Information</legend>
-                    <p>If anyone in your party is physically handicapped, blind, uses a cane or has any other mental of physical limitations would you please let us know. Thank you!</p>
-                    <textarea class="userinfo" name="conditions"></textarea>
-                    <p>Why did you choose Maverick Horseback Riding? Are you celebrating something special, family fun, please let us know!</p>
-                    <textarea class="userinfo" name="celebrating"></textarea>
-                </fieldset>
+                    </fieldset>
 
 
-                <fieldset>
-                    <legend>Payment Information</legend>
-                    <div>Contact Information</div>
-                    <label class="top">Phone Number <input type="tel" name="phone" placeholder="1235551234" pattern="[0-9-. ]{10,14}"></label>
-                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        <p>If anyone in your party is physically handicapped, blind, uses a cane or has any other mental
+                            of physical limitations would you please let us know. Thank you!</p>
+                        <textarea class="userinfo" name="conditions"></textarea>
+                        <p>Why did you choose Maverick Horseback Riding? Are you celebrating something special, family
+                            fun, please let us know!</p>
+                        <textarea class="userinfo" name="celebrating"></textarea>
+                    </fieldset>
 
-                    <div>Card Information</div>
 
-                    <label class="top">Name on Card* <input type="text" name="cName" required></label>
-                    <label class="top">Card Number* <input type="number" name="cNumber" placeholder="1234 5678 9012 3456" required></label>
-                    <label class="top">Expiration Date* <input type="month" name="expires" required></label>
-            
-                </fieldset>
-            
-                <input type="submit" value="Book My Ride" class="submitBtn">
-            
-            </form>
-        </div>
+                    <fieldset>
+                        <legend>Payment Information</legend>
+                        <div>Contact Information</div>
+                        <label class="top">Phone Number <input type="tel" name="phone" placeholder="1235551234"
+                                pattern="[0-9-. ]{10,14}"></label>
+                        <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com"
+                                required></label>
+
+                        <div>Card Information</div>
+
+                        <label class="top">Name on Card* <input type="text" name="cName" required></label>
+                        <label class="top">Card Number* <input type="number" name="cNumber"
+                                placeholder="1234 5678 9012 3456" required></label>
+                        <label class="top">Expiration Date* <input type="month" name="expires" required></label>
+
+                    </fieldset>
+
+                    <input type="submit" value="Book My Ride" class="submitBtn">
+
+                </form>
+            </div>
 
 
 
             <div class="blogSection">
-                    <h1>The Blog</h1>
-                    <div class="card-hover">
-                        
-                        <div class="card">
-                            <div class="content">
-                                <h3>Back in the Saddle</h3>
-                                <p class="disappear">[…]</p>
+                <h1>The Blog</h1>
+                <div class="card-hover">
 
-                                <div class="hoverContent">
-                                    <p>
-                                        From the very first, infamous buffalo ride back in Hutto, to the now beloved
-                                        Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
-                                        may have never dreamed it may come to be. It’s a place where all around
-                                        knowledged people can come, wether you know how to ride or not, and […]
-                                    </p>
-                                    <div class="button"><a href="#"><button type="button">Read More</button></a></div>
-                                </div>
+                    <div class="card">
+                        <div class="content">
+                            <h3>Back in the Saddle</h3>
+                            <p class="disappear">[…]</p>
+
+                            <div class="hoverContent">
+                                <p>
+                                    From the very first, infamous buffalo ride back in Hutto, to the now beloved
+                                    Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
+                                    may have never dreamed it may come to be. It’s a place where all around
+                                    knowledged people can come, wether you know how to ride or not, and […]
+                                </p>
+                                <div class="button"><a href="#"><button type="button">Read More</button></a></div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="card">
-                            <div class="content">
-                                <h3>The Children's Introduction</h3>
-                                <p class="disappear">[…]</p>
+                    <div class="card">
+                        <div class="content">
+                            <h3>The Children's Introduction</h3>
+                            <p class="disappear">[…]</p>
 
-                                <div class="hoverContent">
-                                    <p>
-                                        Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences we offer, horseback riding
-                                        lessons at Maverick Ranch are… well… not the same as horseback riding lessons other places. What we don’t do:
-                                        Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship (ask about our developing cross country
-                                        course) What […]
-                                    </p>
-                                    <div class="button"><a href="#"><button type="button">Read More</button></a></div>
-                                </div>
-                                </div>
-                                </div>
-                                
-                                <div class="card">
-                                    <div class="content">
-                                        <h3>An Update For Guests</h3>
-                                         <p class="disappear">[…]</p>
+                            <div class="hoverContent">
+                                <p>
+                                    Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences
+                                    we offer, horseback riding
+                                    lessons at Maverick Ranch are… well… not the same as horseback riding lessons other
+                                    places. What we don’t do:
+                                    Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship (ask about
+                                    our developing cross country
+                                    course) What […]
+                                </p>
+                                <div class="button"><a href="#"><button type="button">Read More</button></a></div>
+                            </div>
+                        </div>
+                    </div>
 
-                                        <div class="hoverContent">
-                                            <p>
-                                                From the very first, infamous buffalo ride back in Hutto, to the now beloved
-                                                Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
-                                                may have never dreamed it may come to be. It’s a place where all around
-                                                knowledged people can come, wether you know how to ride or not, and […]
-                                            </p>
-                                            <div class="button"><a href="#"><button type="button">Read More</button></a></div>
-                                        </div>
-                                    </div>
+                    <div class="card" id="card-span">
+                        <div class="content">
+                            <h3>An Update For Guests</h3>
+                            <p class="disappear">[…]</p>
+
+                            <div class="hoverContent">
+                                <p>
+                                    Dear Mavericks, The world has been spinning and we here at Mavericks are rolling
+                                    right along with it.
+                                    Life offers many ups and downs for us all. For so many folks in the world right now,
+                                    there are a lot of
+                                    downs. Isn’t it wild we all share this? Mavericks was conceived some 13 years […]
+                                </p>
+                                <div class="button"><a href="#"><button type="button">Read More</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- end card-hover -->
+                    <div class="morePosts">
+
+                        <div class="search">
+                            <div class="inputField"><input type="text" name="search" placeholder="Search.."></div>
                         </div>
 
-                    </div> <!-- end card-hover -->
+                        <div class="viewMore"><button type="button">View More Posts</button></div>
+                    </div>
 
-                    <button type="button">View More Posts</button>
-
-            </div>  <!-- end blogSection--> 
+            </div> <!-- end blogSection-->
 
         </main>
     </div>

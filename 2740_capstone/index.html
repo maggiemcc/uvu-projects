@@ -38,19 +38,6 @@
     <!-- NAVIGATION HERE -->
     <div class="navWrapper">
         <nav class="clearfix">
-            <button onclick="toggleMenu()">&#9776;</button>
-            <ul id="primaryNav" class="hide">
-                <li class="active"><a href="index.html">Welcome</a></li>
-                <li><a href="horses.html">Horses</a></li>
-                <li><a href="book.html">Book a Ride</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-
-
-    <div class="navWrapper">
-        <nav class="clearfix">
     
             <button id="hamburgerBtn" onclick="toggleMenu()">
                 <span>&#9776; OPEN</span>
@@ -58,18 +45,27 @@
             </button>
     
             <ul id="primaryNav" class="hide">
-                <li><a href="#">Home</a></li>
-                <li class="parent"><a href="#">Products</a>
+                <li class="active"><a href="index.html">Welcome</a></li>
+                <li><a href="gallery.html">Gallery</a> </li>
+                <li><a href="book.html">Book a Ride</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="parent" ><a href="#">More</a>
                     <ul>
-                        <li><a href="#">Water Bottles</a></li>
-                        <li><a href="#">Hats</a></li>
-                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Boarding</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">Meet the Horses</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Horses</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">General Services</a></li>
+                        <li><a href="#">Things to do Nearby</a></li>
+                        <li><a href="#">2020 and Beyond</a></li>
+                        <li><a href="#">FAQS</a></li>
                     </ul>
                 </li>
-    
-                <li><a href="#">Deals</a></li>
-                <li class="active"><a href="#">Order</a></li>
-                <li><a href="#">Customer Reviews</a></li>
             </ul>
         </nav>
     </div>
@@ -79,35 +75,31 @@
     <div class="mainWrapper">
         <main>
             <div class="slider">
+                <!-- <picture>
+                    <source srcset="slider_images/horses450.jpg" media="(max-width: 28.12rem)">
+                    <source srcset="slider_images/horses1000.jpg" media="(min-width: 28.12rem)">
+                    <img src="slider_images/horses1000.jpg" alt="slider">
+                </picture> -->
+
                 <picture>
-                    <source srcset="slider_images/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="slider_images/hero900.jpg" media="(min-width: 28.12rem)">
-                    <img src="slider_images/hero1050.jpg" alt="slider">
+                    <source srcset="slider_images/ranch450.jpg" media="(max-width: 28.12rem)">
+                    <source srcset="slider_images/ranch1000.jpg" media="(min-width: 28.12rem)">
+                    <img src="slider_images/ranch1000.jpg" alt="slider">
                 </picture>
 
                 <picture>
-                    <source srcset="slider_images/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="slider_images/hero900.jpg" media="(min-width: 28.12rem)">
-                    <img src="slider_images/hero1050.jpg" alt="slider">
+                    <source srcset="slider_images/shadow_rider450.jpg" media="(max-width: 28.12rem)">
+                    <source srcset="slider_images/shadow_rider1000.jpg" media="(min-width: 28.12rem)">
+                    <img src="slider_images/shadow_rider1000.jpg" alt="slider">
                 </picture>
 
                 <picture>
-                    <source srcset="slider_images/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="slider_images/hero900.jpg" media="(min-width: 28.12rem)">
+                    <source srcset="slider_images/hero1050.jpg" media="(max-width: 28.12rem)">
+                    <source srcset="slider_images/hero1050.jpg" media="(min-width: 28.12rem)">
                     <img src="slider_images/hero1050.jpg" alt="slider">
                 </picture>
 
-                <picture>
-                    <source srcset="slider_images/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="slider_images/hero900.jpg" media="(min-width: 28.12rem)">
-                    <img src="slider_images/hero1050.jpg" alt="slider">
-                </picture>
-
-                <picture>
-                    <source srcset="slider_images/hero450.jpg" media="(max-width: 28.12rem)">
-                    <source srcset="slider_images/hero900.jpg" media="(min-width: 28.12rem)">
-                    <img src="slider_images/hero1050.jpg" alt="slider">
-                </picture>
+                
             </div>
 
 
@@ -206,7 +198,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" id="card-span">
                         <div class="content">
                             <h3>An Update For Guests</h3>
                             <p class="disappear">[…]</p>
@@ -226,7 +218,14 @@
 
                 </div> <!-- end card-hover -->
 
-                <button type="button">View More Posts</button>
+                <div class="morePosts">
+
+                    <div class="search">
+                        <div class="inputField"><input type="text" name="search" placeholder="Search.."></div>
+                    </div>
+
+                    <div class="viewMore"><button type="button">View More Posts</button></div>
+                </div>
             </div> <!-- end blogSection-->
 
         </main>
@@ -238,12 +237,8 @@
             <h1>Follow Us On</h1>
 
             <div class="social">
-                <a href="https://www.facebook.com/Maverick-Horseback-Riding-533495850053543/" target="_blank">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-                <a href="https://www.instagram.com/maverick_horseback_riding/?hl=en" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
+                <a href="https://www.facebook.com/Maverick-Horseback-Riding-533495850053543/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/maverick_horseback_riding/?hl=en" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
             </div>
 
 
