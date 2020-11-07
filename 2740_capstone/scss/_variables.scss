@@ -1,10 +1,27 @@
-$main-background-color: #fff;
-$sec-background-color: rgb(0,0,0);
-$nav-footer-color: rgb(85, 1, 1);
+// Background colors
+$main-color: rgb(1, 94, 131);
+$sec-color: #fff;
+$third-color: #000;
+$main-wrapper-color:rgb(224, 224, 224);
+$background-gradient: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
-$border: 1px solid #000;
+// Text colors
+$black-text: #000;
+$white-text: #fff;
 
-$main-text-color: #fff;
 
-$padding: 0;
+
+// Paddings
+$pad: 0;
+$pad-two: 2%;
+$pad-three: 3%;
+
+// Margins
 $margin: 0;
+$marg-two: 2%;
+
+// widths:
+$full-width: 100%;
+$sixty-width: 60%;
+$half-width: 50%;
+$forty-width: 40%;

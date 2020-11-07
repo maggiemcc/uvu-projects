@@ -1,3 +1,5 @@
+
+// toggle menu toggle
 function toggleMenu() {
     document.getElementById("primaryNav").classList.toggle("hide");
     document.getElementById("hamburgerBtn").classList.toggle("open");

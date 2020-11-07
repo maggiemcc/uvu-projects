@@ -11,7 +11,7 @@
 
     <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <meta http-equiv="refresh" content="10; URL=index.html">
 
     <!-- STYLE SHEETS -->
     <link href="css/styles.css" rel="stylesheet" />
@@ -49,7 +49,7 @@
     
             <ul id="primaryNav" class="hide">
                 <li><a href="index.html">Welcome</a></li>
-                <li class="active"><a href="gallery.html">Gallery</a> </li>
+                <li><a href="gallery.html">Gallery</a> </li>
                 <li><a href="book.html">Book a Ride</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li class="parent" ><a href="#">More</a>
@@ -84,40 +84,21 @@
                 <source media="(max-width: 900px)" srcset="images/heros/hero900.jpg">
                 <source media="(max-width: 1050px)" srcset="images/heros/hero1050.jpg">
 
-                <!-- Image from Unsplash -->
                 <img src="images/heros/hero1100.jpg" alt="The default if no other match is found">
             </picture>
 
-
             <div class="textContent">
-                <h1>Gallery</h1>
+                <h1>Confirmation</h1>
+            </div>
+
+            <div class="confirmation">
+                <h2>Thank you for your reservation!</h2>
+                <p>Your reservation was successfully made. We hope you will enjoy your ride and look forward to seeing you at our stables soon. Please feel free to contact us if you have any questions or concerns.</p>
+                <p>Sincerely,</p>
+                <h5>The Maverick Riding Team</h5>
             </div>
 
 
-
-
-            <!-- <div class="letter"> -->
-
-            <section class="gallery">
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <h4>Maverick Horseback Riding now offers special events for the community, visitors and horse enthusiasts!</h4>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <h4>When Maverick rode the streets of downtown Austin as the unofficial SXSW unicorn, equine trainer MacCoy had to oblige his requests that she dress as a woodlands fairy.</h4>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <h4>Maverick’s has a new Special Events venue in Lockhart</h4>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <h4>Maverick’s has a new Special Events venue in Lockhart</h4>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <h4>Bonfire party this Halloween 2017 with Maverick’s and Flying H</h4>
-
-            </section>
-
-            <!-- </div> -->
 
 
 
@@ -189,6 +170,8 @@
                 </div>
             </div>
 
+
+
         </main>
     </div>
 
@@ -201,23 +184,13 @@
                 <a href="https://www.facebook.com/Maverick-Horseback-Riding-533495850053543/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
                 <a href="https://www.instagram.com/maverick_horseback_riding/?hl=en" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
             </div>
-
+            
             <p>&copy; 2020 &bull; Maggie McCausland &bull; 10661046</p>
         </footer>
     </div>
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
-    <script>
-        var lazyLoadInstance = new LazyLoad({
-            elements_selector: ".lazy",
-            threshold: 0
-            // Your custom settings go here
-        });
-    </script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: $full-width;
+  -ms-text-size-adjust: $full-width;
 }
 
 /*----------- apply a natural box layout model to all elements --------------*/
@@ -17,14 +17,17 @@ body {
 
 /*-------- HEADER --------*/
 header {
-  padding: 0.5rem 2%;
-  background-color: $main-background-color;
+  padding: 0.5rem $pad-two;
+  background-color: $sec-color;
   display: grid;
   grid-template-columns: 100px auto;
+  grid-column-gap: .5rem;
 }
 
-header img {
-  width: 100%;
+header figure.logo {
+  float: left;
+  margin: 0 2% 0 0;
+  img {width: 100%;}
 }
 
 header h1 {
@@ -34,25 +37,25 @@ header h1 {
   margin-top: 1.3rem;
 }
 header h2 {
-  margin: 0;
+  margin: $margin;
   font-weight: 600;
   font-size: 1rem;
 }
 
 /*-------- NAV --------*/
 .navWrapper {
-  background-color: #fff;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  background-color: $sec-color;
+  border-top: 2px solid $black-text;
+  border-bottom: 2px solid $black-text;
 }
 
 nav button {
-  margin: .2rem 2%;
+  margin: .2rem $marg-two;
   background-color: transparent;
   outline: none;
   border: none;
   font-size: 1.6rem;
-  color: #000;
+  color: $black-text;
 }
 
 #hamburgerBtn span:nth-child(1) {display: block;}
@@ -87,21 +90,21 @@ nav button {
 
 nav ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+  padding: $pad;
+  margin: $margin;
 }
 
 nav ul li a {
   display: block;
-  padding: .8rem 2%;
+  padding: .8rem $pad-two;
   text-decoration: none;
-  color: #000;
-  border-top: 1px solid #000;
+  color: $black-text;
+  border-top: 1px solid $black-text;
 }
 
-nav ul li.active a {background-color: rgb(1, 94, 131); color: #fff;}
+nav ul li.active a {background-color: $main-color; color: $white-text;}
 nav ul li a:hover {
-  background-color: rgb(1, 50, 70); color: #fff;
+  background-color: rgb(1, 50, 70); color: $sec-color;
 }
 
 nav ul.hide {display: none;}
@@ -112,62 +115,21 @@ nav ul.hide {display: none;}
 
 /*-------- MAIN --------*/
 .mainWrapper {
-  background-color: rgb(224, 224, 224);
+  background-color: $main-wrapper-color;
 }
 
 main {
   min-height: 10rem;
   margin: $margin auto;
-  background-color: #fff;
+  background-color: $sec-color;
 }
 
-/*-------- Hero/slider --------*/
-
-.slider picture {
-  position: relative;
-  padding: 0;
-  margin: 0;
-}
-.slider picture img {
-  width: 100%;
-}
-
-main picture.hero {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-main picture.hero img {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.textContent {
-  padding: 2% 2%;
-  margin: 0;
-  background-color: #fff;
-}
-
-.gallery {
-  padding: 1.2rem 0;
-}
-
-
-.gallery h4 {
-  margin: 0 auto;
-  text-align: center;
-  padding: 2% 4%;
-  font-weight: 400;
-  font-size: 1.2rem;
-}
-
-/*-------- page h1 titles --------*/
+/*-------- page h1 titles/h3 --------*/
 
 main {
   h1 {
-    margin: 0 auto;
-    padding: 2rem 0;
+    margin: $margin auto;
+    padding: .8rem $pad;
     text-align: center;
     font-size: 30px;
     max-width: 600px;
@@ -179,9 +141,9 @@ main {
     display: block;
     width: 25%;
     height: 5px;
-    background: #000;
+    background: $third-color;
     left: 0;
-    top: 50%;
+    top: $half-width;
     position: absolute;
   }
   h1:after {
@@ -190,16 +152,16 @@ main {
     width: 130px;
     width: 25%;
     height: 5px;
-    background: #000;
+    background: $third-color;
     right: 0;
-    top: 50%;
+    top: $half-width;
     position: absolute;
   }
 
   h3 {
     text-align: center;
     font-weight: 400;
-    margin: 0;
+    margin: $margin;
 
     span {
       font-style: italic;
@@ -207,75 +169,145 @@ main {
   }
 }
 
-/*-------- letter --------*/
 
-.letter {
+.confirmation {
   padding: 1rem 5%;
 
-  a {
-    color: rgb(1, 94, 131);
-    font-weight: 700;
-    text-decoration: none;
-    padding: 0.5rem 0.2rem;
+  h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
   }
+  
 
-  a:hover {
-    text-decoration: underline;
+  h5 {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 0;
+    padding-left: 2%;
+    font-weight: 400;
+  }
+}
+
+
+/*-------- Hero/slider --------*/
+
+.slider picture {
+  position: relative;
+  padding: $pad;
+  margin: $margin;
+
+  img {
+    width: $full-width;
+  }
+}
+
+
+main picture.hero {
+  width: $full-width;
+  margin: $margin;
+  padding: $pad;
+
+  img {
+    width: $full-width;
+    margin: $margin;
+    padding: $pad;
+  }
+}
+
+
+.textContent {
+  padding: $pad-two;
+  margin: $margin;
+  background-color: $sec-color;
+}
+
+
+
+/*-------- welcome letter/book now --------*/
+.letter, .trails {
+  padding: 1rem 5%;
+
+  div {
+    margin: $margin auto;
+
+    button {
+      margin: .7rem $margin;
+      width: $sixty-width;
+      background-color: $main-color;
+      padding: 0.8rem $pad;
+      border: none;
+      border-radius: 3px;
+  
+      a {
+        text-decoration: none;
+        color: $white-text;
+        font-weight: 700;
+      }
+    }
+  
+  
+    button:hover {
+      background-color: $third-color;
+      color: $white-text;
+      cursor: pointer;
+      text-decoration: none;
+    }
   }
 }
 
 
 
 
-/*-------- BOOK/FORM --------*/
-.trails {
-  padding: .5rem 5%;
-  margin: 0 auto;
 
-  a {
-    color: rgb(1, 94, 131);
-    font-weight: 700;
-    text-decoration: none;
-    padding: 0.5rem 0.2rem;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
+/*-------- gallery --------*/
+.gallery {
+  padding: 1.2rem $pad;
 }
 
+
+.gallery h4 {
+  margin: $margin;
+  text-align: center;
+  padding: $pad-two 4%;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+
+
+/*-------- signup/contact form --------*/
 .signupForm {
   padding: .5rem 5%;
-  margin: 0 auto;
+  margin: $margin;
 
 
 
   fieldset {
-    background-color: #fff;
-    margin: 2rem 0;
-    border: 3px solid #000;
+    background-color: $sec-color;
+    margin: 2rem $margin;
+    border: 3px solid $black-text;
     border-radius: 15px;
-    padding: 2%;
+    padding: $pad-two;
 
     p {
-      width: 100%;
+      width: $full-width;
       max-width: 90%;
     }
   }
 
   legend {
-    color: rgb(1, 94, 131);
+    color: $main-color;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.5rem;
-    margin: 0 2%;
-    padding: 0 3%;
+    font-size: 1.2rem;
+    margin: $margin $marg-two;
+    padding: $pad $pad-three;
   }
 
   label.top, div {
     display: block;
     padding-top: 1rem;
-    color: #000;
+    color: $black-text;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 300;
@@ -287,17 +319,17 @@ main {
   }
 
   .agreement {
-    width: 100%;
+    width: $full-width;
     max-width: 90%;
   }
   
 }
 
 form select, form textarea {
-  border: 1px solid #000;
+  border: 1px solid $black-text;
   border-radius: 3px;
   padding: .75rem;
-  width: 100%;
+  width: $full-width;
   max-width: 20rem;
 }
 
@@ -306,11 +338,11 @@ form label.top input, form label.top select {
   -webkit-appearance: none;
   display: block;
   font-size: 1rem;
-  border: 1px solid #000;
+  border: 1px solid $black-text;
   border-radius: 3px;
   padding: .75rem;
   color: #555;
-  width: 100%;
+  width: $full-width;
   max-width: 20rem;
   background-color: rgba(0,0,0,0.05);
 }
@@ -322,16 +354,14 @@ form label.sbs {
 }
 
 
-
-
-
 form input.submitBtn {
-  border: 2px solid #000;
-  background-color: rgb(1, 94, 131);
-  color: #fff;
+  // border: 2px solid $black-text;
+  border: none;
+  background-color: $main-color;
+  color: $white-text;
   border-radius: 16px;
   padding: .75rem 1.5rem;
-  margin: 0 0 2.5rem 2%;
+  margin: $margin $margin 2.5rem $marg-two;
   width: 96%;
   max-width: 20rem;
   text-transform: uppercase;
@@ -356,29 +386,28 @@ form label.top input:required:valid {
 
 
 
-
-
 /*-------- gallery--------*/
 section.gallery figure {
-  width: 100%;
+  width: $full-width;
   height: 0;
   // padding-bottom: 56.8%;
   padding-bottom: 38.8%;
   position: relative;
-  margin: 0;
+  margin: $margin;
+
+  img {
+    width: $full-width;
+    height: auto;
+    position: absolute;
+  }
 }
 
-section.gallery figure img {
-  width: 100%;
-  height: auto;
-  position: absolute;
-}
 
 /*-------- video --------*/
 .videoSection {
   background-color: rgba(26, 92, 0, 0.205);
-  margin: 0 auto;
-  padding: .5rem 2%;
+  margin: $margin;
+  padding: .5rem $pad-two;
   padding-bottom: 1.5rem;
 
   .video {
@@ -387,16 +416,15 @@ section.gallery figure img {
   }
   
   .youtubeVideo {
-    background-color: #000;
-    // margin-bottom: 30px;
+    background-color: $third-color;
     position: relative;
     padding-top: 56.25%;
     overflow: hidden;
     cursor: pointer;
-    width: 100%;
+    width: $full-width;
     
     img {
-      width: 100%;
+      width: $full-width;
       top: -16.82%;
       left: 0;
       opacity: 0.7;
@@ -406,7 +434,7 @@ section.gallery figure img {
       width: 90px;
       height: 60px;
       background-color: #333;
-      box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+      box-shadow: 0 0 30px rgba( 0,0,0,0.6);
       z-index: 1;
       opacity: 0.8;
       border-radius: 6px;
@@ -416,7 +444,7 @@ section.gallery figure img {
       content: "";
       border-style: solid;
       border-width: 15px 0 15px 26.0px;
-      border-color: transparent transparent transparent #fff;
+      border-color: transparent transparent transparent $white-text;
     }
   
     img, .play-button {cursor: pointer;}
@@ -424,14 +452,14 @@ section.gallery figure img {
     img, iframe, .play-button, .play-button:before {position: absolute;}
   
     .play-button, .play-button:before {
-      top: 50%;
-      left: 50%;
-      transform: translate3d( -50%, -50%, 0 );
+      top: $half-width;
+      left: $half-width;
+      transform: translate3d( -$half-width, -$half-width, 0 );
     }
   
     iframe {
-      height: 100%;
-      width: 100%;
+      height: $full-width;
+      width: $full-width;
       top: 0;
       left: 0;
     }
@@ -440,69 +468,42 @@ section.gallery figure img {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------- BLOG --------*/
-.blogSection {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 2% 2%;
-  border-top: 3px solid #000;
-  border-bottom: 3px solid #000;
+.blog {
+  width: $full-width;
+  height: $full-width;
+  margin: $margin auto;
+  padding: $pad-two;
+  border-top: 3px solid $black-text;
+  border-bottom: 3px solid $black-text;
   text-align: center;
-  line-height: 1;
+  background-color: $sec-color;
 
-  button {
-    width: 80%;
-    background-color: rgb(1, 94, 131);
-    font-weight: 700;
-    color: #fff;
-    padding: 0.8rem 0;
-    // margin: 0.5rem 0;
-    border: none;
-    border-radius: 3px;
-  }
-
-  button:hover {
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  .morePosts {
+    .morePosts {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 5% 2%;
+    margin: $margin auto;
+    padding: 5% $pad;
+    margin: 1.2rem $margin;
 
-    .viewMore {
-      margin: 0;
-      padding: .5rem 0;
-    }
+      .viewMore {
+        margin: $margin;
+        padding: .5rem $pad;
+      }
 
-  .search{
-    margin: 0;
-    padding: .5rem 0;
+      .search{
+        margin: $margin;
+        padding: .5rem $pad;
+      }
 
-
-    input[type=text] {
+      input[type=text] {
       width: 150px;
-      width: 40%;
+      width: $forty-width;
       box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 4px;
+      border: 2px solid rgb(189, 189, 189);
+      border-radius: 3px;
       font-size: 16px;
-      background-color: white;
+      background-color: $sec-color;
       background-image: url('../images/search-outline.svg');
       background-position: 5px 5px; 
       background-size: 30px;
@@ -510,137 +511,132 @@ section.gallery figure img {
       padding: 12px 20px 12px 40px;
       -webkit-transition: width 0.4s ease-in-out;
       transition: width 0.4s ease-in-out;
-    }
-    
-    input[type=text]:focus {width: 80%;}
+      }
+      
+      input[type=text]:focus {width: 80%;}
+
+      button {
+        width: 80%;
+        background-color: $main-color;
+        font-weight: 700;
+        color: $white-text;
+        padding: 0.8rem $pad;
+        border: none;
+        border-radius: 3px;
+      }
+
+      button:hover {
+        background-color: $third-color;
+        color: $white-text;
+        cursor: pointer;
+      }
   }
 
-  }
 }
 
 
 .card-hover {
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: .5rem;
+  grid-row-gap: 1%;
 
   .card {
     display: block;
-    width: 100%;
-    height: 470px;
+    width: $full-width;
+    height: 300px;
     text-align: center;
     text-decoration: none;
-    padding: 5% 5%;
+    padding: $pad-three;
     transition: all 0.5s ease-in;
-    color: #fff;
+    color: $white-text;
     border-radius: 3px;
 
-
     .content {
-      height: 100%;
-      border: 3px solid #fff;
+      height: $full-width;
+      border: 3px solid $white-text; 
       border-radius: 3px;
-      padding: 3%;
+      padding: $pad-three;
 
-      h3,
-      .disappear {
+      h3, .disappear {
         font-size: 2rem;
-        text-shadow: 1px 1px 5px #000;
+        text-shadow: 1px 1px 5px $third-color;
         text-align: center;
+        margin: $margin;
       }
 
-      p {
-        font-size: 1.3rem;
+      .description {
+        font-size: 1rem;
         text-align: left;
+
+        .readMore {
+          text-align: center;
+        }
+
+        .readMore:hover {
+          font-weight: 700;
+          text-transform: uppercase;
+        }
       }
     }
   }
-}
 
-.hoverContent {
-  display: none;
-
-  a {
-    text-decoration: none;
-    width: 100%;
-
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 700;
-      height: 2.5rem;
-      color: #000;
-      background-color: #fff;
-      width: 75%;
-      border: none;
-      margin: auto;
-      border-radius: 3px;
-    }
-
-    button:hover {
-      background-color: #fff;
-      color: #000;
-      cursor: pointer;
+  .card:hover {
+    background-color: none;
+    text-shadow: 0px 0px 10px $third-color;
+  
+    img {
+      filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
     }
   }
 }
 
-.card-hover .card:hover {
-  background-color: none;
-  .disappear {
-    display: none;
-  }
-}
+
 
 .card:nth-child(1) {
-  background: url(../images/hover_images/blog1.jpg);
+  background: $background-gradient, url(../images/hover_images/blog1.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  .description {display: none;}
 }
+
 .card:nth-child(2) {
-  background: url(../images/hover_images/blog2.jpg);
+  background: $background-gradient, url(../images/hover_images/blog2.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  .description {display: none;}
 }
+
 .card:nth-child(3) {
-  background: url(../images/hover_images/blog3.jpg);
+  background: $background-gradient, url(../images/hover_images/blog3.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  .description {display: none;}
 }
+
 
 .card:hover {
-  background-color:  rgb(2, 89, 124);
-
   background-image: none;
-
-  text-shadow: 1px 1px 2px #000;
-  font-weight: 400;
-
-  .hoverContent {
-    display: block;
-  }
-
-  button:hover {
-    background-color: black;
-    color: white;
-  }
+  background-color: $main-color;
+  .disappear {display: none;}
+  .description {display: block;}
 }
+
 
 
 
 /*-------- FOOTER --------*/
 .footerWrapper {
-  background-color: $sec-background-color;
-  background-color: #fff;
+  background-color: $sec-color;
+  background-color: $sec-color;
 }
 
 footer {
-  color: $main-text-color;
-  color: #000;
+  color: $black-text;
   text-align: center;
-  padding: 0.8rem 2%;
+  padding: 0.8rem $pad-two;
 
   h1 {
     font-size: 1.2rem;
@@ -649,8 +645,8 @@ footer {
 
 footer .social a {
   font-size: 2.5rem;
-  margin: 2% 0.5rem;
-  color: rgb(1, 94, 131);
+  margin: $marg-two 0.5rem;
+  color: $main-color;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/

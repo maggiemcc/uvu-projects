@@ -27,7 +27,13 @@
 <body>
     <!-- HEADER HERE -->
     <header>
-        <img src="images/logo.png" alt="logo">
+
+        <figure class="logo">
+           <img src="images/logo.png" alt="logo"
+           srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x">
+         </figure>
+
+        <!-- <img src="images/logo.png" alt="logo"> -->
         <div>
             <h1>Maverick Horseback Riding</h1>
             <h2>Ride the Way You Want</h2>
@@ -94,7 +100,7 @@
                 </picture>
 
                 <picture>
-                    <source srcset="slider_images/hero1050.jpg" media="(max-width: 28.12rem)">
+                    <source srcset="slider_images/hero450.jpg" media="(max-width: 28.12rem)">
                     <source srcset="slider_images/hero1050.jpg" media="(min-width: 28.12rem)">
                     <img src="slider_images/hero1050.jpg" alt="slider">
                 </picture>
@@ -146,87 +152,87 @@
                     that horses who feel appreciated, listened to and respected are the most enjoyable ones to ride.
                     We advocate giving riders the freedom to ride and control responsive horses because that’s what
                     horseback riding –and horsemanship– is all about. Want to learn more about our mission to share
-                    animal and land stewardship with Texas and beyond? Read <a href="#">ABOUT US</a> and find out about
-                    how your
+                    animal and land stewardship with Texas and beyond? Read about us and find out about how your
                     ride with us funds our big plans to reach foster children, disadvantaged mothers and
                     socio-economically challenged families.</p>
+
+                <div>
+                <button type="button"><a href="#">Read More About Us</a></button>
+                </div>
 
                 <p>We hope to see you in the saddle!</p>
                 <p>-The Maverick Riding Team</p>
             </div>
 
 
-            <div class="blogSection">
+
+            <div class="blog">
                 <h1>The Blog</h1>
-
+            
                 <div class="card-hover">
-
-                    <div class="card">
+            
+                    <a class="card" href="https://maverickhorsebackriding.com/back-in-the-saddle/" target=" _blank">
                         <div class="content">
                             <h3>Back in the Saddle</h3>
                             <p class="disappear">[…]</p>
-
-                            <div class="hoverContent">
+                            <div class="description">
                                 <p>
                                     From the very first, infamous buffalo ride back in Hutto, to the now beloved
                                     Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
                                     may have never dreamed it may come to be. It’s a place where all around
-                                    knowledged people can come, wether you know how to ride or not, and […]
+                                    knowledged people can come, wether you know how to ride or not, and...
                                 </p>
-                                <div class="button"><a href="#"><button type="button">Read More</button></a></div>
+                                <p class="readMore">Click to Read More</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card">
+                    </a>
+            
+                    <a class="card" href="https://maverickhorsebackriding.com/the-childrens-introduction-to-horsemanship/"
+                        target=" _blank">
                         <div class="content">
                             <h3>The Children's Introduction</h3>
                             <p class="disappear">[…]</p>
-
-                            <div class="hoverContent">
+                            <div class="description">
                                 <p>
-                                    Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences
-                                    we offer, horseback riding
-                                    lessons at Maverick Ranch are… well… not the same as horseback riding lessons other
-                                    places. What we don’t do:
-                                    Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship (ask about
-                                    our developing cross country
-                                    course) What […]
+                                    Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences we offer,
+                                    horseback riding lessons at Maverick Ranch are… well… not the same as horseback riding lessons other
+                                    places. What we don’t do: Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship 
+                                    (ask about our developing cross country course) What...
                                 </p>
-                                <div class="button"><a href="#"><button type="button">Read More</button></a></div>
+                                <p class="readMore">Click to Read More</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card" id="card-span">
+                    </a>
+            
+                    <a class="card" href="https://maverickhorsebackriding.com/an-update-for-guests-at-maverick-ranch/"
+                        target=" _blank">
                         <div class="content">
                             <h3>An Update For Guests</h3>
                             <p class="disappear">[…]</p>
-
-                            <div class="hoverContent">
+                            <div class="description">
                                 <p>
-                                    Dear Mavericks, The world has been spinning and we here at Mavericks are rolling
-                                    right along with it.
-                                    Life offers many ups and downs for us all. For so many folks in the world right now,
-                                    there are a lot of
-                                    downs. Isn’t it wild we all share this? Mavericks was conceived some 13 years […]
+                                    Dear Mavericks, The world has been spinning and we here at Mavericks are rolling right along
+                                    with it. Life offers many ups and downs for us all. For so many folks in the world right now, 
+                                    there are a lot of downs. Isn’t it wild we all share this? Mavericks was conceived some 13 years...
                                 </p>
-                                <div class="button"><a href="#"><button type="button">Read More</button></a></div>
+                                <p class="readMore">Click to Read More</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                </div> <!-- end card-hover -->
-
-                <div class="morePosts">
-
-                    <div class="search">
-                        <div class="inputField"><input type="text" name="search" placeholder="Search.."></div>
-                    </div>
-
-                    <div class="viewMore"><button type="button">View More Posts</button></div>
                 </div>
-            </div> <!-- end blogSection-->
+                    
+                <div class="morePosts">
+                    
+                    <div class="search">
+                        <div class="inputField"><input type="text" name="search" placeholder="Search..."></div>
+                    </div>
+                    
+                    <div class="viewMore">
+                        <button type="button">View More Posts</button>
+                    </div>
+                </div>
+            </div>
 
         </main>
     </div>

@@ -27,7 +27,10 @@
 <body>
     <!-- HEADER HERE -->
     <header>
-        <img src="images/logo.png" alt="logo">
+        <figure class="logo">
+            <img src="images/logo.png" alt="logo"
+            srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x">
+          </figure>
         <div>
             <h1>Maverick Horseback Riding</h1>
             <h2>Ride the Way You Want</h2>
@@ -91,7 +94,12 @@
 
             <div class="letter">
                 <p>Dear Reader,</p>
-                <p>Our prices vary by service.  If you are looking for pricing information, or you would like to book a trail ride or a horsemanship experience, please visit <a href="#">Ride Prices and Schedules</a>. You may book from this page as well.</p>
+                <p>Our prices vary by service.  If you are looking for pricing information, or you would like to book a trail ride or a horsemanship experience, please visit our Ride Prices and Schedules page. You may book from this page as well.</p>
+
+                <div>
+                    <button type="button"><a href="#">View Ride Prices and Schedules</a></button>
+                </div>
+
                 <p>Call or text us at 512-230-8413.  If you listen to the voicemail, we will always have an update on emergency contacts.</p>
                 <p>Email us at maverickhorsebackriding@gmail.com</p>
                 <p>Thanks!</p>
@@ -101,7 +109,7 @@
 
             <div class="signupForm">
 
-            <form method="get" action="thanks.html">
+            <form method="get" action="contactedThanks.html">
                 <fieldset>
                     <legend>Contact Form</legend>
                     <label class="top">Name* <input type="text" name="fname" required></label>
@@ -113,7 +121,7 @@
             
                 </fieldset>
             
-                <input type="submit" value="Book My Ride" class="submitBtn">
+                <input type="submit" value="Send" class="submitBtn">
             
             </form>
         </div>
@@ -131,71 +139,75 @@
             </div>
 
 
-            <div class="blogSection">
-                    <h1>The Blog</h1>
 
-                    <div class="card-hover">
-                        
-                        <div class="card">
-                            <div class="content">
-                                <h3>Back in the Saddle</h3>
-                                <p class="disappear">[…]</p>
-                                <div class="hoverContent">
-                                    <p>
-                                        From the very first, infamous buffalo ride back in Hutto, to the now beloved
-                                        Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
-                                        may have never dreamed it may come to be. It’s a place where all around
-                                        knowledged people can come, wether you know how to ride or not, and […]
-                                    </p>
-                                    <div class="button"><a href="#"><button type="button">Read More</button></a></div>
-                                </div>
+            <div class="blog">
+                <h1>The Blog</h1>
+            
+                <div class="card-hover">
+            
+                    <a class="card" href="https://maverickhorsebackriding.com/back-in-the-saddle/" target=" _blank">
+                        <div class="content">
+                            <h3>Back in the Saddle</h3>
+                            <p class="disappear">[…]</p>
+                            <div class="description">
+                                <p>
+                                    From the very first, infamous buffalo ride back in Hutto, to the now beloved
+                                    Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
+                                    may have never dreamed it may come to be. It’s a place where all around
+                                    knowledged people can come, wether you know how to ride or not, and...
+                                </p>
+                                <p class="readMore">Click to Read More</p>
                             </div>
                         </div>
-
-                        <div class="card">
-                            <div class="content">
-                                <h3>The Children's Introduction</h3>
-                                <p class="disappear">[…]</p>
-
-                                <div class="hoverContent">
-                                    <p>
-                                        Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences we offer, horseback
-                                        riding lessons at Maverick Ranch are… well… not the same as horseback riding lessons other places. What
-                                        we don’t do: Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship (ask about our
-                                        developing cross country course) What […]
-                                    </p>
-                                    <div class="button"><a href="#"><button type="button">Read More</button></a></div>
-                                </div>
+                    </a>
+            
+                    <a class="card" href="https://maverickhorsebackriding.com/the-childrens-introduction-to-horsemanship/"
+                        target=" _blank">
+                        <div class="content">
+                            <h3>The Children's Introduction</h3>
+                            <p class="disappear">[…]</p>
+                            <div class="description">
+                                <p>
+                                    Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences we offer,
+                                    horseback riding lessons at Maverick Ranch are… well… not the same as horseback riding lessons other
+                                    places. What we don’t do: Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship 
+                                    (ask about our developing cross country course) What...
+                                </p>
+                                <p class="readMore">Click to Read More</p>
                             </div>
                         </div>
-
-                        <div class="card" id="card-span">
-                            <div class="content">
-                                <h3>An Update For Guests</h3>
-                                <p class="disappear">[…]</p>
-
-                                <div class="hoverContent">
-                                    <p>
-                                        Dear Mavericks, The world has been spinning and we here at Mavericks are rolling right along with it.
-                                        Life offers many ups and downs for us all. For so many folks in the world right now, there are a lot of
-                                        downs. Isn’t it wild we all share this? Mavericks was conceived some 13 years […]
-                                    </p>
-                                    <div class="button"><a href="#"><button type="button">Read More</button></a></div>
-                                </div>
+                    </a>
+            
+                    <a class="card" href="https://maverickhorsebackriding.com/an-update-for-guests-at-maverick-ranch/"
+                        target=" _blank">
+                        <div class="content">
+                            <h3>An Update For Guests</h3>
+                            <p class="disappear">[…]</p>
+                            <div class="description">
+                                <p>
+                                    Dear Mavericks, The world has been spinning and we here at Mavericks are rolling right along
+                                    with it. Life offers many ups and downs for us all. For so many folks in the world right now, 
+                                    there are a lot of downs. Isn’t it wild we all share this? Mavericks was conceived some 13 years...
+                                </p>
+                                <p class="readMore">Click to Read More</p>
                             </div>
                         </div>
+                    </a>
 
-                    </div> <!-- end card-hover -->
-
-                    <div class="morePosts">
-
-                        <div class="search">
-                            <div class="inputField"><input type="text" name="search" placeholder="Search.."></div>
-                        </div>
-
-                        <div class="viewMore"><button type="button">View More Posts</button></div>
+                </div>
+                    
+                <div class="morePosts">
+                    
+                    <div class="search">
+                        <div class="inputField"><input type="text" name="search" placeholder="Search..."></div>
                     </div>
-            </div>  <!-- end blogSection-->
+                    
+                    <div class="viewMore">
+                        <button type="button">View More Posts</button>
+                    </div>
+                </div>
+            </div>
+
 
         </main>
     </div>
