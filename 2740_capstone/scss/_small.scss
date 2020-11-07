@@ -478,8 +478,7 @@ section.gallery figure {
   height: $full-width;
   margin: $margin auto;
   padding: $pad-two;
-  border-top: 3px solid $black-text;
-  border-bottom: 3px solid $black-text;
+  border-top: 2px solid $black-text;
   text-align: center;
   background-color: $sec-color;
 
@@ -634,7 +633,7 @@ section.gallery figure {
 /*-------- FOOTER --------*/
 .footerWrapper {
   background-color: $sec-color;
-  background-color: $sec-color;
+  border-top: 2px solid $black-text;
 }
 
 footer {
