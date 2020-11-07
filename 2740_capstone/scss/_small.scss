@@ -410,6 +410,7 @@ section.gallery figure {
 /*-------- video --------*/
 .videoSection {
   background-color: rgba(26, 92, 0, 0.205);
+  border-top: 2px solid $black-text;
   margin: $margin;
   padding: .5rem $pad-two;
   padding-bottom: 1.5rem;
@@ -481,13 +482,15 @@ section.gallery figure {
   border-top: 2px solid $black-text;
   text-align: center;
   background-color: $sec-color;
+  background-color: rgba(0, 81, 92, 0.205);
+
 
     .morePosts {
     display: grid;
     grid-template-columns: 1fr;
     margin: $margin auto;
     padding: 5% $pad;
-    margin: 1.2rem $margin;
+    margin: 1rem $margin;
 
       .viewMore {
         margin: $margin;
@@ -546,7 +549,7 @@ section.gallery figure {
   .card {
     display: block;
     width: $full-width;
-    height: 300px;
+    height: 310px;
     text-align: center;
     text-decoration: none;
     padding: $pad-three;
