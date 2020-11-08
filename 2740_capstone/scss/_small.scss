@@ -252,6 +252,8 @@ main picture.hero {
     button {
       margin: .7rem $margin;
       width: $sixty-width;
+      width: 100%;
+      max-width: 480px;
       background-color: $main-color;
       padding: 0.8rem $pad;
       border: none;
@@ -318,7 +320,7 @@ main picture.hero {
     font-weight: 700;
     font-size: 1.2rem;
     margin: $margin $marg-two;
-    padding: $pad $pad-three;
+    padding: $pad 1rem;
   }
 
   label.top, div {
@@ -333,7 +335,7 @@ main picture.hero {
 
   div span {
     font-weight: 700;
-  }
+    }
 
   .agreement {
     width: $full-width;
@@ -376,7 +378,7 @@ form input.submitBtn {
   border: none;
   background-color: $main-color;
   color: $white-text;
-  border-radius: 16px;
+  border-radius: 3px;
   padding: .75rem 1.5rem;
   margin: $margin $margin 2.5rem $marg-two;
   width: 96%;
@@ -736,12 +738,12 @@ section.gallery figure {
 
 .meetHorses {
   h1:before {
-    width: 10%;
+    width: 13%;
     height: 5px;
   }
   h1:after {
     // width: 130px;
-    width: 10%;
+    width: 13%;
   }
 }
 

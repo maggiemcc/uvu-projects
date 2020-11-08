@@ -50,6 +50,7 @@ header {
   div {
   button {
     width: $forty-width;
+    width: 50%;
   }  
 }
 }
@@ -114,6 +115,14 @@ fieldset {
     width: 50%;
   }
  }
+
+
+ .flip {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 100%;
+
+}
 
 }
 
