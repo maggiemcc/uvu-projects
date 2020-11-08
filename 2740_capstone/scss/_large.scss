@@ -1,3 +1,130 @@
+header {
+  // text-align: center; 
+  // background-color: red;
+
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  justify-content: center;
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .headerText {
+   text-align: center;
+
+  }
+}
+
+// NAV
+
+nav button {display: none;}
+nav ul.hide {display: block;}
+
+nav { margin: 0 auto;}
+
+nav ul {
+    margin: $margin $margin $margin 2vw;
+    padding: $pad;
+}
+
+nav ul > li {
+    float: left;
+
+    padding: 0;
+
+    margin: 0 auto;
+    list-style: none;
+    border-right: none;
+    border-left: 1px solid $black-text;
+}
+
+nav ul > li:first-child {border-left: none;}
+
+nav ul li a {
+    display: block;
+    margin: 0 auto;
+    background: none;
+    font-size: 1rem;
+    padding: 1em 1em;
+    text-decoration: none;
+    -webkit-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+    border: none;
+}
+
+
+#primaryNav {overflow: visible;}
+
+
+#primaryNav .parent li  {
+    display: block;
+    border-left: none;
+}
+
+#primaryNav .parent li a  {min-width: 12em;}
+// 
+#primaryNav li.parent > a::after {padding-top: .2rem; margin-left: .6rem;}
+
+nav ul li ul {
+    z-index:998;
+    position: absolute;
+    background-color: $sec-color;
+    background-color: rgb(240, 240, 240);
+    // left:-999em;
+    left:-899em;
+    width: 12em;
+}
+
+nav ul li ul li {
+    border: none;
+    border-top: 1px solid $black-text;
+    // border-bottom: 1px solid $black-text;
+}
+
+nav ul li ul {
+  border: none;
+}
+
+
+nav ul li ul li:first-child {
+    border: none;
+}
+
+nav ul li:hover ul {
+    left: auto;
+    margin-left: $margin;
+}
+
+
+
+
+
+nav {
+  // background-color: green;
+  margin: 0 auto;
+  width: 53%;
+}
+
+nav #primaryNav {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-left: 12%;
+}
+nav ul {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+
+nav ul li {
+  // background-color: blue;
+  margin: 0 auto;
+}
+
 nav ul li a {padding: .6rem 1rem;}
 
 /*-------- MAIN --------*/ 
@@ -35,6 +162,28 @@ header, nav, main, footer {
 
 
 /*-------- video --------*/
+.meetHorses {
+  border-top: 2px solid $black-text;
+  padding: 5%;
+
+  .members {
+    .column{
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+.viewMore { 
+    button {
+      width: 25%;
+    }
+  }
+}
+
+
+
 .videoSection {
     .video {
       width: $sixty-width;

@@ -20,31 +20,42 @@ header {
   padding: 0.5rem $pad-two;
   background-color: $sec-color;
   display: grid;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
   grid-column-gap: .5rem;
+  justify-content: center;
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+    img {width: 100px;}
+
+  }
+
+  .headerText {
+   text-align: center;
+
+    h1 {
+      margin: $margin;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 1.3rem;
+    }
+    
+    h2 {
+      margin: $margin;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+  }
+
 }
 
-header figure.logo {
-  float: left;
-  margin: 0 2% 0 0;
-  img {width: 100%;}
-}
-
-header h1 {
-  margin: $margin;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: 1.3rem;
-}
-header h2 {
-  margin: $margin;
-  font-weight: 600;
-  font-size: 1rem;
-}
 
 /*-------- NAV --------*/
 .navWrapper {
-  background-color: $sec-color;
+  background-color: rgb(240, 240, 240);
   border-top: 2px solid $black-text;
   border-bottom: 2px solid $black-text;
 }
@@ -296,6 +307,8 @@ main picture.hero {
     p {
       width: $full-width;
       max-width: 90%;
+
+      span {font-weight: 700;}
     }
   }
 
@@ -417,59 +430,83 @@ section.gallery figure {
 
   .video {
     width: 90%;
+    height: 400px;
     margin: auto;
-  }
-  
-  .youtubeVideo {
-    background-color: $third-color;
-    position: relative;
-    padding-top: 56.25%;
-    overflow: hidden;
-    cursor: pointer;
-    width: $full-width;
-    
-    img {
-      width: $full-width;
-      top: -16.82%;
-      left: 0;
-      opacity: 0.7;
-    }
-  
-    .play-button {
-      width: 90px;
-      height: 60px;
-      background-color: #333;
-      box-shadow: 0 0 30px rgba( 0,0,0,0.6);
-      z-index: 1;
-      opacity: 0.8;
-      border-radius: 6px;
-    }
-  
-    .play-button:before {
-      content: "";
-      border-style: solid;
-      border-width: 15px 0 15px 26.0px;
-      border-color: transparent transparent transparent $white-text;
-    }
-  
-    img, .play-button {cursor: pointer;}
-  
-    img, iframe, .play-button, .play-button:before {position: absolute;}
-  
-    .play-button, .play-button:before {
-      top: $half-width;
-      left: $half-width;
-      transform: translate3d( -$half-width, -$half-width, 0 );
-    }
-  
+
     iframe {
       height: $full-width;
       width: $full-width;
       top: 0;
       left: 0;
+      border: none;
     }
   }
 }
+
+
+.meetHorses {
+  background-color: rgba(167, 185, 0, 0.205);
+  border-top: 2px solid $black-text;
+  padding: 5%;
+
+
+  .members {
+    // height: 100%;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3%;
+    padding-bottom: 2rem;
+
+
+    .column {
+      padding: 0;
+      margin: 0;
+
+    #circle {
+      display: block;
+      width: 100%;
+      clip-path: circle(62%);
+      margin-left: auto;
+      margin-right: auto;
+      margin: 0 auto;  
+      margin-bottom: .8rem;
+  }
+  
+
+  h2 {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+}
+
+ .viewMore {
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+
+  button {
+    width: 80%;
+    background-color: $main-color;
+    font-weight: 700;
+    color: $white-text;
+    padding: 0.8rem $pad;
+    border: none;
+    border-radius: 3px;
+  }
+
+  button:hover {
+    background-color: $third-color;
+    color: $white-text;
+    cursor: pointer;
+  }
+ }
+
+}
+
 
 
 
@@ -517,6 +554,7 @@ section.gallery figure {
       padding: 12px 20px 12px 40px;
       -webkit-transition: width 0.4s ease-in-out;
       transition: width 0.4s ease-in-out;
+      outline: none;
       }
       
       input[type=text]:focus {width: 80%;}

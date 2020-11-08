@@ -6,75 +6,12 @@ header h1 {
 header h2 {
   font-size: 1.5rem;
 }
-
 /*-------- NAV --------*/
-nav button {display: none;}
-nav ul.hide {display: block;}
-
-nav ul {
-    margin: $margin $margin $margin 2vw;
-    padding: $pad;
-}
-
-nav ul > li {
-    float: left;
-    list-style: none;
-    border-right: none;
-    border-left: 1px solid $black-text;
-}
-
-nav ul > li:first-child {border-left: none;}
-
-nav ul li a {
-    display: block;
-    background: none;
-    font-size: 1rem;
-    padding: 1em 1em;
-    text-decoration: none;
-    -webkit-transition: background 0.3s linear;
-    transition: background 0.3s linear;
-    border: none;
-}
-
-#primaryNav {overflow: visible;}
+// .navWrapper {background-color: red;}
 
 
-#primaryNav .parent li  {
-    display: block;
-    border-left: none;
-}
-
-#primaryNav .parent li a  {min-width: 12em;}
-
-#primaryNav li.parent > a::after {padding-top: .2rem; margin-left: .6rem;}
-
-nav ul li ul {
-    z-index:998;
-    position: absolute;
-    background-color: $sec-color;
-    left:-999em;
-    width: 12em;
-}
-
-nav ul li ul li {
-    border: none;
-    border-top: 1px solid $black-text;
-}
-
-nav ul li ul {
-  border: none;
-  border: 1px solid $black-text;
-}
 
 
-nav ul li ul li:first-child {
-    border: none;
-}
-
-nav ul li:hover ul {
-    left: auto;
-    margin-left: $margin;
-}
 
 /*-------- MAIN --------*/
 .letter, .trails {
@@ -108,6 +45,64 @@ fieldset {
     width: 70%;
     // height: 500px;
   }
+}
+
+.meetHorses {
+  border-top: 2px solid $black-text;
+  padding: 5%;
+
+
+  .members {
+    .column {
+      // background-color: red;
+
+      #circle {
+      width: 50%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+}
+
+ .viewMore {
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+
+  button {
+    width: 50%;
+  }
+ }
+
+}
+
+.meetHorses {
+  border-top: 2px solid $black-text;
+  padding: 5%;
+
+  .members {
+  margin: 0 auto;
+  width: 70%;
+  width: 100%;
+  min-width: 550px;
+  max-width: 600px;
+  
+
+    .column {
+      width: 100%;
+
+      #circle {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+ }
+}
+
 }
 
 

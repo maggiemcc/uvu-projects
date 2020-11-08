@@ -27,15 +27,19 @@
 <body>
     <!-- HEADER HERE -->
     <header>
-        <figure class="logo">
-            <img src="images/logo.png" alt="logo"
-            srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x">
-          </figure>
-        <div>
+
+        <div class="headerText">
             <h1>Maverick Horseback Riding</h1>
             <h2>Ride the Way You Want</h2>
         </div>
+
+        <figure class="logo">
+           <img src="images/logos/logo.png" alt="logo"
+           srcset="images/logos/logo1.png 1x, images/logos/logo2.png 2x, images/logos/logo3.png 3x">
+         </figure>
+         
     </header>
+
 
 
     <!-- NAVIGATION HERE -->
@@ -62,7 +66,7 @@
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Horses</a></li>
                         <li><a href="#">Events</a></li>
-                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Horse Photography</a></li>
                         <li><a href="#">General Services</a></li>
                         <li><a href="#">Things to do Nearby</a></li>
                         <li><a href="#">2020 and Beyond</a></li>
@@ -78,14 +82,14 @@
     <div class="mainWrapper">
         <main>
             <picture class="hero">
-                <source media="(max-width: 450px)" srcset="images/heros/hero450.jpg">
-                <source media="(max-width: 600px)" srcset="images/heros/hero600.jpg">
-                <source media="(max-width: 750px)" srcset="images/heros/hero750.jpg">
-                <source media="(max-width: 900px)" srcset="images/heros/hero900.jpg">
-                <source media="(max-width: 1050px)" srcset="images/heros/hero1050.jpg">
+                <source media="(max-width: 450px)" srcset="images/contact/hero450.jpg">
+                <source media="(max-width: 600px)" srcset="images/contact/hero600.jpg">
+                <source media="(max-width: 750px)" srcset="images/contact/hero750.jpg">
+                <source media="(max-width: 900px)" srcset="images/contact/hero900.jpg">
+                <source media="(max-width: 1050px)" srcset="images/contact/hero1050.jpg">
 
                 <!-- Image from Unsplash -->
-                <img src="images/heros/hero1100.jpg" alt="The default if no other match is found">
+                <img src="images/contact/hero1100.jpg" alt="The default if no other match is found">
             </picture>
 
             <div class="textContent">
@@ -127,14 +131,38 @@
         </div>
 
 
+        <div class="meetHorses">
+            <h1>Meet the Horses</h1>
+        
+            <div class="members">
+        
+                <div class="column">
+                    <img id="circle" src="images/horses/maverick.jpg" alt="Maverick"/>
+                    <h2>Maverick</h2>
+                </div>
+                <div class="column">
+                    <img id="circle" src="images/horses/rowdy.jpg" alt="Rowdy"/>
+                    <h2>Rowdy</h2>
+                </div>
+                <div class="column">
+                    <img id="circle" src="images/horses/lady_black_hawk.jpg" alt="Lady Back Hawk"/>
+                    <h2>Lady Black Hawk</h2>
+                </div>
+
+            </div>
+
+            <div class="viewMore">
+                <button type="button">Meet the Horses</button>
+            </div>
+        
+        </div>
+
+
 
             <div class="videoSection">
                 <h1>Video</h1>
                 <div class="video">
-                    <div class="youtubeVideo" data-embed="D1X9cBV1-C4">
-                        <div class="play-button"></div>
-                    </div>
-
+                    <iframe class="lazy" data-src="https://www.youtube.com/embed/D1X9cBV1-C4"></iframe>
                 </div>
             </div>
 
@@ -229,6 +257,15 @@
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy",
+            threshold: 0
+            // Your custom settings go here
+        });
+    </script>
 </body>
 
 </html>
