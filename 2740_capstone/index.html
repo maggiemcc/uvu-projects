@@ -156,18 +156,20 @@
             </div>
 
 
+            <div class="lazy" data-bg="images/IMG_0222.jpg">
             <div class="quick">
                 <h1>Quick Links</h1>
                 <ul>
-                    <li><a href="#">FAQ's</a></li>
-                    <li><a href="#">Tail Rides</a></li>
-                    <li><a href="#">Lessons</a></li>
-                    <li><a href="#">Training</a></li>
-                    <li><a href="#">Book Online</a></li>
-                    <li><a href="#">Boarding</a></li>
-                    <li><a href="#">Horses for Sale</a></li>
+                    <li><a href="https://maverickhorsebackriding.com/faqs/" target="_blank">FAQ's</a></li>
+                    <li><a href="https://maverickhorsebackriding.com/trail-rides-2/" target="_blank">Tail Rides</a></li>
+                    <li><a href="https://maverickhorsebackriding.com/lessons/" target="_blank">Lessons</a></li>
+                    <li><a href="https://maverickhorsebackriding.com/training/" target="_blank">Training</a></li>
+                    <li><a href="book.html">Book Online</a></li>
+                    <li><a href="https://maverickhorsebackriding.com/boarding/" target="_blank">Boarding</a></li>
+                    <li><a href="https://maverickhorsebackriding.com/horses-for-sale/" target="_blank">Horses for Sale</a></li>
                 </ul>
 
+              </div>
             </div>
 
         </main>
@@ -212,6 +214,15 @@
             });
         });
     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+<script>
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+        threshold: 0
+        // Your custom settings go here
+    });
+</script>
 </body>
 
 </html>
