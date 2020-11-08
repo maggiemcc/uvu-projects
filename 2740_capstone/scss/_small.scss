@@ -21,27 +21,17 @@ header {
   background-color: $sec-color;
   display: grid;
   grid-template-columns: 100px 1fr;
-  // margin: 0 auto;
-  // margin: 0;
-  // grid-column-gap: .5rem;
-  // justify-content: center;
+
 
   .logo {
-    // margin: 0 auto;
-    // text-align: center;
-    // width: 100%;
     float: left;
     margin: 0 2% 0 0;
     img {width: 100px;}
-    order: 1;
-    // background-color: red;
-
   }
 
   .headerText {
    text-align: left;
-   order: 2;
-  //  background-color: blue;
+
 
 
     h1 {
@@ -417,8 +407,7 @@ form label.top input:required:valid {
 section.gallery figure {
   width: $full-width;
   height: 0;
-  // padding-bottom: 56.8%;
-  padding-bottom: 38.8%;
+  padding-bottom: 55.8%;
   position: relative;
   margin: $margin;
 
@@ -429,10 +418,21 @@ section.gallery figure {
   }
 }
 
+.lazyImages {
+  padding: 1rem 0;
+  h4 {
+    font-weight: 600; 
+    text-align: center;
+    padding: 0 3%;
+  }
+}
+
 
 /*-------- video --------*/
 .videoSection {
   background-color: rgba(26, 92, 0, 0.205);
+  background-color: rgba(0, 81, 92, 0.205);
+
   border-top: 2px solid $black-text;
   margin: $margin;
   padding: .5rem $pad-two;
@@ -456,6 +456,8 @@ section.gallery figure {
 
 .meetHorses {
   background-color: rgba(167, 185, 0, 0.205);
+  background-color: rgba(0, 81, 92, 0.205);
+
   border-top: 2px solid $black-text;
   padding: 5%;
 
@@ -525,6 +527,8 @@ section.gallery figure {
 
 .quick {
   background-color: rgba(26, 92, 0, 0.205);
+  background-color: rgba(0, 81, 92, 0.205);
+
   border-top: 2px solid $black-text;
   margin: 0;
   padding: 1rem 2%;

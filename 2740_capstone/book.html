@@ -27,16 +27,15 @@
 <body>
     <!-- HEADER HERE -->
     <header>
+        <figure class="logo">
+            <img src="images/logos/logo.png" alt="logo"
+            srcset="images/logos/logo1.png 1x, images/logos/logo2.png 2x, images/logos/logo3.png 3x">
+          </figure>
 
         <div class="headerText">
             <h1>Maverick Horseback Riding</h1>
             <h2>Ride the Way You Want</h2>
         </div>
-
-        <figure class="logo">
-           <img src="images/logos/logo.png" alt="logo"
-           srcset="images/logos/logo1.png 1x, images/logos/logo2.png 2x, images/logos/logo3.png 3x">
-         </figure>
          
     </header>
 
@@ -80,15 +79,20 @@
     <!-- CONTENT HERE -->
     <div class="mainWrapper">
         <main>
-            <picture class="hero">
+            <!-- <picture class="hero">
                 <source media="(max-width: 450px)" srcset="images/book/hero450.jpg">
                 <source media="(max-width: 600px)" srcset="images/book/hero600.jpg">
                 <source media="(max-width: 750px)" srcset="images/book/hero750.jpg">
                 <source media="(max-width: 900px)" srcset="images/book/hero900.jpg">
                 <source media="(max-width: 1050px)" srcset="images/book/hero1050.jpg">
 
-                <!-- Image from Unsplash -->
                 <img src="images/book/hero1100.jpg" alt="The default if no other match is found">
+            </picture> -->
+
+            <picture class="hero">
+                <source srcset="slider_images/main450.jpg" media="(max-width: 28.12rem)">
+                <source srcset="slider_images/main1024.jpg" media="(min-width: 28.12rem)">
+                <img src="slider_images/main1024.jpg" alt="slider">
             </picture>
 
             <div class="textContent">
@@ -253,72 +257,11 @@
 
 
 
-            <div class="blog">
-                <h1>The Blog</h1>
-                <h2>Thoughts, musings, and ruminations.</h2>
-        
-                <div class="card-hover">
-            
-                    <a class="card" href="https://maverickhorsebackriding.com/back-in-the-saddle/" target=" _blank">
-                        <div class="content">
-                            <h3>Back in the Saddle</h3>
-                            <p class="disappear">[…]</p>
-                            <div class="description">
-                                <p>
-                                    From the very first, infamous buffalo ride back in Hutto, to the now beloved
-                                    Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
-                                    may have never dreamed it may come to be. It’s a place where all around
-                                    knowledged people can come, wether you know how to ride or not, and...
-                                </p>
-                                <p class="readMore">Click to Read More</p>
-                            </div>
-                        </div>
-                    </a>
-            
-                    <a class="card" href="https://maverickhorsebackriding.com/the-childrens-introduction-to-horsemanship/"
-                        target=" _blank">
-                        <div class="content">
-                            <h3>The Children's Introduction</h3>
-                            <p class="disappear">[…]</p>
-                            <div class="description">
-                                <p>
-                                    Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences we offer,
-                                    horseback riding lessons at Maverick Ranch are… well… not the same as horseback riding lessons other
-                                    places. What we don’t do: Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship 
-                                    (ask about our developing cross country course) What...
-                                </p>
-                                <p class="readMore">Click to Read More</p>
-                            </div>
-                        </div>
-                    </a>
-            
-                    <a class="card" href="https://maverickhorsebackriding.com/an-update-for-guests-at-maverick-ranch/"
-                        target=" _blank">
-                        <div class="content">
-                            <h3>An Update For Guests</h3>
-                            <p class="disappear">[…]</p>
-                            <div class="description">
-                                <p>
-                                    Dear Mavericks, The world has been spinning and we here at Mavericks are rolling right along
-                                    with it. Life offers many ups and downs for us all. For so many folks in the world right now, 
-                                    there are a lot of downs. Isn’t it wild we all share this? Mavericks was conceived some 13 years...
-                                </p>
-                                <p class="readMore">Click to Read More</p>
-                            </div>
-                        </div>
-                    </a>
 
-                </div>
-                    
-                <div class="morePosts">
-                    
-                    <div class="search">
-                        <div class="inputField"><input type="text" name="search" placeholder="Search..."></div>
-                    </div>
-                    
-                    <div class="viewMore">
-                        <button type="button">View More Posts</button>
-                    </div>
+            <div class="videoSection">
+                <h1>Video</h1>
+                <div class="video">
+                    <iframe class="lazy" data-src="https://www.youtube.com/embed/D1X9cBV1-C4"></iframe>
                 </div>
             </div>
 
@@ -341,6 +284,15 @@
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy",
+            threshold: 0
+            // Your custom settings go here
+        });
+    </script>
 </body>
 
 </html>

@@ -27,16 +27,15 @@
 <body>
     <!-- HEADER HERE -->
     <header>
+        <figure class="logo">
+            <img src="images/logos/logo.png" alt="logo"
+            srcset="images/logos/logo1.png 1x, images/logos/logo2.png 2x, images/logos/logo3.png 3x">
+          </figure>
 
         <div class="headerText">
             <h1>Maverick Horseback Riding</h1>
             <h2>Ride the Way You Want</h2>
         </div>
-
-        <figure class="logo">
-           <img src="images/logos/logo.png" alt="logo"
-           srcset="images/logos/logo1.png 1x, images/logos/logo2.png 2x, images/logos/logo3.png 3x">
-         </figure>
          
     </header>
 
@@ -80,15 +79,21 @@
     <!-- CONTENT HERE -->
     <div class="mainWrapper">
         <main>
-            <picture class="hero">
+            <!-- <picture class="hero">
                 <source media="(max-width: 450px)" srcset="images/contact/hero450.jpg">
                 <source media="(max-width: 600px)" srcset="images/contact/hero600.jpg">
                 <source media="(max-width: 750px)" srcset="images/contact/hero750.jpg">
                 <source media="(max-width: 900px)" srcset="images/contact/hero900.jpg">
                 <source media="(max-width: 1050px)" srcset="images/contact/hero1050.jpg">
 
-                <!-- Image from Unsplash -->
+
                 <img src="images/contact/hero1100.jpg" alt="The default if no other match is found">
+            </picture> -->
+
+            <picture class="hero">
+                <source srcset="slider_images/main450.jpg" media="(max-width: 28.12rem)">
+                <source srcset="slider_images/main1024.jpg" media="(min-width: 28.12rem)">
+                <img src="slider_images/main1024.jpg" alt="slider">
             </picture>
 
             <div class="textContent">
@@ -128,42 +133,6 @@
             
             </form>
         </div>
-
-
-        <div class="meetHorses">
-            <h1>Meet the Horses</h1>
-        
-            <div class="members">
-        
-                <div class="column">
-                    <img id="circle" src="images/horses/maverick.jpg" alt="Maverick"/>
-                    <h2>Maverick</h2>
-                </div>
-                <div class="column">
-                    <img id="circle" src="images/horses/rowdy.jpg" alt="Rowdy"/>
-                    <h2>Rowdy</h2>
-                </div>
-                <div class="column">
-                    <img id="circle" src="images/horses/lady_black_hawk.jpg" alt="Lady Back Hawk"/>
-                    <h2>Lady Black Hawk</h2>
-                </div>
-
-            </div>
-
-            <div class="viewMore">
-                <button type="button">Meet the Horses</button>
-            </div>
-        
-        </div>
-
-
-
-            <div class="videoSection">
-                <h1>Video</h1>
-                <div class="video">
-                    <iframe class="lazy" data-src="https://www.youtube.com/embed/D1X9cBV1-C4"></iframe>
-                </div>
-            </div>
 
 
 
@@ -256,15 +225,6 @@
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
-    <script>
-        var lazyLoadInstance = new LazyLoad({
-            elements_selector: ".lazy",
-            threshold: 0
-            // Your custom settings go here
-        });
-    </script>
 </body>
 
 </html>

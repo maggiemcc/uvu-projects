@@ -1,46 +1,49 @@
 /*-------- HEADER --------*/
 header {
-  padding: 0.5rem $pad-two;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0 auto;
-  grid-column-gap: .5rem;
-  justify-content: center;
+  grid-template-columns: 41% 1fr;
+  margin: 0;
 
   .logo {
-    margin: 0 auto;
-    text-align: center;
-    img {width: 100px;}
-    order: 2;
-
+    margin: 0;
+    order: 1;
+  img{float: right;}
   }
 
   .headerText {
-   text-align: center;
-   order: 1;
+   text-align: left;
+   order: 2;
+   margin: 0;
 
-    h1 {
-      margin: $margin;
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-top: 1.3rem;
-    }
-    
-    h2 {
-      margin: $margin;
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
+   h1 {
+    margin: $margin;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 1.3rem;
+  }
+  
+  h2 {
+    margin: $margin;
+    font-weight: 600;
+    font-size: 1.1rem;
   }
 
+
+  }
 }
+
+
+.meetHorses {
+  h1:before {
+    width: 25%;
+    height: 5px;
+  }
+  h1:after {
+    // width: 130px;
+    width: 25%;
+  }
+}
+
 /*-------- NAV --------*/
-// .navWrapper {background-color: red;}
-
-
-
-
 
 /*-------- MAIN --------*/
 .letter, .trails {

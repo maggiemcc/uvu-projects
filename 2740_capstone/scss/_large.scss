@@ -1,44 +1,47 @@
+/*-------- HEADER --------*/ 
 header {
-  // text-align: center; 
-  // background-color: red;
-
-  grid-template-columns: 1fr;
-  margin: 0 auto;
-  justify-content: center;
+  grid-template-columns: 42% 1fr;
+  margin: 0;
 
   .logo {
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    order: 1;
+  img{float: right;}
   }
 
   .headerText {
-   text-align: center;
+   text-align: left;
+   order: 2;
+   margin: 0;
 
   }
 }
 
-// NAV
-
+/*-------- NAV --------*/ 
 nav button {display: none;}
 nav ul.hide {display: block;}
 
-nav { margin: 0 auto;}
+nav {
+  margin: 0 auto;
+  width: 53%;
+}
 
 nav ul {
-    margin: $margin $margin $margin 2vw;
-    padding: $pad;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
 }
 
 nav ul > li {
     float: left;
-
     padding: 0;
-
     margin: 0 auto;
     list-style: none;
     border-right: none;
     border-left: 1px solid $black-text;
 }
+
 
 nav ul > li:first-child {border-left: none;}
 
@@ -47,24 +50,26 @@ nav ul li a {
     margin: 0 auto;
     background: none;
     font-size: 1rem;
-    padding: 1em 1em;
     text-decoration: none;
     -webkit-transition: background 0.3s linear;
     transition: background 0.3s linear;
     border: none;
+    padding: .6rem 1rem;
 }
 
 
-#primaryNav {overflow: visible;}
-
-
-#primaryNav .parent li  {
-    display: block;
-    border-left: none;
+#primaryNav {
+  overflow: visible;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-left: 12%;
 }
+
+#primaryNav .parent li  {display: block; border-left: none;}
 
 #primaryNav .parent li a  {min-width: 12em;}
-// 
+ 
 #primaryNav li.parent > a::after {padding-top: .2rem; margin-left: .6rem;}
 
 nav ul li ul {
@@ -72,60 +77,21 @@ nav ul li ul {
     position: absolute;
     background-color: $sec-color;
     background-color: rgb(240, 240, 240);
-    // left:-999em;
-    left:-899em;
+    left:-999em;
     width: 12em;
 }
 
 nav ul li ul li {
     border: none;
     border-top: 1px solid $black-text;
-    // border-bottom: 1px solid $black-text;
 }
 
-nav ul li ul {
-  border: none;
-}
+nav ul li ul {border: none;}
 
+nav ul li ul li:first-child {border: none;}
 
-nav ul li ul li:first-child {
-    border: none;
-}
+nav ul li:hover ul {left: auto; margin-left: $margin;}
 
-nav ul li:hover ul {
-    left: auto;
-    margin-left: $margin;
-}
-
-
-
-
-
-nav {
-  // background-color: green;
-  margin: 0 auto;
-  width: 53%;
-}
-
-nav #primaryNav {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  margin-left: 12%;
-}
-nav ul {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  justify-content: center;
-}
-
-nav ul li {
-  // background-color: blue;
-  margin: 0 auto;
-}
-
-nav ul li a {padding: .6rem 1rem;}
 
 /*-------- MAIN --------*/ 
 header, nav, main, footer {

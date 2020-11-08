@@ -27,16 +27,15 @@
 <body>
     <!-- HEADER HERE -->
     <header>
+        <figure class="logo">
+            <img src="images/logos/logo.png" alt="logo"
+            srcset="images/logos/logo1.png 1x, images/logos/logo2.png 2x, images/logos/logo3.png 3x">
+          </figure>
 
         <div class="headerText">
             <h1>Maverick Horseback Riding</h1>
             <h2>Ride the Way You Want</h2>
         </div>
-
-        <figure class="logo">
-           <img src="images/logos/logo.png" alt="logo"
-           srcset="images/logos/logo1.png 1x, images/logos/logo2.png 2x, images/logos/logo3.png 3x">
-         </figure>
          
     </header>
 
@@ -80,15 +79,21 @@
     <!-- CONTENT HERE -->
     <div class="mainWrapper">
         <main>
-            <picture class="hero">
+            <!-- <picture class="hero">
                 <source media="(max-width: 450px)" srcset="images/gallery/horses450.jpg">
                 <source media="(max-width: 600px)" srcset="images/gallery/horses600.jpg">
                 <source media="(max-width: 750px)" srcset="images/gallery/horses750.jpg">
                 <source media="(max-width: 900px)" srcset="images/gallery/horses900.jpg">
                 <source media="(max-width: 1050px)" srcset="images/gallery/horses1050.jpg">
 
-                <!-- Image from Unsplash -->
+          
                 <img src="images/gallery/horses1050.jpg" alt="The default if no other match is found">
+            </picture> -->
+
+            <picture class="hero">
+                <source srcset="slider_images/main450.jpg" media="(max-width: 28.12rem)">
+                <source srcset="slider_images/main1024.jpg" media="(min-width: 28.12rem)">
+                <img src="slider_images/main1024.jpg" alt="slider">
             </picture>
 
 
@@ -99,111 +104,67 @@
 
 
 
-            <!-- <div class="letter"> -->
+            <div class="lazyImages">
 
             <section class="gallery">
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg"/></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg"/></figure>
+                <figure><img alt="A lazy image" class="lazy" data-src="images/gallery/flower.jpg" /></figure>
+                <figure><img alt="A lazy image" class="lazy" data-src="images/gallery/specialEvents.jpg"/></figure>
             </section>
+
                 <h4>Maverick Horseback Riding now offers special events for the community, visitors and horse enthusiasts!</h4>
-
+            
             <section class="gallery">
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
+                <figure><img alt="A lazy image" class="lazy" data-src="images/gallery/groupRide.jpg" /></figure>
+                <figure><img alt="A lazy image" class="lazy" data-src="images/gallery/unicorn.jpg" /></figure>
             </section>
+
                 <h4>When Maverick rode the streets of downtown Austin as the unofficial SXSW unicorn, equine trainer MacCoy had to oblige his requests that she dress as a woodlands fairy.</h4>
 
             <section class="gallery">
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
+                <figure><img alt="A lazy image" class="lazy" data-src="images/gallery/field.jpg" /></figure>
+                <figure><img alt="A lazy image" class="lazy" data-src="images/gallery/halloween.jpg"/></figure>
             </section>
-                <h4>Maverick’s has a new Special Events venue in Lockhart</h4>
+            
+            <h4>We are ready for Halloween in Lockhart, are you?</h4>
 
             <section class="gallery">
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
+                <figure><img alt="A lazy image" class="lazy" data-src="images/gallery/trails.jpg" /></figure>
+                <figure><img alt="A lazy image" class="lazy" data-src="images/gallery/bonfire.jpg" /></figure>
             </section>
-                <h4>Maverick’s has a new Special Events venue in Lockhart</h4>
-
-            <section class="gallery">
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-                <figure><img alt="A lazy image" class="lazy" data-src="images/heros/hero1050.jpg" /></figure>
-            </section>
-                <h4>Bonfire party this Halloween 2017 with Maverick’s and Flying H</h4>
-
-
-            <!-- </div> -->
+            <h4>Bonfire party Halloween 2017 with Maverick’s and Flying H</h4>
 
 
 
-            <div class="blog">
-                <h1>The Blog</h1>
-                <h2>Thoughts, musings, and ruminations.</h2>
-            
-                <div class="card-hover">
-            
-                    <a class="card" href="https://maverickhorsebackriding.com/back-in-the-saddle/" target=" _blank">
-                        <div class="content">
-                            <h3>Back in the Saddle</h3>
-                            <p class="disappear">[…]</p>
-                            <div class="description">
-                                <p>
-                                    From the very first, infamous buffalo ride back in Hutto, to the now beloved
-                                    Lockhart BBQ Ride, I’ve watched this Program become something a lot of people
-                                    may have never dreamed it may come to be. It’s a place where all around
-                                    knowledged people can come, wether you know how to ride or not, and...
-                                </p>
-                                <p class="readMore">Click to Read More</p>
-                            </div>
-                        </div>
-                    </a>
-            
-                    <a class="card" href="https://maverickhorsebackriding.com/the-childrens-introduction-to-horsemanship/"
-                        target=" _blank">
-                        <div class="content">
-                            <h3>The Children's Introduction</h3>
-                            <p class="disappear">[…]</p>
-                            <div class="description">
-                                <p>
-                                    Maverick Ranch Horseback Riding Lessons As is the case with many of the experiences we offer,
-                                    horseback riding lessons at Maverick Ranch are… well… not the same as horseback riding lessons other
-                                    places. What we don’t do: Barrels, Poles, Playdays (check back in January 2021) Hunter showmanship 
-                                    (ask about our developing cross country course) What...
-                                </p>
-                                <p class="readMore">Click to Read More</p>
-                            </div>
-                        </div>
-                    </a>
-            
-                    <a class="card" href="https://maverickhorsebackriding.com/an-update-for-guests-at-maverick-ranch/"
-                        target=" _blank">
-                        <div class="content">
-                            <h3>An Update For Guests</h3>
-                            <p class="disappear">[…]</p>
-                            <div class="description">
-                                <p>
-                                    Dear Mavericks, The world has been spinning and we here at Mavericks are rolling right along
-                                    with it. Life offers many ups and downs for us all. For so many folks in the world right now, 
-                                    there are a lot of downs. Isn’t it wild we all share this? Mavericks was conceived some 13 years...
-                                </p>
-                                <p class="readMore">Click to Read More</p>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-                    
-                <div class="morePosts">
-                    
-                    <div class="search">
-                        <div class="inputField"><input type="text" name="search" placeholder="Search..."></div>
-                    </div>
-                    
-                    <div class="viewMore">
-                        <button type="button">View More Posts</button>
-                    </div>
-                </div>
             </div>
+
+
+
+
+                    <div class="meetHorses">
+            <h1>Meet the Horses</h1>
+        
+            <div class="members">
+        
+                <div class="column">
+                    <img id="circle" src="images/horses/maverick.jpg" alt="Maverick"/>
+                    <h2>Maverick</h2>
+                </div>
+                <div class="column">
+                    <img id="circle" src="images/horses/rowdy.jpg" alt="Rowdy"/>
+                    <h2>Rowdy</h2>
+                </div>
+                <div class="column">
+                    <img id="circle" src="images/horses/lady_black_hawk.jpg" alt="Lady Back Hawk"/>
+                    <h2>Lady Black Hawk</h2>
+                </div>
+
+            </div>
+
+            <div class="viewMore">
+                <button type="button">Meet the Horses</button>
+            </div>
+        
+        </div>
 
         </main>
     </div>
