@@ -1,10 +1,39 @@
 /*-------- HEADER --------*/
-header h1 {
-  font-size: 2rem;
-  margin-top: 0.8rem;
-}
-header h2 {
-  font-size: 1.5rem;
+header {
+  padding: 0.5rem $pad-two;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  grid-column-gap: .5rem;
+  justify-content: center;
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+    img {width: 100px;}
+    order: 2;
+
+  }
+
+  .headerText {
+   text-align: center;
+   order: 1;
+
+    h1 {
+      margin: $margin;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 1.3rem;
+    }
+    
+    h2 {
+      margin: $margin;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+  }
+
 }
 /*-------- NAV --------*/
 // .navWrapper {background-color: red;}
@@ -43,7 +72,7 @@ fieldset {
 .videoSection {
   .video {
     width: 70%;
-    // height: 500px;
+    height: 400px;
   }
 }
 
@@ -53,8 +82,15 @@ fieldset {
 
 
   .members {
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3%;
+    padding-bottom: 2rem;
+
     .column {
       // background-color: red;
+
 
       #circle {
       width: 50%;
@@ -105,6 +141,18 @@ fieldset {
 
 }
 
+
+
+
+.quick {
+  ul {
+    // grid-column-gap: 0;
+    // background-color: rebeccapurple;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
 
 /*-------- BLOG --------*/
 .blog {

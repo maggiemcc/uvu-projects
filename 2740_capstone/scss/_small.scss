@@ -20,26 +20,36 @@ header {
   padding: 0.5rem $pad-two;
   background-color: $sec-color;
   display: grid;
-  grid-template-columns: 1fr;
-  margin: 0 auto;
-  grid-column-gap: .5rem;
-  justify-content: center;
+  grid-template-columns: 100px 1fr;
+  // margin: 0 auto;
+  // margin: 0;
+  // grid-column-gap: .5rem;
+  // justify-content: center;
 
   .logo {
-    margin: 0 auto;
-    text-align: center;
+    // margin: 0 auto;
+    // text-align: center;
+    // width: 100%;
+    float: left;
+    margin: 0 2% 0 0;
     img {width: 100px;}
+    order: 1;
+    // background-color: red;
 
   }
 
   .headerText {
-   text-align: center;
+   text-align: left;
+   order: 2;
+  //  background-color: blue;
+
 
     h1 {
-      margin: $margin;
+      // margin: $margin;
       font-size: 1.35rem;
       font-weight: 700;
-      margin-top: 1.3rem;
+      margin-bottom:0;
+      margin-top: 1.5rem;
     }
     
     h2 {
@@ -160,7 +170,7 @@ main {
   h1:after {
     content: "";
     display: block;
-    width: 130px;
+    // width: 130px;
     width: 25%;
     height: 5px;
     background: $third-color;
@@ -430,7 +440,7 @@ section.gallery figure {
 
   .video {
     width: 90%;
-    height: 400px;
+    height: 250px;
     margin: auto;
 
     iframe {
@@ -451,37 +461,40 @@ section.gallery figure {
 
 
   .members {
-    // height: 100%;
-    padding-bottom: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3%;
-    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0 auto;
+    // background-color: red;
 
 
     .column {
       padding: 0;
-      margin: 0;
+      margin: 0 auto;
+      margin-bottom: 1rem;
 
-    #circle {
-      display: block;
-      width: 100%;
-      clip-path: circle(62%);
-      margin-left: auto;
-      margin-right: auto;
-      margin: 0 auto;  
-      margin-bottom: .8rem;
-  }
-  
 
-  h2 {
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-    margin: 0 auto;
+      #circle {
+        display: block;
+        width: 100%;
+        clip-path: circle(62%);
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;  
+        margin-bottom: .8rem;
+      }
+    
+
+        h2 {
+          width: 100%;
+          font-size: 1rem;
+          text-align: center;
+          margin: 0 auto;
+        }
+    }
   }
-}
-}
+
+
 
  .viewMore {
    width: 100%;
@@ -507,6 +520,41 @@ section.gallery figure {
 
 }
 
+
+
+
+.quick {
+  background-color: rgba(26, 92, 0, 0.205);
+  border-top: 2px solid $black-text;
+  margin: 0;
+  padding: 1rem 2%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2%;
+  }
+
+  ul li {
+    padding: .7rem 0;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  ul li:hover {background-color: $main-color; border-radius: 3px;}
+
+  ul li:hover a {color: white;}
+}
 
 
 
@@ -666,6 +714,31 @@ section.gallery figure {
   background-color: $main-color;
   .disappear {display: none;}
   .description {display: block;}
+}
+
+
+
+
+.quick, .textContent {
+  h1:before {
+    width: 20%;
+    height: 5px;
+  }
+  h1:after {
+    // width: 130px;
+    width: 20%;
+  }
+}
+
+.meetHorses {
+  h1:before {
+    width: 10%;
+    height: 5px;
+  }
+  h1:after {
+    // width: 130px;
+    width: 10%;
+  }
 }
 
 
