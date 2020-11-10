@@ -1,0 +1,120 @@
+/*-------- HEADER --------*/
+
+/*-------- NAV --------*/
+nav button {display: none;}
+
+nav {
+    @include zero;
+    background: $white-color;
+}
+
+nav ul.hide {display: block;}
+
+
+nav ul {
+    display: block;
+    justify-content: right;
+    float: right;
+}
+
+nav ul li {float: left;}
+
+nav ul li a {
+    border: none;
+    padding: .5rem $padding .5rem 1rem;
+    margin: $margin;
+    color: $gray-color;
+}
+
+nav ul li a i {
+    color: $gray-color;
+}
+
+nav ul li a:hover, nav ul li i:hover {background-color: transparent; color: $main-color;}
+
+
+/*-------- MAIN --------*/
+.expect {
+    width: 90%;
+    margin: $margin auto;
+    padding: 2% $padding;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .best {
+        padding: $padding .5rem;
+        grid-column: 1/span 2;
+
+        ul {margin-left: 3rem;}
+    }
+
+
+    .formula {
+        padding: $padding .5rem;
+        grid-column: 3;
+        text-align: right;
+        p{margin: .35rem; text-align: right;}
+
+    }
+}
+
+
+/*-------- More About Us Section --------*/
+
+.more {
+    padding: 3% $padding;
+    width: 90%; 
+    margin: $margin auto;
+
+    .aboutGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1%;
+        width: $full;
+        margin: auto; 
+
+        .our {
+            width: 90%;
+            margin: $margin auto;
+        }
+    } 
+}
+
+
+
+/*-------- Support Section --------*/
+.supportGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1%;
+    padding: .8rem $padding;
+    width: 90%;
+    margin: $margin auto;
+
+    #infrastructure {grid-column: 1;}
+
+    #tech {grid-column: 2;}
+
+    #pricing {
+        grid-column: 3;
+        grid-row: 1/span 2;
+
+        button {
+            border-radius: 15px;
+            width: 85%;
+         }
+    }
+
+    #live {grid-column: 1/span 2; grid-row: 2;}
+
+}
+
+
+
+/*-------- ADDS --------*/
+
+
+
+/*-------- FOOTER --------*/
+
+

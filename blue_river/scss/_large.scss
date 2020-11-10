@@ -1,0 +1,107 @@
+header, nav, .hero, .expect, main, footer {
+    max-width: 74rem;
+    margin: 0 auto;
+}
+
+/*-------- MAIN --------*/
+.expect {
+    width: $full;
+
+    .best {
+        padding: $padding;
+    }
+
+    .formula {
+        padding: $padding;
+        i {padding-right: .3rem;}
+    }
+}
+
+
+/*-------- More About Us Section --------*/
+.more {
+    padding: 3% $padding;
+    width: $full;
+    .aboutGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 1%;
+        padding: .8rem $padding;
+
+        .our {
+            width: $full;
+            img {width: $full;}
+
+            h1 {
+                color: $main-color; 
+                margin: .8rem $margin .4rem $margin; 
+                font-size: 1.5rem;
+            }
+            p {color: $gray-color; @include zero; font-size: .8rem;}
+        }
+    } 
+}
+
+/*-------- Support Section --------*/
+.supportGrid {
+    width: $full;
+
+
+    .support {
+        width: $full;
+        img {width: $full;}
+
+        h1 {
+            color: $main-color; 
+            margin: .8rem $margin .4rem $margin; 
+            font-size: 1.5rem;
+        }
+        p {color: $gray-color; @include zero; font-size: .8rem;}
+    }
+
+
+    #pricing {
+        margin: $margin;
+        text-align: center;
+
+
+        img {@include zero;}
+        button {
+            background-color: $main-color;
+            color: $white-color;
+            border: none;
+            border-radius: 20px;
+            padding: .8rem 3%;
+            width: 75%;
+            font-size: 1.3rem;
+         }
+         p{padding: .5rem 2%;}
+    }
+
+}
+
+
+
+
+/*-------- ADDS --------*/
+.adds{
+    margin: $margin;
+    padding: 2rem $padding;
+
+    .advertising {
+        grid-template-columns: repeat(6,1fr);
+        grid-column-gap: 2%;
+        width: $full;
+
+        .add {width: $full;}
+    }
+}
+
+
+/*-------- FOOTER --------*/
+footer {
+    text-align: left;
+    padding: .23rem $padding$full;
+}
+
+
