@@ -1,111 +1,120 @@
-/*-------- HEADER --------*/ 
-header {
-  grid-template-columns: 42% 1fr;
-  margin: 0;
-
-  .logo {
-    margin: 0;
-    order: 1;
-  img{float: right;}
-  }
-
-  .headerText {
-   text-align: left;
-   order: 2;
-   margin: 0;
-
-  }
+header, nav, main, footer {
+  max-width: 70rem;
+  margin: auto;
 }
+
+/*-------- HEADER --------*/ 
+header {background-color: #fff;}
+
+
+
 
 /*-------- NAV --------*/ 
-nav button {display: none;}
-nav ul.hide {display: block;}
-
 nav {
   margin: 0 auto;
-  width: 53%;
+  max-width: 710px;
+  min-width: 710px;
 }
 
-nav ul {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  justify-content: center;
-}
-
-nav ul > li {
-    float: left;
-    padding: 0;
-    margin: 0 auto;
-    list-style: none;
-    border-right: none;
-    border-left: 1px solid $black-text;
-}
-
-
-nav ul > li:first-child {border-left: none;}
 
 nav ul li a {
-    display: block;
-    margin: 0 auto;
-    background: none;
-    font-size: 1rem;
-    text-decoration: none;
-    -webkit-transition: background 0.3s linear;
-    transition: background 0.3s linear;
-    border: none;
     padding: .6rem 1rem;
 }
 
-
-#primaryNav {
-  overflow: visible;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  margin-left: 12%;
-}
-
-#primaryNav .parent li  {display: block; border-left: none;}
-
-#primaryNav .parent li a  {min-width: 12em;}
- 
-#primaryNav li.parent > a::after {padding-top: .2rem; margin-left: .6rem;}
-
 nav ul li ul {
-    z-index:998;
-    position: absolute;
-    background-color: $sec-color;
-    background-color: rgb(240, 240, 240);
-    left:-999em;
-    width: 12em;
+  z-index:998;
+  position: absolute;
+  background-color: $sec-color;
+  background-color: rgb(240, 240, 240);
+  left:-999em;
+  width: 10em;
+  transform: none;
+  
 }
-
-nav ul li ul li {
-    border: none;
-    border-top: 1px solid $black-text;
-}
-
-nav ul li ul {border: none;}
-
-nav ul li ul li:first-child {border: none;}
-
-nav ul li:hover ul {left: auto; margin-left: $margin;}
-
 
 /*-------- MAIN --------*/ 
-header, nav, main, footer {
-    max-width: 74rem;
-    margin: $margin auto;
-}
 
-.letter, .trails {
-  div {
-    button {
+
+// .letter, .trails {
+//   div {
+//     button {
+//       width: 30%;
+//     }  
+//   }
+// }
+
+/*-------- Welcome --------*/
+.letter {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+
+  .readMore {
+    a {
+      display: block;
+      text-align: center;
+      margin: 0;
       width: 30%;
-    }  
+    }
   }
 }
+
+
+/*-------- Trails --------*/
+
+.trailContent {
+  p {
+    width: 100%;
+    max-width: 80%;;
+    margin: 0 auto;
+  }
+
+  .rideList {
+    div {
+      width: 30%;
+    }
+  }
+}
+
+.images {
+  padding: 1.2rem $pad-three;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+
+  .lazyImagesRides {
+    padding: 1rem 0;
+    width: 80%;
+    margin: 0 auto;
+
+
+    .galleryTwo {
+
+
+
+       figure {
+        width: 100%;
+        height: 0;
+        padding-bottom: 105%;
+        margin: $margin;
+    
+        img {width: 100%; height: auto;}
+      }
+    }
+  
+  }
+
+  h3 {padding-top: 1.5rem; }
+  p {width: 78%; margin: 0 auto; padding: .6rem 0;}
+}
+
+
+
+
+
+
+
+
 
 
 /*-------- signup/contact form --------*/
@@ -159,6 +168,7 @@ header, nav, main, footer {
 
 
 
+
 /*-------- BLOG --------*/
 .blog {
 
@@ -193,3 +203,4 @@ header, nav, main, footer {
     display: table;
     clear: both;
   }
+

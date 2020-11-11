@@ -22,46 +22,40 @@ header {
   display: grid;
   grid-template-columns: 100px 1fr;
 
-
   .logo {
-    float: left;
+    // float: left;
     margin: 0 2% 0 0;
     img {width: 100px;}
   }
 
   .headerText {
-   text-align: left;
-
-
+    // text-align: left;
 
     h1 {
       // margin: $margin;
       font-size: 1.35rem;
       font-weight: 700;
-      margin-bottom:0;
+      margin-bottom: 0;
       margin-top: 1.5rem;
     }
-    
+
     h2 {
       margin: $margin;
       font-weight: 600;
       font-size: 1.1rem;
     }
-
   }
-
 }
-
 
 /*-------- NAV --------*/
 .navWrapper {
-  background-color: rgb(240, 240, 240);
-  border-top: 2px solid $black-text;
-  border-bottom: 2px solid $black-text;
+  background-color: $nav-color;
+  border-top: $border;
+  border-bottom: $border;
 }
 
 nav button {
-  margin: .2rem $marg-two;
+  margin: 0.2rem $marg-two;
   background-color: transparent;
   outline: none;
   border: none;
@@ -75,29 +69,22 @@ nav button {
 #hamburgerBtn.open span:nth-child(1) {display: none;}
 #hamburgerBtn.open span:nth-child(2) {display: block;}
 
-#primaryNav {
-  height: 0;
-  overflow: hidden;
-}
+#primaryNav {height: 0; overflow: hidden;}
 
 #primaryNav.open {height: auto;}
 
 #primaryNav li.parent > a::after {
   content: "\25BC";
-  font-size: .7rem;
-  padding-top: .16rem;
-  color: rgba(0,0,0,0.53);
+  font-size: 0.7rem;
+  padding-top: 0.16rem;
+  padding-left: .8rem;
+  color: rgba(0, 0, 0, 0.53);
   float: right;
 }
 
-#primaryNav li ul {
-  display: none;
-}
+#primaryNav li ul {display: none;}
 
-#primaryNav li:hover ul {
-  display: block;
-}
-
+#primaryNav li:hover ul {display: block;}
 
 nav ul {
   list-style-type: none;
@@ -107,27 +94,22 @@ nav ul {
 
 nav ul li a {
   display: block;
-  padding: .8rem $pad-two;
+  padding: 0.8rem $pad-two;
   text-decoration: none;
   color: $black-text;
   border-top: 1px solid $black-text;
 }
 
+
 nav ul li.active a {background-color: $main-color; color: $white-text;}
-nav ul li a:hover {
-  background-color: rgb(1, 50, 70); color: $sec-color;
-}
+nav ul li a:hover {background-color: rgb(1, 50, 70); color: $sec-color;}
+
+
 
 nav ul.hide {display: none;}
 
-
-
-
-
 /*-------- MAIN --------*/
-.mainWrapper {
-  background-color: $main-wrapper-color;
-}
+.mainWrapper {background-color: $main-wrapper-color;}
 
 main {
   min-height: 10rem;
@@ -140,7 +122,7 @@ main {
 main {
   h1 {
     margin: $margin auto;
-    padding: .8rem $pad;
+    padding: 0.8rem $pad;
     text-align: center;
     font-size: 30px;
     max-width: 600px;
@@ -157,12 +139,10 @@ main {
     top: $half-width;
     position: absolute;
     border-radius: 3px;
-
   }
   h1:after {
     content: "";
     display: block;
-    // width: 130px;
     width: 25%;
     height: 5px;
     background: $third-color;
@@ -170,7 +150,6 @@ main {
     top: $half-width;
     position: absolute;
     border-radius: 3px;
-
   }
 
   h3 {
@@ -193,37 +172,14 @@ main {
 }
 
 
-.confirmation {
-  padding: 1rem 5%;
-
-  h2 {
-    font-weight: 600;
-    font-size: 1.5rem;
-  }
-  
-
-  h5 {
-    font-style: italic;
-    font-size: 1.2rem;
-    margin-top: 0;
-    padding-left: 2%;
-    font-weight: 400;
-  }
-}
-
-
-/*-------- Hero/slider --------*/
-
+/*-------- Hero/slider images --------*/
 .slider picture {
   position: relative;
   padding: $pad;
   margin: $margin;
 
-  img {
-    width: $full-width;
-  }
+  img {width: $full-width;}
 }
-
 
 main picture.hero {
   width: $full-width;
@@ -238,216 +194,546 @@ main picture.hero {
 }
 
 
-.textContent {
+/*-------- Page titles --------*/
+
+.titleContent {
   padding: $pad-two;
+  background-color: $sec-color;
+  // background-color: red;
+}
+
+
+/*-------- Main page content --------*/
+/*-------- Welcome/Index --------*/
+/*---- Quote ----*/
+.quoteContent {
+  padding: $pad-three;
   margin: $margin;
   background-color: $sec-color;
+}
+/*---- letter ----*/
+.letter {
+  padding: 1rem $pad-three;
+
+  .readMore {
+    padding: .6rem 0;
+
+    a {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      width: 95%;
+      padding: 0.7rem 3%;
+      color: #fff;
+      background-color: $main-color;
+      box-shadow: 2px 2px 3px #000;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: #000;
+      background-color: #fff;
+      border: 1px solid #000;
+      border-radius: 3px;
+    }
+  }
+}
+
+/*---- quick links ----*/
+.quick {
+  border-top: $border;
+  margin: 0;
+  padding: 1rem 2%;
+  color: #fff;
+
+
+  h1 {
+    color: #fff;
+    text-shadow: $text-shadow;
+  }
+
+  h1:before, h1:after {
+    background-color: #fff;
+    box-shadow: 2px 2px 3px #000;
+  }
+
+
+  ul {
+    margin: 0;
+    padding: 0;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 0.8rem;
+  }
+
+  a {
+    padding: 0.7rem 0;
+    list-style-type: none;
+    text-align: center;
+    box-shadow: 2px 2px 3px #000;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  a:hover {
+    color: #fff;
+    background-color: $main-color;
+    border-radius: 3px;
+  }
+
 }
 
 
 
-/*-------- welcome letter/book now --------*/
-.letter, .trails {
-  padding: 1rem 5%;
 
-  div {
-    margin: $margin auto;
+/*-------- Gallery --------*/
+.gallery {
+  padding: 1.2rem $pad;
+  // background-color: rgba(255, 0, 0, 0.541);
 
-    button {
-      margin: .7rem $margin;
-      width: $sixty-width;
+  figure {
+    width: $full-width;
+    height: 0;
+    padding-bottom: 53.8%;
+    position: relative;
+    margin: $margin;
+
+    img {
+      width: $full-width;
+      height: auto;
+      position: absolute;
+    }
+  }
+
+}
+
+
+
+/*---- First Section ----*/
+
+.lazyImages {
+  padding: 0;
+  padding-bottom: 1.3rem;
+
+
+  .lazy {
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 $pad-three;
+    // padding-bottom: .7rem;
+
+    // background-color: rgba(0, 128, 0, 0.473);
+
+  }
+}
+
+/*---- Second Section ----*/
+
+.lazyImagesTwo {
+  padding: 1rem 0;
+  // background-color: red;
+
+  h4 {
+    font-weight: 600;
+    text-align: center;
+    padding: 0 3%;
+  }
+
+  .galleryTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+    margin: 0 auto;
+    width: 96%;
+    justify-content: center;
+
+    figure {
       width: 100%;
-      max-width: 480px;
-      background-color: $main-color;
-      padding: 0.8rem $pad;
-      border: none;
-      border-radius: 3px;
-      color: #fff;
-      font-weight: 700;
+      height: 0;
+      padding-bottom: 60%;
+      // position: relative;
+      margin: $margin;
+    
+      img {
+        width: 100%;
+        height: auto;
+        // position: absolute;
+      }
     }
-  
-  
-    button:hover {
-      background-color: $third-color;
-      color: $white-text;
-      cursor: pointer;
-      text-decoration: none;
-    }
+    
   }
 }
 
 
 
 
-
-/*-------- gallery --------*/
-.gallery {
-  padding: 1.2rem $pad;
-}
-
-
-.gallery h4 {
+/*-------- Trails --------*/
+.trailContent {
+  padding: 1rem $pad-three;
+  padding-top:0;
   margin: $margin;
-  text-align: center;
-  padding: $pad-two 4%;
-  font-weight: 400;
-  font-size: 1.2rem;
+  background-color: $sec-color;
+
+  // background-color: rgba(255, 0, 0, 0.342);
+
+  // .intro {
+  //   // padding: 0;
+  //   // width: 90%;
+  //   // max-width: 900px;
+  //   // margin: 0 auto;
+  //   background-color: green;
+  // }
+  
+
+  .rideList {
+    margin: 0 auto;
+    padding: 0;
+    // width: 90%;
+    // max-width: 900px;
+
+    h3 {
+      font-weight: 600;
+      // font-size: 2rem;
+      font-size: 1.6rem;
+      padding-top: 1.2rem;
+    }
+
+    p {
+      margin: 0 auto;
+      padding: 0.8rem 0;
+    }
+
+    span {font-weight: 700;}
+
+
+    div {
+      margin: $margin auto;
+      text-align: center;
+      width: 95%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 1rem;
+      padding: 1.2rem 0;
+      // padding-top: 0.6rem;
+
+
+      a {
+        padding: 0.7rem 3%;
+        box-shadow: 2px 2px 3px #000;
+        border-radius: 3px;
+        background-color: $main-color;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+        // background-color: red;
+      }
+
+      a:hover {
+        color: #000;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 3px;
+      }
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 1rem;
+      padding-top: 0.6rem;
+      margin: 0.6rem 0;
+      // margin: 0;
+      text-align: center;
+      // padding: 0;
+    }
+      
+    h5 {
+      font-weight: 400;
+      font-size: 1rem;
+      padding: 0;
+      margin: 0;
+      font-style: normal;
+      text-align: center;
+    }
+
+  }
+
+}
+
+
+.images {
+  padding: 1.2rem $pad-three;
+  margin: 0 auto;
+
+  // width: 90%;
+  // max-width: 900px;
+
+  .lazyImagesRides {
+    padding: 1rem 0;
+
+
+    .galleryTwo {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 2%;
+      margin: 0 auto;
+      width: 100%;
+      justify-content: center;
+
+       figure {
+        width: 100%;
+        height: 0;
+        padding-bottom: 105%;
+        margin: $margin;
+    
+        img {width: 100%; height: auto;}
+      }
+    }
+  
+  }
+
+  h3 {padding-top: 1.5rem;}
 }
 
 
 
-/*-------- signup/contact form --------*/
+/*-------- Book Online --------*/
+.trails {
+  margin: 0;
+  padding: 0 $pad-three;
+  padding-bottom: 1rem;
+
+  p {
+    margin: 0 auto;
+    padding: 0.8rem 0;
+  }
+
+  div {
+    margin: $margin auto;
+    text-align: center;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+    padding: 1.2rem 0;
+
+
+    a {
+      padding: 0.7rem 3%;
+      box-shadow: 2px 2px 3px #000;
+      border-radius: 3px;
+      background-color: $main-color;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: #000;
+      background-color: #fff;
+      border: 1px solid #000;
+      border-radius: 3px;
+    }
+  }
+}
+
+
+/*---- signup/contact form ----*/
+
 .signupForm {
-  padding: .5rem 5%;
+  padding: $pad-three;
   margin: $margin;
-
-
+  // background-color: rgba(255, 0, 0, 0.582);
 
   fieldset {
     background-color: $sec-color;
     margin: 2rem $margin;
     border: 3px solid $black-text;
     border-radius: 15px;
-    padding: $pad-two;
+    padding: $pad-three;
 
+    legend {
+      color: $main-color;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: $margin $marg-two;
+      padding: $pad 1rem;
+    }
+    
     p {
+      width: $full-width;
+      // max-width: 90%;
+      // background-color: red;
+
+      span {font-weight: 700;}
+    }
+
+    .section {font-weight: 700;}
+    .agreement {
       width: $full-width;
       max-width: 90%;
 
       span {font-weight: 700;}
     }
+
   }
 
-  legend {
-    color: $main-color;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin: $margin $marg-two;
-    padding: $pad 1rem;
-  }
 
-  label.top, div {
+  .top, div {
     display: block;
     padding-top: 1rem;
     color: $black-text;
     font-size: 1rem;
     line-height: 1.5rem;
-    font-weight: 300;
-
+    font-weight: 400;
   }
 
-  div span {
+  form select, form textarea {
+    border: 1px solid $black-text;
+    border-radius: 3px;
+    padding: 0.75rem;
+    width: $full-width;
+    max-width: 20rem;
+  }
+
+  form label.top input, form label.top select {
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: 1px solid $black-text;
+    border-radius: 3px;
+    padding: 0.75rem;
+    color: #555;
+    width: $full-width;
+    max-width: 20rem;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  form label.sbs {
+    display: block;
+    padding: 0.75rem 0;
+    color: rgb(68, 68, 68);
+  }
+
+  form input.submitBtn {
+    // border: 2px solid $black-text;
+    border: none;
+    background-color: $main-color;
+    color: $white-text;
+    border-radius: 3px;
+    padding: 0.75rem 1.5rem;
+    margin: $margin $margin 2.5rem $marg-two;
+    width: 96%;
+    max-width: 20rem;
+    text-transform: uppercase;
     font-weight: 700;
+  }
+
+  form input.submitBtn:hover {background-color: rgb(7, 128, 3);}
+
+  form label.top input:required {
+    border-left: rgb(179, 1, 1) solid 6px;
+    border-radius: 10px;
+  }
+
+  form label.top input:required:valid {
+    border-left: green solid 6px;
+    border-radius: 10px;
+  }
+
+
+}
+
+
+/*-------- Contact--------*/
+
+.contact {
+  padding: 1rem $pad-three;
+
+  div {
+    padding: .6rem 0;
+
+    a {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      width: 95%;
+      padding: 0.7rem 3%;
+      color: #fff;
+      background-color: $main-color;
+      box-shadow: 2px 2px 3px #000;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
 
-  .agreement {
-    width: $full-width;
-    max-width: 90%;
-  }
-  
-}
-
-form select, form textarea {
-  border: 1px solid $black-text;
-  border-radius: 3px;
-  padding: .75rem;
-  width: $full-width;
-  max-width: 20rem;
-}
-
-
-form label.top input, form label.top select {
-  -webkit-appearance: none;
-  display: block;
-  font-size: 1rem;
-  border: 1px solid $black-text;
-  border-radius: 3px;
-  padding: .75rem;
-  color: #555;
-  width: $full-width;
-  max-width: 20rem;
-  background-color: rgba(0,0,0,0.05);
-}
-
-form label.sbs {
-  display: block;
-  padding: .75rem 0;
-  color: rgb(68, 68, 68);
-}
-
-
-form input.submitBtn {
-  // border: 2px solid $black-text;
-  border: none;
-  background-color: $main-color;
-  color: $white-text;
-  border-radius: 3px;
-  padding: .75rem 1.5rem;
-  margin: $margin $margin 2.5rem $marg-two;
-  width: 96%;
-  max-width: 20rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-form input.submitBtn:hover {
-  background-color: rgb(7, 128, 3);
-}
-
-
-
-form label.top input:required {
-  border-left: rgb(179, 1, 1) solid 6px;
-  border-radius: 10px;
-}
-
-form label.top input:required:valid {
-  border-left: green solid 6px;
-  border-radius: 10px;
-}
-
-
-
-/*-------- gallery--------*/
-section.gallery figure {
-  width: $full-width;
-  height: 0;
-  padding-bottom: 55.8%;
-  position: relative;
-  margin: $margin;
-
-  img {
-    width: $full-width;
-    height: auto;
-    position: absolute;
-  }
-}
-
-.lazyImages {
-  padding: 1rem 0;
-  h4 {
-    font-weight: 600; 
-    text-align: center;
-    padding: 0 3%;
+    a:hover {
+      color: #000;
+      background-color: #fff;
+      border: 1px solid #000;
+      border-radius: 3px;
+    }
   }
 }
 
 
-/*-------- video --------*/
+
+/*-------- Confirmation --------*/
+.confirmation {
+  padding: 1rem $pad-three;
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 0;
+    padding-left: 2%;
+    font-weight: 400;
+  }
+}
+
+
+
+
+
+/*------  video ------*/
 .videoSection {
   background-color: rgba(26, 92, 0, 0.205);
   background-color: rgba(0, 81, 92, 0.205);
 
   border-top: 2px solid $black-text;
   margin: $margin;
-  padding: .5rem $pad-two;
+  padding: 0.5rem $pad-two;
   padding-bottom: 1.5rem;
 
   .video {
     width: 90%;
     height: 250px;
     margin: auto;
+    padding: 1.5rem 0;
 
     iframe {
       height: $full-width;
@@ -463,175 +749,35 @@ section.gallery figure {
 }
 
 
-.meetHorses {
-  background-color: rgba(0, 81, 92, 0.205);
-
-  border-top: 2px solid $black-text;
-  padding: 5%;
-
-
-  .members {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    margin: 0 auto;
-
-
-    .column {
-      padding: 0;
-      margin: 0 auto;
-      margin-bottom: 1rem;
-
-
-      #circle {
-        display: block;
-        width: 100%;
-        clip-path: circle(62%);
-        margin-left: auto;
-        margin-right: auto;
-        margin: 0 auto;  
-        margin-bottom: .8rem;
-      }
-    
-
-        h2 {
-          width: 100%;
-          font-size: 1rem;
-          text-align: center;
-          margin: 0 auto;
-        }
-    }
-  }
-
-
-
- .viewMore {
-   width: 100%;
-   margin: 0 auto;
-   text-align: center;
-
-  button {
-    width: 80%;
-    background-color: $main-color;
-    font-weight: 700;
-    color: $white-text;
-    padding: 0.8rem $pad;
-    border: none;
-    border-radius: 3px;
-  }
-
-  button:hover {
-    background-color: $third-color;
-    color: $white-text;
-    cursor: pointer;
-  }
- }
-
-}
-
-
-
-.lazy {
-  background-repeat: none;
-  background-position: center;
-  background-size: cover;
-}
-
-
-.quick, .videoSection {
-  h1 {color: #fff; text-shadow: 2px 2px 3px #000;}
-
-  h1:before {
-    background-color: white;
-    box-shadow: 2px 2px 3px #000;
-  }
-
-  h1:after {
-    background-color: white;
-    // drop: 2px 2px 3px #000;
-    box-shadow: 2px 2px 3px #000;
-  }
-}
-
-
-.quick {
-  // background-color: rgba(26, 92, 0, 0.205);
-  // background-color: rgba(0, 81, 92, 0.205);
-  // background-image:url(../images/IMG_0222.jpg);
-
-
-  border-top: 2px solid $black-text;
-  margin: 0;
-  padding: 1rem 2%;
-  color: white;
-
-
-
-  ul {
-    margin: 0;
-    padding: 0;
-    padding: 5%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 2%;
-    grid-row-gap: .8rem;
-  }
-
-  ul li {
-    padding: .7rem 0;
-    list-style-type: none;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 2px 2px 3px #000;
-    border-radius: 3px;
-    // margin: .5rem 0;
-  }
-
-  ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #000;
-  }
-
-  ul li:hover {background-color: $main-color; border-radius: 3px;}
-
-  ul li:hover a {color: #fff;}
-}
-
-
-
 /*-------- BLOG --------*/
 .blog {
   width: $full-width;
   height: $full-width;
   margin: $margin auto;
-  padding: $pad-two;
+  padding: $pad-three;
   border-top: 2px solid $black-text;
   text-align: center;
   background-color: $sec-color;
   background-color: rgba(0, 81, 92, 0.205);
 
-
-    .morePosts {
+  .morePosts {
     display: grid;
     grid-template-columns: 1fr;
     margin: $margin auto;
     padding: 5% $pad;
     margin: 1rem $margin;
 
-      .viewMore {
-        margin: $margin;
-        padding: .5rem $pad;
-      }
+    .viewMore {
+      margin: $margin;
+      padding: 0.5rem $pad;
+    }
 
-      .search{
-        margin: $margin;
-        padding: .5rem $pad;
-      }
+    .search {
+      margin: $margin;
+      padding: 0.5rem $pad;
+    }
 
-      input[type=text] {
+    input[type="text"] {
       width: 150px;
       width: $forty-width;
       box-sizing: border-box;
@@ -639,37 +785,37 @@ section.gallery figure {
       border-radius: 3px;
       font-size: 16px;
       background-color: $sec-color;
-      background-image: url('../images/search-outline.svg');
-      background-position: 5px 5px; 
+      background-image: url("../images/search-outline.svg");
+      background-position: 5px 5px;
       background-size: 30px;
       background-repeat: no-repeat;
       padding: 12px 20px 12px 40px;
       -webkit-transition: width 0.4s ease-in-out;
       transition: width 0.4s ease-in-out;
       outline: none;
-      }
-      
-      input[type=text]:focus {width: 80%;}
+    }
 
-      button {
-        width: 80%;
-        background-color: $main-color;
-        font-weight: 700;
-        color: $white-text;
-        padding: 0.8rem $pad;
-        border: none;
-        border-radius: 3px;
-      }
+    input[type="text"]:focus {
+      width: 80%;
+    }
 
-      button:hover {
-        background-color: $third-color;
-        color: $white-text;
-        cursor: pointer;
-      }
+    button {
+      width: 80%;
+      background-color: $main-color;
+      font-weight: 700;
+      color: $white-text;
+      padding: 0.8rem $pad;
+      border: none;
+      border-radius: 3px;
+    }
+
+    button:hover {
+      background-color: $third-color;
+      color: $white-text;
+      cursor: pointer;
+    }
   }
-
 }
-
 
 .card-hover {
   display: grid;
@@ -689,11 +835,12 @@ section.gallery figure {
 
     .content {
       height: $full-width;
-      border: 3px solid $white-text; 
+      border: 3px solid $white-text;
       border-radius: 3px;
       padding: $pad-three;
 
-      h3, .disappear {
+      h3,
+      .disappear {
         font-size: 2rem;
         text-shadow: 1px 1px 5px $third-color;
         text-align: center;
@@ -719,21 +866,21 @@ section.gallery figure {
   .card:hover {
     background-color: none;
     text-shadow: 0px 0px 10px $third-color;
-  
+
     img {
       filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
     }
   }
 }
 
-
-
 .card:nth-child(1) {
   background: $background-gradient, url(../images/hover_images/blog1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  .description {display: none;}
+  .description {
+    display: none;
+  }
 }
 
 .card:nth-child(2) {
@@ -741,7 +888,9 @@ section.gallery figure {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  .description {display: none;}
+  .description {
+    display: none;
+  }
 }
 
 .card:nth-child(3) {
@@ -749,18 +898,113 @@ section.gallery figure {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  .description {display: none;}
+  .description {
+    display: none;
+  }
 }
-
 
 .card:hover {
   background-image: none;
   background-color: $main-color;
-  .disappear {display: none;}
-  .description {display: block;}
+  .disappear {
+    display: none;
+  }
+  .description {
+    display: block;
+  }
 }
 
 
+
+/*---- Meet the horses ----*/
+.meetHorses {
+  background-color: rgba(0, 81, 92, 0.205);
+  border-top: 2px solid $black-text;
+  padding: 1rem 3%;
+
+    h1:before {
+      width: 13%;
+      height: 5px;
+      border-radius: 3px;
+    }
+    h1:after {
+      width: 13%;
+      border-radius: 3px;
+    }
+
+  .members {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0 auto;
+
+    .column {
+      padding: 0;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+
+      #circle {
+        display: block;
+        width: 100%;
+        clip-path: circle(50%);
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;
+        margin-bottom: 0.8rem;
+      }
+
+      h2 {
+        width: 100%;
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .viewMore {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    button {
+      width: 80%;
+      background-color: $main-color;
+      font-weight: 700;
+      color: $white-text;
+      padding: 0.8rem $pad;
+      border: none;
+      border-radius: 3px;
+    }
+
+    button:hover {
+      background-color: $third-color;
+      color: $white-text;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+/*---- section h1s ----*/
+.quick, .videoSection {
+  h1 {
+    color: #fff;
+    text-shadow: 2px 2px 3px #000;
+  }
+
+  h1:before {
+    background-color: white;
+    box-shadow: 2px 2px 3px #000;
+  }
+
+  h1:after {
+    background-color: white;
+    // drop: 2px 2px 3px #000;
+    box-shadow: 2px 2px 3px #000;
+  }
+}
 
 
 .quick, .textContent {
@@ -775,21 +1019,6 @@ section.gallery figure {
     border-radius: 3px;
   }
 }
-
-.meetHorses {
-  h1:before {
-    width: 13%;
-    height: 5px;
-    border-radius: 3px;
-
-  }
-  h1:after {
-    // width: 130px;
-    width: 13%;
-    border-radius: 3px;
-  }
-}
-
 
 
 

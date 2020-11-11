@@ -1,228 +1,412 @@
 /*-------- HEADER --------*/
 header {
-  grid-template-columns: 41% 1fr;
-  margin: 0;
-
-  .logo {
-    margin: 0;
-    order: 1;
-  img{float: right;}
-  }
+  grid-template-columns: 100px 310px;
+  margin: 0 auto;
+  justify-content: center;
 
   .headerText {
-   text-align: left;
-   order: 2;
-   margin: 0;
-
-   h1 {
-    margin: $margin;
-    font-size: 1.35rem;
-    font-weight: 700;
-    margin-top: 1.3rem;
-  }
-  
-  h2 {
-    margin: $margin;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-
-
-  }
-}
-
-
-.meetHorses {
-  h1:before {
-    width: 25%;
-    height: 5px;
-  }
-  h1:after {
-    // width: 130px;
-    width: 25%;
-  }
-}
-
-/*-------- NAV --------*/
-
-/*-------- MAIN --------*/
-.letter, .trails {
-  div {
-  button {
-    width: $forty-width;
-    width: 50%;
-  }  
-}
-}
-
-/*-------- signup/contact form --------*/
-.signupForm {
-fieldset {
-
-  p {
-    width: $full-width;
-    max-width: $sixty-width;
-  }
-}
-
-.agreement {
-  width: $full-width;
-  max-width: $sixty-width;
-}
-}
-
-
-/*-------- video --------*/
-.videoSection {
-  .video {
-    width: 70%;
-    height: 400px;
-  }
-}
-
-.meetHorses {
-  border-top: 2px solid $black-text;
-  padding: 5%;
-
-
-  .members {
-    padding-bottom: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3%;
-    padding-bottom: 2rem;
-
-    .column {
-      // background-color: red;
-
-
-      #circle {
-      width: 50%;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-}
-}
-
- .viewMore {
-   width: 100%;
-   margin: 0 auto;
-   text-align: center;
-
-  button {
-    width: 50%;
-  }
- }
-
-
- .flip {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  width: 100%;
-
-}
-
-}
-
-.meetHorses {
-  border-top: 2px solid $black-text;
-  padding: 5%;
-
-  .members {
-  margin: 0 auto;
-  width: 70%;
-  width: 100%;
-  min-width: 550px;
-  max-width: 600px;
-  
-
-    .column {
-      width: 100%;
-
-      #circle {
-      width: 100%;
+    h1 {
+      font-size: 1.4rem;
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
- }
+  }
 }
 
+/*-------- NAV --------*/ 
+nav button {display: none;}
+nav ul.hide {display: block;}
+
+nav {
+  margin: 0 auto;
+  // width: 57%;
+  // min-width: 710px;
+  // width: 100%;
+  // max-width: 98%;
+  // background-color: red;
+
+  width:100%;
+  max-width:595px;
+  min-width:590px;
+  margin:0 auto;
 }
 
+nav ul {
+  margin: 0 auto;
+  // position: relative;
+  // display: inline;
+  // left: 20%;
+  // right: 25%;
+  text-align: center;
+  // border: 1px solid green;
+}
 
-
-
-.quick {
-  ul {
-    // grid-column-gap: 0;
-    // background-color: rebeccapurple;
-    grid-template-columns: 1fr 1fr;
-    width: 70%;
+nav ul > li {
+    float: left;
+    padding: 0;
     margin: 0 auto;
-  }
+    list-style: none;
+    border-right: none;
+    border-left: 1px solid $black-text;
+    // border: 1px solid green;
+
 }
 
-/*-------- BLOG --------*/
-.blog {
-  .morePosts {
-    padding: $pad-two;
 
-    .search{
-      input[type=text] {width: 30%;}
-        
-      input[type=text]:focus {width: $half-width;}
-    }
+nav ul > li:first-child {border-left: none;}
 
-    button {width: $half-width;}
-  }
-
-  .card:nth-child(3) {
-    grid-column: 1/span 2;
-  }
+nav ul li a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    background: none;
+    font-size: 1rem;
+    text-decoration: none;
+    -webkit-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+    border: none;
+    padding: .6rem .5rem;
+}
 
 
-  .card-hover {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1%;
+#primaryNav {
+  overflow: visible;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-left: 2%;
+}
 
-    .card {
+#primaryNav .parent li  {display: block; border-left: none;}
+
+#primaryNav .parent li a  {min-width: 10em;}
+ 
+// #primaryNav li.parent > a::after {padding-top: .2rem; margin-left: .6rem;}
+// #primaryNav li.parent > a::after {padding-top: .2rem; margin-left: 0;}
+
+nav ul li ul {
+    z-index:998;
+    position: absolute;
+    background-color: $sec-color;
+    background-color: rgb(240, 240, 240);
+    left:-999em;
+    width: 10em;
+    transform: translateX(-50%);
+}
+
+nav ul li ul li {
+    border: none;
+    border-top: 1px solid $black-text;
+}
+
+nav ul li ul {border: none;}
+
+nav ul li ul li:first-child {border: none;}
+
+nav ul li:hover ul {left: auto; margin-left: $margin;}
+
+
+
+/*-------- MAIN --------*/
+/*-------- Welcome --------*/
+.letter {
+  .readMore {
+    a {
       display: block;
-      width: $full-width;
-      height: 405px;
       text-align: center;
-      text-decoration: none;
-      padding: $pad-three;
-      transition: all 0.5s ease-in;
-      color: $white-text;
-      border-radius: 3px;
-
-
-    .content {
-      padding: $pad-three;
-
-      h3, .disappear {
-        font-size: 2rem;
-        text-shadow: 1px 1px 3px $third-color;
-      }
-
-      .description {
-        font-size: 1rem;
-        text-shadow: 1px 1px 3px $third-color;
-       }
-     }
+      margin: 0;
+      width: 50%;
     }
+  }
+}
+
+
+/*-------- Trails --------*/
+.trailContent {
+  p {width: 95%; margin: 0 auto;}
+
+  .rideList {
+    div {
+      text-align: center;
+      width: 50%;
+    }
+  }
+}
+
+.images{
+  width: 90%;
+  padding: 0;
+  h3 {font-weight: 700;}
+}
+
+
+/*-------- Book Online --------*/
+.trails {
+  div {
+    width: 50%;
+  }
+}
+
+/*---- signup/contact form ----*/
+
+.signupForm {
+  fieldset {
+    legend {font-size: 1.4rem;}
+    
+    p {
+      width: 72%;
+      span {font-weight: 700;}
+    }
+
+    .section {font-weight: 700;}
+    .agreement {
+      max-width: 72%;
+      span {font-weight: 700;}
+    }
+
+  }
+}
+
+
+
+/*---- Contact ----*/
+.contact {
+  div {
+    a {width: 50%;}
+  }
+}
+
+
+/*-------- Confirmation --------*/
+.confirmation {
+  padding: 1rem $pad-three;
+  background-color: red;
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 0;
+    padding-left: 2%;
+    font-weight: 400;
   }
 }
 
 
 
 
-/*----- Clearfix: Force an Element not to collapse -----*/
+// .meetHorses {
+//   h1:before {
+//     width: 25%;
+//     height: 5px;
+//   }
+//   h1:after {
+//     // width: 130px;
+//     width: 25%;
+//   }
+// }
+
+
+// /*-------- MAIN --------*/
+// .letter, .trails {
+//   div {
+//   button {
+//     width: $forty-width;
+//     width: 50%;
+//   }  
+// }
+// }
+
+
+
+// .images {
+//   .lazyImagesRides {
+//   .galleryTwo {
+//     grid-template-columns: 1fr 1fr 1fr;
+//     }
+//   }
+// }
+  
+
+// /*-------- signup/contact form --------*/
+// .signupForm {
+// fieldset {
+
+//   p {
+//     width: $full-width;
+//     max-width: $sixty-width;
+//   }
+// }
+
+// .agreement {
+//   width: $full-width;
+//   max-width: $sixty-width;
+// }
+// }
+
+
+// /*-------- video --------*/
+// .videoSection {
+//   .video {
+//     width: 70%;
+//     height: 400px;
+//   }
+// }
+
+// .meetHorses {
+//   border-top: 2px solid $black-text;
+//   padding: 5%;
+
+
+//   .members {
+//     padding-bottom: 1rem;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-gap: 3%;
+//     padding-bottom: 2rem;
+
+//     .column {
+//       // background-color: red;
+
+
+//       #circle {
+//       width: 50%;
+//   }
+
+//   h2 {
+//     font-size: 1.3rem;
+//   }
+// }
+// }
+
+//  .viewMore {
+//    width: 100%;
+//    margin: 0 auto;
+//    text-align: center;
+
+//   button {
+//     width: 50%;
+//   }
+//  }
+
+
+//  .flip {
+//   -webkit-transform: scaleX(-1);
+//   transform: scaleX(-1);
+//   width: 100%;
+
+// }
+
+// }
+
+// .meetHorses {
+//   border-top: 2px solid $black-text;
+//   padding: 5%;
+
+//   .members {
+//   margin: 0 auto;
+//   width: 70%;
+//   width: 100%;
+//   min-width: 550px;
+//   max-width: 600px;
+  
+
+//     .column {
+//       width: 100%;
+
+//       #circle {
+//       width: 100%;
+//     }
+
+//     h2 {
+//       font-size: 1rem;
+//     }
+//  }
+// }
+
+// }
+
+
+
+
+// .quick {
+//   ul {
+//     grid-template-columns: 1fr 1fr;
+//     width: 70%;
+//     margin: 0 auto;
+//   }
+// }
+
+
+// .galleryTwo {
+//   grid-template-columns: 1fr 1fr 1fr;
+// }
+
+
+
+// /*-------- BLOG --------*/
+// .blog {
+//   .morePosts {
+//     padding: $pad-two;
+
+//     .search{
+//       input[type=text] {width: 30%;}
+        
+//       input[type=text]:focus {width: $half-width;}
+//     }
+
+//     button {width: $half-width;}
+//   }
+
+//   .card:nth-child(3) {
+//     grid-column: 1/span 2;
+//   }
+
+
+//   .card-hover {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-column-gap: 1%;
+
+//     .card {
+//       display: block;
+//       width: $full-width;
+//       height: 405px;
+//       text-align: center;
+//       text-decoration: none;
+//       padding: $pad-three;
+//       transition: all 0.5s ease-in;
+//       color: $white-text;
+//       border-radius: 3px;
+
+
+//     .content {
+//       padding: $pad-three;
+
+//       h3, .disappear {
+//         font-size: 2rem;
+//         text-shadow: 1px 1px 3px $third-color;
+//       }
+
+//       .description {
+//         font-size: 1rem;
+//         text-shadow: 1px 1px 3px $third-color;
+//        }
+//      }
+//     }
+//   }
+// }
+
+
+
+
+// /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
   content: "";
   display: table;
