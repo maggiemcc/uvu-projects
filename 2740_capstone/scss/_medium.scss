@@ -29,12 +29,7 @@ nav {
 
 nav ul {
   margin: 0 auto;
-  // position: relative;
-  // display: inline;
-  // left: 20%;
-  // right: 25%;
   text-align: center;
-  // border: 1px solid green;
 }
 
 nav ul > li {
@@ -44,8 +39,6 @@ nav ul > li {
     list-style: none;
     border-right: none;
     border-left: 1px solid $black-text;
-    // border: 1px solid green;
-
 }
 
 
@@ -77,8 +70,7 @@ nav ul li a {
 
 #primaryNav .parent li a  {min-width: 10em;}
  
-// #primaryNav li.parent > a::after {padding-top: .2rem; margin-left: .6rem;}
-// #primaryNav li.parent > a::after {padding-top: .2rem; margin-left: 0;}
+#primaryNav li.parent > a::after {padding-top: .2rem; margin-left: 0;}
 
 nav ul li ul {
     z-index:998;
@@ -117,6 +109,32 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 }
 
 
+/*-------- Gallery--------*/
+
+.lazyImagesTwo {
+  padding: 1rem 0;
+
+  .galleryTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+    margin: 0 auto;
+    width: 97%;
+
+    figure {
+      width: 100%;    
+      img {
+        width: 100%;
+      }
+    }
+    
+  }
+}
+
+
+
+
+
 /*-------- Trails --------*/
 .trailContent {
   p {width: 95%; margin: 0 auto;}
@@ -133,6 +151,12 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
   width: 90%;
   padding: 0;
   h3 {font-weight: 700;}
+
+  .lazyImagesRides {
+    .galleryTwo {
+      grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
 }
 
 
@@ -142,6 +166,8 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
     width: 50%;
   }
 }
+
+
 
 /*---- signup/contact form ----*/
 
@@ -176,7 +202,6 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 /*-------- Confirmation --------*/
 .confirmation {
   padding: 1rem $pad-three;
-  background-color: red;
 
   h2 {
     font-weight: 600;
@@ -213,210 +238,83 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 }
 
 
+/*------  video ------*/
+.videoSection {
 
-// .meetHorses {
-//   h1:before {
-//     width: 25%;
-//     height: 5px;
-//   }
-//   h1:after {
-//     // width: 130px;
-//     width: 25%;
-//   }
-// }
-
-
-// /*-------- MAIN --------*/
-// .letter, .trails {
-//   div {
-//   button {
-//     width: $forty-width;
-//     width: 50%;
-//   }  
-// }
-// }
+  .video {
+    width: 90%;
+    height: 500px;
+  }
+}
 
 
 
-// .images {
-//   .lazyImagesRides {
-//   .galleryTwo {
-//     grid-template-columns: 1fr 1fr 1fr;
-//     }
-//   }
-// }
+
+/*---- Meet the horses ----*/
+.meetHorses {
+  background-color: rgba(0, 81, 92, 0.205);
+  background-color: $main-wrapper-color;
+  border-top: 2px solid $black-text;
+  padding: 1rem 3%;
+
+  .members {
+    margin: 0 auto;
+    max-width: 700px;
+
+    .column {
+      #maverick, #rowdy, #caspian {
+        width: 100%;
+      }
+    }
+  }
+
+  .viewMore {
+    .button {
+      width: 55%;
+      padding: 0.8rem $pad;
+    }
+  }
+}
+
+
+
+/*-------- BLOG --------*/
+.card-hover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3%;
+  grid-row-gap: 3%;
   
 
-// /*-------- signup/contact form --------*/
-// .signupForm {
-// fieldset {
+  .card {
+    min-height: 360px;
 
-//   p {
-//     width: $full-width;
-//     max-width: $sixty-width;
-//   }
-// }
+  }
+}
 
-// .agreement {
-//   width: $full-width;
-//   max-width: $sixty-width;
-// }
-// }
+.card:nth-child(1) {
+  grid-column: 1;
+}
 
+.card:nth-child(2) {
+  grid-column: 2;
+}
 
-// /*-------- video --------*/
-// .videoSection {
-//   .video {
-//     width: 70%;
-//     height: 400px;
-//   }
-// }
+.card:nth-child(3) {
+  grid-row: 2;
+  grid-column: 1/span 2;
+  height: 350px;
 
-// .meetHorses {
-//   border-top: 2px solid $black-text;
-//   padding: 5%;
+}
 
 
-//   .members {
-//     padding-bottom: 1rem;
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     grid-gap: 3%;
-//     padding-bottom: 2rem;
-
-//     .column {
-//       // background-color: red;
 
 
-//       #circle {
-//       width: 50%;
-//   }
-
-//   h2 {
-//     font-size: 1.3rem;
-//   }
-// }
-// }
-
-//  .viewMore {
-//    width: 100%;
-//    margin: 0 auto;
-//    text-align: center;
-
-//   button {
-//     width: 50%;
-//   }
-//  }
 
 
-//  .flip {
-//   -webkit-transform: scaleX(-1);
-//   transform: scaleX(-1);
-//   width: 100%;
 
-// }
 
-// }
-
-// .meetHorses {
-//   border-top: 2px solid $black-text;
-//   padding: 5%;
-
-//   .members {
-//   margin: 0 auto;
-//   width: 70%;
-//   width: 100%;
-//   min-width: 550px;
-//   max-width: 600px;
   
-
-//     .column {
-//       width: 100%;
-
-//       #circle {
-//       width: 100%;
-//     }
-
-//     h2 {
-//       font-size: 1rem;
-//     }
-//  }
-// }
-
-// }
-
-
-
-
-// .quick {
-//   ul {
-//     grid-template-columns: 1fr 1fr;
-//     width: 70%;
-//     margin: 0 auto;
-//   }
-// }
-
-
-// .galleryTwo {
-//   grid-template-columns: 1fr 1fr 1fr;
-// }
-
-
-
-// /*-------- BLOG --------*/
-// .blog {
-//   .morePosts {
-//     padding: $pad-two;
-
-//     .search{
-//       input[type=text] {width: 30%;}
-        
-//       input[type=text]:focus {width: $half-width;}
-//     }
-
-//     button {width: $half-width;}
-//   }
-
-//   .card:nth-child(3) {
-//     grid-column: 1/span 2;
-//   }
-
-
-//   .card-hover {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     grid-column-gap: 1%;
-
-//     .card {
-//       display: block;
-//       width: $full-width;
-//       height: 405px;
-//       text-align: center;
-//       text-decoration: none;
-//       padding: $pad-three;
-//       transition: all 0.5s ease-in;
-//       color: $white-text;
-//       border-radius: 3px;
-
-
-//     .content {
-//       padding: $pad-three;
-
-//       h3, .disappear {
-//         font-size: 2rem;
-//         text-shadow: 1px 1px 3px $third-color;
-//       }
-
-//       .description {
-//         font-size: 1rem;
-//         text-shadow: 1px 1px 3px $third-color;
-//        }
-//      }
-//     }
-//   }
-// }
-
-
 
 
 // /*----- Clearfix: Force an Element not to collapse -----*/
