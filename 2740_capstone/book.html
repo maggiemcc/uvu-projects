@@ -7,7 +7,7 @@
     <meta name="author" content="Maggie McCausland">
 
 
-    <title>Welcome: Maverick Horseback Riding</title>
+    <title>Book Online: Maverick Horseback Riding</title>
 
     <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -72,7 +72,7 @@
                         <!-- <li><a href="#">FAQS</a></li> -->
                     </ul>
                 </li>
-                <li><a href="contact.html">FAQs</a></li>
+                <li><a href="https://maverickhorsebackriding.com/faqs/" target="_blank">FAQs</a></li>
             </ul>
         </nav>
     </div>
@@ -113,18 +113,20 @@
 
                 <form method="get" action="bookedThanks.html">
                     <fieldset>
-                        <legend>The Ride</legend>
+                        <legend>Ride Options</legend>
 
-                        <div>Pick a Ride*</div>
+                        <div>Pick a Ride or Class*</div>
                         <select name="rideOption" required>
                             <option value="">Please Select</option>
-                            <option value="ranch">Ranch Ride</option>
-                            <option value="private">Private Rider, Park, BBQ, or Horsemanship Ride</option>
-                            <option value="childrens">The Chrildren's Introduction to Horsemanship on the Trail</option>
-                            <option value="private ranch">Private Ranch Ride</option>
-                            <option value="one hour">One Hour Private Ride</option>
-                            <option value="group">Group Horsemanship Trail Ride</option>
+                            <option value="ranch">Ranch Ride: $115 per person</option>
+                            <option value="private">Private Rider, Park, BBQ, or Horsemanship Ride: $350 per person</option>
+                            <option value="childrens">The Chrildren's Introduction to Horsemanship on the Trail: $60 per child</option>
+                            <option value="private ranch">Private Ranch Ride: $150-$250 depending on group size</option>
+                            <option value="one hour">One Hour Private Ride: $125 per person</option>
+                            <option value="group">Group Horsemanship Trail Ride: $150 per person</option>
+                            <option value="immersion">Nature Immersion Workshop Class: $20 per child</option>
                         </select>
+                        
 
                         <label class="top">Pick a Date*<input type="date" name="rideDate" required></label>
 
@@ -132,14 +134,14 @@
                         <label class="sbs"><input type="radio" name="time" value="morning"> 10:00am
                             Ride</label>
                         <label class="sbs"><input type="radio" name="time" value="afternoon"> 1:15pm Ride</label>
+                        <label class="sbs"><input type="radio" name="time" value="evening"> 3:00pm Ride</label>
 
                     </fieldset>
 
 
                     <fieldset>
-                        <legend>Rider</legend>
+                        <legend>Rider(s) Information</legend>
                         <h2>ATTENTION:</h2>
-
                         <p>Women 185+ lbs. and men 210+ lbs. Please CALL us before finishing the booking: 512-230-8413.
                         </p>
                         <p>Thank you.</p>
@@ -152,62 +154,31 @@
                             rewarded a refund.</label>
                         </div>
 
-                        <label class="top">First Name* <input type="text" name="fname" required></label>
-
-                        <div>Select a height*</div>
-                        <select name="hightOption" required>
+                        <div>Select Number of Riders</div>
+                            <select required>
                             <option value="">Please Select</option>
-                            <option value="under">under 4'</option>
-                            <option value="four">4'1"</option>
-                            <option value="four two">4'2"</option>
-                            <option value="four three">4'3"</option>
-                            <option value="four four">4'4"</option>
-                            <option value="four five">4'5"</option>
-                            <option value="four six">4'6"</option>
-                            <option value="four seven">4'7"</option>
-                            <option value="four eight">4'8"</option>
-                            <option value="four nine">4'9"</option>
-                            <option value="four ten">4'10"</option>
-                            <option value="four eleven">4'11"</option>
-
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
                             <option value="five">5</option>
-                            <option value="five">5"1</option>
-                            <option value="five two">5'2"</option>
-                            <option value="five three">5'3"</option>
-                            <option value="five four">5'4"</option>
-                            <option value="five five">5'5"</option>
-                            <option value="five six">5'6"</option>
-                            <option value="five seven">5'7"</option>
-                            <option value="five eight">5'8"</option>
-                            <option value="five nine">5'9"</option>
-                            <option value="five ten">5'10"</option>
-                            <option value="five eleven">5'11"</option>
+                            <option value="six">6</option>
+                            <option value="seven">7</option>
+                            <option value="eight">8</option>
+                            </select>
+    
+                        <div>Please enter each rider's height in feet*</div>
+                        <textarea class="userinfo" name="height" placeholder="5'5&quot;" required></textarea>
 
-                            <option value="six">6'</option>
-                            <option value="six one">6'1"</option>
-                            <option value="six two">6'2"</option>
-                            <option value="six three">6'3"</option>
-                            <option value="six four">6'4"</option>
-                            <option value="six five">6'5"</option>
-                            <option value="six six">6'6"</option>
-                            <option value="six seven">6'7"</option>
-                            <option value="six eight">6'8"</option>
-                            <option value="six nine">6'9"</option>
-                            <option value="six ten">6'10"</option>
-                            <option value="six eleven">6'11"</option>
+                        <div>Please enter each rider's weight in pounds*</div>
+                        <textarea class="userinfo" name="weight" placeholder="150 lbs" required></textarea>
 
-                            <option value="seven">7'</option>
-                            <option value="over">Over 7'</option>
-                        </select>
-
-                        <div>Please write your weight in pounds*</div>
-                        <textarea class="userinfo" name="children" placeholder="150lbs" required></textarea>
-
-                        <div>Riding Experience</div>
+                        <div>Riding Experience for Rider(s)</div>
                         <label class="sbs"><input type="radio" name="experience" value="beginner"> Beginner</label>
                         <label class="sbs"><input type="radio" name="experience" value="intermediate">
                             Intermediate</label>
                         <label class="sbs"><input type="radio" name="experience" value="advanced"> Advanced</label>
+
 
                     </fieldset>
 
@@ -222,10 +193,17 @@
                         <textarea class="userinfo" name="celebrating"></textarea>
                     </fieldset>
 
+                    <fieldset>
+                        <legend>Gift Cards</legend>
+                        <p>Perfect gift for any occasion!</p>
+                        <p>Gift Cards are good towards any ride at any location.</p>
+                        <label class="top">Gift Card Amount<input type="text" name="gcustome" placeholder="$50"></label>
+                    </fieldset>
 
                     <fieldset>
                         <legend>Payment Information</legend>
                         <div class="section">Contact Information</div>
+                        <label class="top">First Name* <input type="text" name="fname" required></label>
                         <label class="top">Phone Number <input type="tel" name="phone" placeholder="1235551234"
                                 pattern="[0-9-. ]{10,14}"></label>
                         <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com"

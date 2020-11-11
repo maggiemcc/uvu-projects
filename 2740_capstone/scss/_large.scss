@@ -12,7 +12,7 @@ header {background-color: #fff;}
 /*-------- NAV --------*/ 
 nav {
   margin: 0 auto;
-  max-width: 710px;
+  max-width: 722px;
   min-width: 710px;
 }
 
@@ -192,6 +192,22 @@ nav ul li ul {
     .card:nth-child(3) {
       grid-column: 3;
     }
+  }
+
+}
+
+
+
+/*-------- Quick --------*/
+.quick {
+
+  ul {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1%;
+  }
+
+  li {
+    width: 80%;
   }
 
 }

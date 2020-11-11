@@ -21,16 +21,10 @@ nav ul.hide {display: block;}
 
 nav {
   margin: 0 auto;
-  // width: 57%;
-  // min-width: 710px;
-  // width: 100%;
-  // max-width: 98%;
-  // background-color: red;
-
   width:100%;
-  max-width:595px;
-  min-width:590px;
-  margin:0 auto;
+  max-width:591px;
+  min-width:570px;
+  margin: 0 auto;
 }
 
 nav ul {
@@ -93,7 +87,7 @@ nav ul li ul {
     background-color: rgb(240, 240, 240);
     left:-999em;
     width: 10em;
-    transform: translateX(-50%);
+    transform: translateX(-52%);
 }
 
 nav ul li ul li {
@@ -198,6 +192,25 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
   }
 }
 
+
+
+/*-------- Quick --------*/
+.quick {
+
+  ul {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  a {
+    width: 100%;
+  }
+
+}
 
 
 

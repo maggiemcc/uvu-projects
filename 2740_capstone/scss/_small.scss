@@ -23,16 +23,13 @@ header {
   grid-template-columns: 100px 1fr;
 
   .logo {
-    // float: left;
     margin: 0 2% 0 0;
     img {width: 100px;}
   }
 
   .headerText {
-    // text-align: left;
 
     h1 {
-      // margin: $margin;
       font-size: 1.35rem;
       font-weight: 700;
       margin-bottom: 0;
@@ -262,18 +259,29 @@ main picture.hero {
 
 
   ul {
-    margin: 0;
+    display: inline-block;
+    margin: 0 auto;
     padding: 0;
     padding: 5%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-column-gap: 2%;
-    grid-row-gap: 0.8rem;
+    // grid-column-gap: 2%;
+    // grid-row-gap: 2%;
+    // background-color: red;
+  }
+
+  li {
+    list-style-type: none; 
+    padding: .6rem 0;
+    margin: 0 auto;
+    width: 100%;
+    // background-color: blue;
   }
 
   a {
+    display: inline-block;
+    width: 100%;
     padding: 0.7rem 0;
-    list-style-type: none;
     text-align: center;
     box-shadow: 2px 2px 3px #000;
     border-radius: 3px;
@@ -282,6 +290,7 @@ main picture.hero {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 600;
+
   }
 
   a:hover {
@@ -326,7 +335,7 @@ main picture.hero {
 
 
   .lazy {
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
@@ -573,10 +582,12 @@ main picture.hero {
       color: $main-color;
       text-transform: uppercase;
       font-weight: 700;
-      font-size: 1.2rem;
-      margin: $margin $marg-two;
-      padding: $pad 1rem;
+      font-size: 1.05rem;
+      margin: $margin .5rem;
+      padding: $pad .8rem;
     }
+
+    h2 {font-size: 1.2rem; margin: 0; padding: 1rem 0 0 0;}
     
     p {
       width: $full-width;
@@ -731,7 +742,7 @@ main picture.hero {
 
   .video {
     width: 90%;
-    height: 250px;
+    height: 300px;
     margin: auto;
     padding: 1.5rem 0;
 
@@ -864,7 +875,7 @@ main picture.hero {
   }
 
   .card:hover {
-    background-color: none;
+    background-color: transparent;
     text-shadow: 0px 0px 10px $third-color;
 
     img {
@@ -894,7 +905,7 @@ main picture.hero {
 }
 
 .card:nth-child(3) {
-  background: $background-gradient, url(../images/hover_images/blog3.jpg);
+  background: $background-gradient, url("../images/hover_images/blog3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -919,6 +930,7 @@ main picture.hero {
 /*---- Meet the horses ----*/
 .meetHorses {
   background-color: rgba(0, 81, 92, 0.205);
+  background-color: $main-wrapper-color;
   border-top: 2px solid $black-text;
   padding: 1rem 3%;
 
@@ -933,19 +945,25 @@ main picture.hero {
     }
 
   .members {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    margin: 0 auto;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-content: center;
+    // margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2%;
 
     .column {
       padding: 0;
       margin: 0 auto;
       margin-bottom: 1rem;
+      // background-color: rgba(255, 0, 0, 0.233);
+
 
       #circle {
         display: block;
-        width: 100%;
+        width: 90%;
         clip-path: circle(50%);
         margin-left: auto;
         margin-right: auto;
@@ -956,6 +974,7 @@ main picture.hero {
       h2 {
         width: 100%;
         font-size: 1.3rem;
+        font-weight: 600;
         text-align: center;
         margin: 0 auto;
       }
