@@ -18,7 +18,7 @@ nav {
 
 
 nav ul li a {
-    padding: .6rem 1rem;
+    padding: .75rem 1rem;
 }
 
 nav ul li ul {
@@ -50,28 +50,48 @@ nav ul li ul {
 
 
 
-// .letter, .trails {
-//   div {
-//     button {
-//       width: 30%;
-//     }  
-//   }
-// }
+// /*-------- BUTTONS --------*/
+.trailContent .rideList, .trails, .letter, .contact {
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 0 auto;
+
+      .button {
+         width: 75%;
+         margin: 0;
+        }
+
+  }
+}
+
+.trailContent .rideList {
+  .bookViewBtn {
+    width: 60%;
+    grid-column-gap: 2%;
+
+    .button {width: 100%;}
+  }
+}
+
+.trailContent .rideList {
+  .bookNowBtn {
+    width: 80%;
+    margin: 0 auto;
+    border: powderblue;
+  }
+}
+
+
+
+
 
 /*-------- Welcome --------*/
 .letter {
   width: 100%;
   max-width: 90%;
   margin: 0 auto;
-
-  .readMore {
-    a {
-      display: block;
-      text-align: center;
-      margin: 0;
-      width: 30%;
-    }
-  }
 }
 
 
@@ -105,12 +125,6 @@ nav ul li ul {
     width: 100%;
     max-width: 80%;;
     margin: 0 auto;
-  }
-
-  .rideList {
-    div {
-      width: 30%;
-    }
   }
 }
 
@@ -150,11 +164,21 @@ nav ul li ul {
 
 /*-------- Book Online --------*/
 .trails, .contact { margin: 0 auto;
-  div {width: 30%; margin: 0 auto; a {width: 100%;}}
+  // div {width: 35%;  margin: 0; a {width: 100%;}}
+}
+
+
+.contact, .trails {
+    width: 100%;
+    max-width: 80%;;
+    margin: 0 auto;
 }
 
 /*-------- signup/contact form --------*/
 .signupForm {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto; 
   fieldset {
     p {width: $full-width; max-width: 53%;}
   }
@@ -166,12 +190,15 @@ nav ul li ul {
 
 
 
+
 /*-------- video --------*/
 .meetHorses {
   border-top: 2px solid $black-text;
   padding: 5%;
 
   .members {
+    grid-column-gap: 5%;
+
     .column{
 
       h2 {
@@ -181,8 +208,8 @@ nav ul li ul {
   }
 
 .viewMore { 
-    button {
-      width: 25%;
+    .button {
+      width: 30%;
     }
   }
 }

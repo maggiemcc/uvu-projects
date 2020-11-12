@@ -54,7 +54,7 @@ nav ul li a {
     -webkit-transition: background 0.3s linear;
     transition: background 0.3s linear;
     border: none;
-    padding: .6rem .5rem;
+    padding: .75rem .55rem;
 }
 
 
@@ -96,15 +96,26 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 
 
 /*-------- MAIN --------*/
-/*-------- Welcome --------*/
-.letter {
-  .readMore {
-    a {
-      display: block;
-      text-align: center;
-      margin: 0;
-      width: 50%;
-    }
+/*-------- BUTTONS --------*/
+.trailContent .rideList, .trails, .letter, .contact {
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 0 auto;
+
+      .button {
+         width: 100%;
+         margin: 0 auto;
+        }
+
+  }
+}
+
+.trailContent .rideList {
+  .bookNowBtn {
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -139,12 +150,17 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 .trailContent {
   p {width: 95%; margin: 0 auto;}
 
-  .rideList {
-    div {
-      text-align: center;
-      width: 50%;
-    }
-  }
+  // .rideList {
+  //   div {
+  //     grid-template-columns: 1fr 1fr;
+  //     width: 90%;
+  //     margin: 0 auto;
+  //       .button {
+  //          width: 96%;
+  //          margin: 0 auto;
+  //         }
+  //   }
+  // }
 }
 
 .images{
@@ -161,11 +177,18 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 
 
 /*-------- Book Online --------*/
-.trails {
-  div {
-    width: 50%;
-  }
-}
+// .trails {
+//   div {
+//     margin: 0;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+
+//     .button {
+//       width: 96%;
+//       margin: 0 auto;
+//     }
+//   }
+// }
 
 
 
@@ -192,11 +215,11 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 
 
 /*---- Contact ----*/
-.contact {
-  div {
-    a {width: 50%;}
-  }
-}
+// .contact {
+//   div {
+//     a {width: 50%;}
+//   }
+// }
 
 
 /*-------- Confirmation --------*/

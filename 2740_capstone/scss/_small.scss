@@ -21,6 +21,7 @@ header {
   background-color: $sec-color;
   display: grid;
   grid-template-columns: 100px 1fr;
+  grid-column-gap: 2%;
 
   .logo {
     margin: 0 2% 0 0;
@@ -33,7 +34,7 @@ header {
       font-size: 1.35rem;
       font-weight: 700;
       margin-bottom: 0;
-      margin-top: 1.5rem;
+      // margin-top: 1.5rem;
     }
 
     h2 {
@@ -120,6 +121,7 @@ main {
   h1 {
     margin: $margin auto;
     padding: 0.8rem $pad;
+    padding-top: 1.5rem;
     text-align: center;
     font-size: 30px;
     max-width: 600px;
@@ -206,6 +208,44 @@ main {
 
 }
 
+
+
+/*-------- Content BUTTONS --------*/
+.trailContent .rideList, .trails, .letter, .contact {
+  div {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 auto;
+    padding: .6rem 0;
+
+    .button {
+        display: block;
+        text-align: center;
+        margin: .5rem auto;
+        width: 95%;
+        padding: 0.7rem 3%;
+        color: #fff;
+        background-color: $main-color;
+        box-shadow: 2px 2px 3px #000;
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .button:hover {
+        color: #000;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 3px;
+    }
+  }
+}
+
+
+
+
 /*-------- Hero/slider images --------*/
 .slider picture {
   position: relative;
@@ -239,32 +279,6 @@ main picture.hero {
 /*---- letter ----*/
 .letter {
   padding: 1rem $pad-three;
-
-  .readMore {
-    padding: .6rem 0;
-
-    a {
-      display: block;
-      text-align: center;
-      margin: 0 auto;
-      width: 95%;
-      padding: 0.7rem 3%;
-      color: #fff;
-      background-color: $main-color;
-      box-shadow: 2px 2px 3px #000;
-      border-radius: 3px;
-      text-decoration: none;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    a:hover {
-      color: #000;
-      background-color: #fff;
-      border: 1px solid #000;
-      border-radius: 3px;
-    }
-  }
 }
 
 /*---- quick links ----*/
@@ -453,44 +467,12 @@ main picture.hero {
 
     span {font-weight: 700;}
 
-
-    div {
-      margin: $margin auto;
-      text-align: center;
-      width: 95%;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-row-gap: 1rem;
-      padding: 1.2rem 0;
-      // padding-top: 0.6rem;
-
-
-      a {
-        padding: 0.7rem 3%;
-        box-shadow: 2px 2px 3px #000;
-        border-radius: 3px;
-        background-color: $main-color;
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.3rem;
-        font-weight: 600;
-        // background-color: red;
-      }
-
-      a:hover {
-        color: #000;
-        background-color: #fff;
-        border: 1px solid #000;
-        border-radius: 3px;
-      }
-    }
-
     h4 {
       font-weight: 600;
       font-size: 1rem;
       padding-top: 0.6rem;
       margin: 0.6rem 0;
-      // margin: 0;
+      margin: 0;
       text-align: center;
       // padding: 0;
     }
@@ -554,35 +536,6 @@ main picture.hero {
   p {
     margin: 0 auto;
     padding: 0.8rem 0;
-  }
-
-  div {
-    margin: $margin auto;
-    text-align: center;
-    width: 95%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 1rem;
-    padding: 1.2rem 0;
-
-
-    a {
-      padding: 0.7rem 3%;
-      box-shadow: 2px 2px 3px #000;
-      border-radius: 3px;
-      background-color: $main-color;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    a:hover {
-      color: #000;
-      background-color: #fff;
-      border: 1px solid #000;
-      border-radius: 3px;
-    }
   }
 }
 
@@ -699,35 +652,7 @@ main picture.hero {
 
 /*-------- Contact--------*/
 
-.contact {
-  padding: 1rem $pad-three;
-
-  div {
-    padding: .6rem 0;
-
-    a {
-      display: block;
-      text-align: center;
-      margin: 0 auto;
-      width: 95%;
-      padding: 0.7rem 3%;
-      color: #fff;
-      background-color: $main-color;
-      box-shadow: 2px 2px 3px #000;
-      border-radius: 3px;
-      text-decoration: none;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    a:hover {
-      color: #000;
-      background-color: #fff;
-      border: 1px solid #000;
-      border-radius: 3px;
-    }
-  }
-}
+.contact {padding: 1rem $pad-three;}
 
 
 
@@ -973,6 +898,11 @@ main picture.hero {
         margin-right: auto;
         margin: 0 auto;
         margin-bottom: 0.8rem;
+      }
+
+      #caspian {
+        -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
       }
 
       h2 {
