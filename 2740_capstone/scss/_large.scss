@@ -227,7 +227,15 @@ nav ul li ul {
     }
   }
 
+  .card:nth-child(1) {grid-column: 1;}
+
+  .card:nth-child(2) {grid-column: 2;}
+
+  .card:nth-child(3) {grid-column: 3; grid-row: 1;}
+
 }
+
+
 
 
 
@@ -248,25 +256,7 @@ nav ul li ul {
 
 
 
-/*-------- BLOG --------*/
-.card-hover {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1f4;
-  grid-column-gap: 3%;
-  grid-row-gap: 3%;
-  
 
-  .card {
-    min-height: 360px;
-
-  }
-}
-
-.card:nth-child(1) {grid-column: 1;}
-
-.card:nth-child(2) {grid-column: 2;}
-
-.card:nth-child(3) {grid-column: 3; grid-row: 1;}
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/
