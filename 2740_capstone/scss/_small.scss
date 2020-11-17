@@ -882,7 +882,7 @@ main picture.hero {
     // margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2%;
 
     .column {
@@ -892,9 +892,9 @@ main picture.hero {
       // background-color: rgba(255, 0, 0, 0.233);
 
 
-      #maverick, #rowdy, #caspian {
+      #maverick, #haughty, #rowdy, #caspian {
         display: block;
-        width: 90%;
+        width: 65%;
         clip-path: circle(50%);
         margin-left: auto;
         margin-right: auto;
@@ -922,7 +922,6 @@ main picture.hero {
     margin: 0 auto;
     text-align: center;
     padding: 1rem 0;
-
     .button {
       display: inline-block;
       text-decoration: none;
@@ -944,9 +943,6 @@ main picture.hero {
     }
   }
 }
-
-
-
 
 /*-------- FOOTER --------*/
 .footerWrapper {
