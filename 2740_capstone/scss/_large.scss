@@ -236,10 +236,10 @@ nav ul li ul {
     .search{
       input[type=text] {width: 25%;}
         
-      input[type=text]:focus {width: $forty-width;}
+      input[type=text]:focus {width: 33%;}
     }
 
-    button {width: $forty-width;}
+    button {width: 50%;}
   }
 
   .card-hover {
@@ -261,6 +261,7 @@ nav ul li ul {
   .card:nth-child(3) {grid-column: 3; grid-row: 1;}
 
 }
+
 
 
 

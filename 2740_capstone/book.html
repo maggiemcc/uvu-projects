@@ -225,6 +225,15 @@
                 </form>
             </div>
 
+            <div class="lazy" data-bg="images/IMG_0222.jpg">
+                <div class="videoSection">
+                    <h1>Video</h1>
+                    <div class="video">
+                        <iframe class="lazy" data-src="https://www.youtube.com/embed/D1X9cBV1-C4"></iframe>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 
@@ -246,6 +255,14 @@
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+<script>
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+        threshold: 0
+    });
+</script>
 </body>
 
 </html>

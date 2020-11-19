@@ -119,6 +119,18 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
   }
 }
 
+.trailContent .rideList {
+
+    .bookViewBtn {
+      width: 95%;
+      margin: 0 auto;
+
+      .button {
+        width: 95%;
+      }
+    }
+
+  }
 
 /*-------- Gallery--------*/
 
@@ -275,8 +287,6 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 
 /*---- Meet the horses ----*/
 .meetHorses {
-  background-color: rgba(0, 81, 92, 0.205);
-  background-color: $main-wrapper-color;
   border-top: 2px solid $black-text;
   padding: 1rem 3%;
 
@@ -303,6 +313,24 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 
 
 /*-------- BLOG --------*/
+.blog {
+  .morePosts {
+    .viewMore {
+      width: 65%;
+      margin: $margin auto;
+    }
+
+    input[type="text"] {
+      width: 30%;
+    }
+
+    input[type="text"]:focus {
+      width: 52%;
+    }
+  }
+}
+
+
 .card-hover {
   display: grid;
   grid-template-columns: 1fr 1fr;

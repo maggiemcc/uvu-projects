@@ -149,7 +149,7 @@ main {
 
 
 main {
-  .titleContent {padding: 0 3%;}
+  .titleContent {padding: 0 3%; h2 {text-align: center; margin: 0;}}
 
   h1:before {
     content: "";
@@ -304,9 +304,6 @@ main picture.hero {
     padding: 5%;
     display: grid;
     grid-template-columns: 1fr;
-    // grid-column-gap: 2%;
-    // grid-row-gap: 2%;
-    // background-color: red;
   }
 
   li {
@@ -314,7 +311,6 @@ main picture.hero {
     padding: .6rem 0;
     margin: 0 auto;
     width: 100%;
-    // background-color: blue;
   }
 
   a {
@@ -384,10 +380,6 @@ main picture.hero {
     font-weight: 400;
     text-align: center;
     padding: 0 $pad-three;
-    // padding-bottom: .7rem;
-
-    // background-color: rgba(0, 128, 0, 0.473);
-
   }
 }
 
@@ -395,7 +387,6 @@ main picture.hero {
 
 .lazyImagesTwo {
   padding: 1rem 0;
-  // background-color: red;
 
   h4 {
     font-weight: 600;
@@ -570,7 +561,6 @@ main picture.hero {
     p {
       width: $full-width;
       // max-width: 90%;
-      // background-color: red;
 
       span {font-weight: 700;}
     }
@@ -658,6 +648,7 @@ main picture.hero {
 
 
 
+
 /*-------- Confirmation --------*/
 .confirmation {
   padding: 1rem $pad-three;
@@ -718,8 +709,10 @@ main picture.hero {
   padding: $pad-three;
   border-top: 2px solid $black-text;
   text-align: center;
-  background-color: $sec-color;
-  background-color: rgba(0, 81, 92, 0.205);
+  // background-color: $sec-color;
+  // background-color: rgba(0, 81, 92, 0.205);
+  background-color: rgb(230, 230, 230);
+
 
   .morePosts {
     display: grid;
@@ -870,17 +863,13 @@ main picture.hero {
 
 /*---- Meet the horses ----*/
 .meetHorses {
-  background-color: rgba(0, 81, 92, 0.205);
-  background-color: $main-wrapper-color;
+  // background-color: $main-wrapper-color;
+  background-color: rgb(230, 230, 230);
   border-top: 2px solid $black-text;
   padding: 1rem 3%;
 
-  .members {
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-content: center;
-    // margin: 0 auto;
 
+  .members {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2%;
@@ -889,7 +878,6 @@ main picture.hero {
       padding: 0;
       margin: 0 auto;
       margin-bottom: 1rem;
-      // background-color: rgba(255, 0, 0, 0.233);
 
 
       #maverick, #haughty, #rowdy, #caspian {
@@ -922,12 +910,13 @@ main picture.hero {
     margin: 0 auto;
     text-align: center;
     padding: 1rem 0;
+
     .button {
       display: inline-block;
       text-decoration: none;
       padding: 0;
       margin: 0;
-      width: 80%;
+      width: 100%;
       background-color: $main-color;
       font-weight: 700;
       color: $white-text;
