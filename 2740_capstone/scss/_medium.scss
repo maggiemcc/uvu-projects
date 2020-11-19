@@ -38,7 +38,7 @@ nav ul > li {
     margin: 0 auto;
     list-style: none;
     border-right: none;
-    border-left: 1px solid $black-text;
+    // border-left: 1px solid $black-text;
 }
 
 
@@ -55,6 +55,7 @@ nav ul li a {
     transition: background 0.3s linear;
     border: none;
     padding: .75rem .55rem;
+    background-color: #fff;
 }
 
 
@@ -80,11 +81,12 @@ nav ul li ul {
     left:-999em;
     width: 10em;
     transform: translateX(-52%);
+    box-shadow: 1px 1px 3px rgb(158, 158, 158);
 }
 
 nav ul li ul li {
     border: none;
-    border-top: 1px solid $black-text;
+    // border-top: 1px solid $black-text;
 }
 
 nav ul li ul {border: none;}
@@ -339,7 +341,7 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
   
 
   .card {
-    min-height: 360px;
+    min-height: 397px;
 
   }
 }

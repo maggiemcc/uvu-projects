@@ -11,6 +11,11 @@ html {
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+
 body {
   font-family: "Crimson Text", serif;
 }
@@ -47,7 +52,7 @@ header {
 
 /*-------- NAV --------*/
 .navWrapper {
-  background-color: $nav-color;
+  background-color: #fff;
   border-top: $border;
   border-bottom: $border;
 }
@@ -107,12 +112,20 @@ nav ul li a:hover {background-color: rgb(1, 50, 70); color: $sec-color;}
 nav ul.hide {display: none;}
 
 /*-------- MAIN --------*/
-.mainWrapper {background-color: $main-wrapper-color;}
+.mainWrapper {
+  background-color: $main-wrapper-color;
+  background-color: #dfdfdf;
+  // background-color: #fff;
+}
 
 main {
   min-height: 10rem;
   margin: $margin auto;
   background-color: $sec-color;
+  background-color: rgb(238, 238, 238);
+  background-color: #e7e7e7;
+  // border: 1px solid #000;
+
 }
 
 /*-------- page h1 titles/h3 --------*/
@@ -123,9 +136,11 @@ main {
     padding: 0.8rem $pad;
     padding-top: 1.5rem;
     text-align: center;
-    font-size: 30px;
+    font-size: 2rem;
+    line-height: normal;
     max-width: 600px;
     position: relative;
+    font-family: 'Varela Round', sans-serif;
   }
 
   h3 {
@@ -145,41 +160,34 @@ main {
     padding-left: 2%;
     font-weight: 400;
   }
+
+
+  h4, p {
+    font-family: 'Lato', sans-serif;
+  }
 }
 
 
 main {
   .titleContent {padding: 0 3%; h2 {text-align: center; margin: 0;}}
 
-  h1:before {
+  h1:before, h1:after {
     content: "";
     display: block;
-    width: 30%;
+    width: 25%;
     height: 3px;
     background: $third-color;
-    left: 0;
     top: $half-width;
     position: absolute;
     border-radius: 3px;
+  }
+
+  h1:before{
+    left: 0;
   }
 
   h1:after {
-    content: "";
-    display: block;
-    width: 30%;
-    height: 3px;
-    background: $third-color;
     right: 0;
-    top: $half-width;
-    position: absolute;
-    border-radius: 3px;
-  }
-
-
- #trails, #book  {
-    h1:before, h1:after {
-     width: 25%;
-   }
   }
 
   /*---- section h1s ----*/
@@ -192,7 +200,7 @@ main {
      h1:before, h1:after {
           background-color: #fff;
           box-shadow: 2px 2px 3px #000;
-          width: 25%;
+          width: 20%;
         }
    }
 
@@ -276,7 +284,7 @@ main picture.hero {
 .quoteContent {
   padding: $pad-three;
   margin: $margin;
-  background-color: $sec-color;
+  // background-color: $sec-color;
 }
 /*---- letter ----*/
 .letter {
@@ -427,7 +435,7 @@ main picture.hero {
   padding: 1rem $pad-three;
   padding-top:0;
   margin: $margin;
-  background-color: $sec-color;
+  // background-color: $sec-color;
 
   // background-color: rgba(255, 0, 0, 0.342);
 
@@ -538,10 +546,12 @@ main picture.hero {
 .signupForm {
   padding: $pad-three;
   margin: $margin;
+  font-family: "Crimson Text", serif;
+
   // background-color: rgba(255, 0, 0, 0.582);
 
   fieldset {
-    background-color: $sec-color;
+    // background-color: $sec-color;
     margin: 2rem $margin;
     border: 3px solid $black-text;
     border-radius: 15px;
@@ -560,17 +570,14 @@ main picture.hero {
     
     p {
       width: $full-width;
-      // max-width: 90%;
+      font-family: "Crimson Text", serif;
 
-      span {font-weight: 700;}
     }
 
     .section {font-weight: 700;}
     .agreement {
       width: $full-width;
       max-width: 90%;
-
-      span {font-weight: 700;}
     }
 
   }
@@ -603,7 +610,8 @@ main picture.hero {
     color: #555;
     width: $full-width;
     max-width: 20rem;
-    background-color: rgba(0, 0, 0, 0.05);
+    // background-color: rgba(0, 0, 0, 0.05);
+    background-color: #fff;
   }
 
   form label.sbs {
@@ -613,7 +621,6 @@ main picture.hero {
   }
 
   form input.submitBtn {
-    // border: 2px solid $black-text;
     border: none;
     background-color: $main-color;
     color: $white-text;
@@ -624,6 +631,8 @@ main picture.hero {
     max-width: 20rem;
     text-transform: uppercase;
     font-weight: 700;
+    font-family: "Crimson Text", serif;
+    line-height: normal;
   }
 
   form input.submitBtn:hover {background-color: rgb(7, 128, 3);}
@@ -711,7 +720,8 @@ main picture.hero {
   text-align: center;
   // background-color: $sec-color;
   // background-color: rgba(0, 81, 92, 0.205);
-  background-color: rgb(230, 230, 230);
+  // background-color: rgb(230, 230, 230);
+  background-color: #fff;
 
 
   .morePosts {
@@ -808,17 +818,46 @@ main picture.hero {
         .readMore {
           text-align: center;
         }
-
-        .readMore:hover {
-          font-weight: 700;
-          text-transform: uppercase;
-        }
       }
     }
   }
 }
 
-.card:nth-child(1) {
+
+
+.card {
+  background-image: none;
+  background-color: $main-color;
+  position: relative;
+
+  .disappear {
+    display: none;
+  }
+  .description {
+    display: block;
+
+  }
+
+  .readMore {
+    display: none; 
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 2px 2px 5px #000;
+    font-size: 1.5rem;
+    background-color: $main-color;
+    border-radius: 3px;
+    padding: 2% 0;
+    }
+
+}
+
+
+
+.card:nth-child(1):hover {
   background: $background-gradient, url(../images/hover_images/blog1.jpg);
   background-size: cover;
   background-position: center;
@@ -826,9 +865,12 @@ main picture.hero {
   .description {
     display: none;
   }
+
+  .readMore {display: block;}
+  .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
 }
 
-.card:nth-child(2) {
+.card:nth-child(2):hover {
   background: $background-gradient, url(../images/hover_images/blog2.jpg);
   background-size: cover;
   background-position: center;
@@ -836,35 +878,31 @@ main picture.hero {
   .description {
     display: none;
   }
+
+  .readMore {display: block;}
+  .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
 }
 
-.card:nth-child(3) {
-  background: $background-gradient, url("../images/hover_images/blog3.jpg");
+.card:nth-child(3):hover {
+  background: $background-gradient, url(../images/hover_images/blog3.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   .description {
     display: none;
   }
-}
 
-.card:hover {
-  background-image: none;
-  background-color: $main-color;
-  .disappear {
-    display: none;
-  }
-  .description {
-    display: block;
-  }
-}
+  .readMore {display: block;}
+  .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
 
+}
 
 
 /*---- Meet the horses ----*/
 .meetHorses {
   // background-color: $main-wrapper-color;
-  background-color: rgb(230, 230, 230);
+  // background-color: rgb(230, 230, 230);
+  background-color: #fff;
   border-top: 2px solid $black-text;
   padding: 1rem 3%;
 
