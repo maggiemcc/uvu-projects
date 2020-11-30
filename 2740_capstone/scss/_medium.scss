@@ -38,7 +38,6 @@ nav ul > li {
     margin: 0 auto;
     list-style: none;
     border-right: none;
-    // border-left: 1px solid $black-text;
 }
 
 
@@ -55,7 +54,7 @@ nav ul li a {
     transition: background 0.3s linear;
     border: none;
     padding: .75rem .55rem;
-    background-color: #fff;
+    background-color:$sec-color;
 }
 
 
@@ -86,7 +85,6 @@ nav ul li ul {
 
 nav ul li ul li {
     border: none;
-    // border-top: 1px solid $black-text;
 }
 
 nav ul li ul {border: none;}
@@ -185,18 +183,6 @@ main {
 /*-------- Trails --------*/
 .trailContent {
   p {width: 95%; margin: 0 auto;}
-
-  // .rideList {
-  //   div {
-  //     grid-template-columns: 1fr 1fr;
-  //     width: 90%;
-  //     margin: 0 auto;
-  //       .button {
-  //          width: 96%;
-  //          margin: 0 auto;
-  //         }
-  //   }
-  // }
 }
 
 .images{
@@ -210,21 +196,6 @@ main {
       }
     }
 }
-
-
-/*-------- Book Online --------*/
-// .trails {
-//   div {
-//     margin: 0;
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-
-//     .button {
-//       width: 96%;
-//       margin: 0 auto;
-//     }
-//   }
-// }
 
 
 
@@ -249,18 +220,9 @@ main {
 }
 
 
-
-/*---- Contact ----*/
-// .contact {
-//   div {
-//     a {width: 50%;}
-//   }
-// }
-
-
 /*-------- Confirmation --------*/
 .confirmation {
-  padding: 1rem $pad-three;
+  padding: 1rem 3%;
 
   h2 {
     font-weight: 600;
@@ -329,7 +291,7 @@ main {
   .viewMore {
     .button {
       width: 55%;
-      padding: 0.8rem $pad;
+      padding: 0.8rem 0;
     }
   }
 }
@@ -363,7 +325,6 @@ main {
   
 
   .card {
-    // min-height: 397px;
     
       .readMore {
         display: none; 

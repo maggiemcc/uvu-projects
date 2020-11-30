@@ -4,7 +4,7 @@ header, nav, main, footer {
 }
 
 /*-------- HEADER --------*/ 
-header {background-color: #fff;}
+header {background-color: $sec-color;}
 
 
 
@@ -129,7 +129,7 @@ nav ul li ul {
 }
 
 .images {
-  padding: 1.2rem $pad-three;
+  padding: 1.2rem 3%;
   padding: 0;
   margin: 0 auto;
   width: 100%;
@@ -164,7 +164,6 @@ nav ul li ul {
 
 /*-------- Book Online --------*/
 .trails, .contact { margin: 0 auto;
-  // div {width: 35%;  margin: 0; a {width: 100%;}}
 }
 
 
@@ -185,7 +184,7 @@ nav ul li ul {
   .agreement {width: $full-width; max-width: 53%;}
   }
 
-  form label.sbs {padding: .4rem $pad;}
+  form label.sbs {padding: .4rem 0;}
 
 
 

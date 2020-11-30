@@ -22,7 +22,7 @@ body {
 
 /*-------- HEADER --------*/
 header {
-  padding: 0.5rem $pad-two;
+  padding: 0.5rem 2%;
   background-color: $sec-color;
   display: grid;
   grid-template-columns: 100px 1fr;
@@ -52,7 +52,7 @@ header {
 
 /*-------- NAV --------*/
 .navWrapper {
-  background-color: #fff;
+  background-color: $sec-color;
   border-top: $border;
   border-bottom: $border;
 }
@@ -91,13 +91,13 @@ nav button {
 
 nav ul {
   list-style-type: none;
-  padding: $pad;
+  padding: 0;
   margin: $margin;
 }
 
 nav ul li a {
   display: block;
-  padding: 0.8rem $pad-two;
+  padding: 0.8rem 2%;
   text-decoration: none;
   color: $black-text;
   border-top: 1px solid $black-text;
@@ -115,7 +115,6 @@ nav ul.hide {display: none;}
 .mainWrapper {
   background-color: $main-wrapper-color;
   background-color: #dfdfdf;
-  // background-color: #fff;
 }
 
 main {
@@ -124,8 +123,6 @@ main {
   background-color: $sec-color;
   background-color: rgb(238, 238, 238);
   background-color: #e7e7e7;
-  // border: 1px solid #000;
-
 }
 
 /*-------- page h1 titles/h3 --------*/
@@ -133,7 +130,7 @@ main {
 main {
   h1 {
     margin: $margin auto;
-    padding: 0.8rem $pad;
+    padding: 0.8rem 0;
     padding-top: 1.5rem;
     text-align: center;
     font-size: 2rem;
@@ -215,13 +212,13 @@ main {
 
    .quick, .videoSection {
      h1 {
-       color: #fff;
-       text-shadow: 2px 2px 3px #000;
+       color: $sec-color;
+       text-shadow: 2px 2px 3px $third-color;
      }
 
      h1:before, h1:after {
-          background-color: #fff;
-          box-shadow: 2px 2px 3px #000;
+          background-color: $sec-color;
+          box-shadow: 2px 2px 3px $third-color;
           width: 15%;
         }
    }
@@ -253,9 +250,9 @@ main {
         margin: .5rem auto;
         width: 95%;
         padding: 0.7rem 3%;
-        color: #fff;
+        color: $sec-color;
         background-color: $main-color;
-        box-shadow: 2px 2px 3px #000;
+        box-shadow: 2px 2px 3px $third-color;
         border-radius: 3px;
         text-decoration: none;
         font-size: 1.3rem;
@@ -263,9 +260,9 @@ main {
     }
 
     .button:hover {
-        color: #000;
-        background-color: #fff;
-        border: 1px solid #000;
+        color: $third-color;
+        background-color: $sec-color;
+        border: 1px solid $third-color;
         border-radius: 3px;
     }
   }
@@ -277,7 +274,7 @@ main {
 /*-------- Hero/slider images --------*/
 .slider picture {
   position: relative;
-  padding: $pad;
+  padding: 0;
   margin: $margin;
 
   img {width: $full-width;}
@@ -286,12 +283,12 @@ main {
 main picture.hero {
   width: $full-width;
   margin: $margin;
-  padding: $pad;
+  padding: 0;
 
   img {
     width: $full-width;
     margin: $margin;
-    padding: $pad;
+    padding: 0;
   }
 }
 
@@ -300,13 +297,13 @@ main picture.hero {
 /*-------- Welcome/Index --------*/
 /*---- Quote ----*/
 .quoteContent {
-  padding: $pad-three;
+  padding: 3%;
   margin: $margin;
   // background-color: $sec-color;
 }
 /*---- letter ----*/
 .letter {
-  padding: 1rem $pad-three;
+  padding: 1rem 3%;
 }
 
 /*---- quick links ----*/
@@ -314,11 +311,11 @@ main picture.hero {
   border-top: $border;
   margin: 0;
   padding: 1rem 2%;
-  color: #fff;
+  color: $sec-color;
 
 
   h1 {
-    color: #fff;
+    color: $sec-color;
     text-shadow: $text-shadow;
   }
 
@@ -344,10 +341,10 @@ main picture.hero {
     width: 100%;
     padding: 0.7rem 0;
     text-align: center;
-    box-shadow: 2px 2px 3px #000;
+    box-shadow: 2px 2px 3px $third-color;
     border-radius: 3px;
-    background-color: #fff;
-    color: #000;
+    background-color: $sec-color;
+    color: $third-color;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 600;
@@ -355,7 +352,7 @@ main picture.hero {
   }
 
   a:hover {
-    color: #fff;
+    color: $sec-color;
     background-color: $main-color;
     border-radius: 3px;
   }
@@ -367,7 +364,7 @@ main picture.hero {
 
 /*-------- Gallery --------*/
 .gallery {
-  padding: 1.2rem $pad;
+  padding: 1.2rem 0;
   // background-color: rgba(255, 0, 0, 0.541);
 
   figure {
@@ -405,7 +402,7 @@ main picture.hero {
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
-    padding: 0 $pad-three;
+    padding: 0 3%;
   }
 }
 
@@ -450,31 +447,17 @@ main picture.hero {
 
 /*-------- Trails --------*/
 .trailContent {
-  padding: 1rem $pad-three;
+  padding: 1rem 3%;
   padding-top:0;
   margin: $margin;
-  // background-color: $sec-color;
-
-  // background-color: rgba(255, 0, 0, 0.342);
-
-  // .intro {
-  //   // padding: 0;
-  //   // width: 90%;
-  //   // max-width: 900px;
-  //   // margin: 0 auto;
-  //   background-color: green;
-  // }
   
 
   .rideList {
     margin: 0 auto;
     padding: 0;
-    // width: 90%;
-    // max-width: 900px;
 
     h3 {
       font-weight: 600;
-      // font-size: 2rem;
       font-size: 1.6rem;
       padding-top: 1.2rem;
     }
@@ -493,7 +476,6 @@ main picture.hero {
       margin: 0.6rem 0;
       margin: 0;
       text-align: center;
-      // padding: 0;
     }
       
     h5 {
@@ -511,11 +493,9 @@ main picture.hero {
 
 
 .images {
-  padding: 1.2rem $pad-three;
+  padding: 1.2rem 3%;
   margin: 0 auto;
 
-  // width: 90%;
-  // max-width: 900px;
 
   .lazyImagesRides {
     padding: 1rem 0;
@@ -549,7 +529,7 @@ main picture.hero {
 /*-------- Book Online --------*/
 .trails {
   margin: 0;
-  padding: 0 $pad-three;
+  padding: 0 3%;
   padding-bottom: 1rem;
 
   p {
@@ -562,18 +542,16 @@ main picture.hero {
 /*---- signup/contact form ----*/
 
 .signupForm {
-  padding: $pad-three;
+  padding: 3%;
   margin: $margin;
   font-family: "Crimson Text", serif;
 
-  // background-color: rgba(255, 0, 0, 0.582);
 
   fieldset {
-    // background-color: $sec-color;
     margin: 2rem $margin;
     border: 3px solid $black-text;
     border-radius: 15px;
-    padding: $pad-three;
+    padding: 3%;
 
     legend {
       color: $main-color;
@@ -581,7 +559,7 @@ main picture.hero {
       font-weight: 700;
       font-size: 1.05rem;
       margin: $margin .5rem;
-      padding: $pad .8rem;
+      padding: 0 .8rem;
     }
 
     h2 {font-size: 1.2rem; margin: 0; padding: 1rem 0 0 0;}
@@ -628,8 +606,7 @@ main picture.hero {
     color: #555;
     width: $full-width;
     max-width: 20rem;
-    // background-color: rgba(0, 0, 0, 0.05);
-    background-color: #fff;
+    background-color: $sec-color;
   }
 
   form label.sbs {
@@ -671,14 +648,14 @@ main picture.hero {
 
 /*-------- Contact--------*/
 
-.contact {padding: 1rem $pad-three;}
+.contact {padding: 1rem 3%;}
 
 
 
 
 /*-------- Confirmation --------*/
 .confirmation {
-  padding: 1rem $pad-three;
+  padding: 1rem 3%;
 
   h2 {
     font-weight: 600;
@@ -705,7 +682,7 @@ main picture.hero {
 
   border-top: 2px solid $black-text;
   margin: $margin;
-  padding: 0.5rem $pad-two;
+  padding: 0.5rem 2%;
   padding-bottom: 1.5rem;
 
   .video {
@@ -719,10 +696,9 @@ main picture.hero {
       width: $full-width;
       top: 0;
       left: 0;
-      border: 1px solid #fff;
-      // border: none;
+      border: 1px solid $sec-color;
       border-radius: 3px;
-      box-shadow: 0px 0px 3px #000;
+      box-shadow: 0px 0px 3px $third-color;
     }
   }
 }
@@ -733,30 +709,27 @@ main picture.hero {
   width: $full-width;
   height: $full-width;
   margin: $margin auto;
-  padding: $pad-three;
+  padding: 3%;
   border-top: 2px solid $black-text;
   text-align: center;
-  // background-color: $sec-color;
-  // background-color: rgba(0, 81, 92, 0.205);
-  // background-color: rgb(230, 230, 230);
-  background-color: #fff;
+  background-color: $sec-color;
 
 
   .morePosts {
     display: grid;
     grid-template-columns: 1fr;
     margin: $margin auto;
-    padding: 5% $pad;
+    padding: 5% 0;
     margin: 1rem $margin;
 
     .viewMore {
       margin: $margin;
-      padding: 0.5rem $pad;
+      padding: 0.5rem 0;
     }
 
     .search {
       margin: $margin;
-      padding: 0.5rem $pad;
+      padding: 0.5rem 0;
     }
 
     input[type="text"] {
@@ -786,7 +759,7 @@ main picture.hero {
       background-color: $main-color;
       font-weight: 700;
       color: $white-text;
-      padding: 0.8rem $pad;
+      padding: 0.8rem 0;
       border: none;
       border-radius: 3px;
     }
@@ -810,7 +783,7 @@ main picture.hero {
     height: 400px;
     text-align: center;
     text-decoration: none;
-    padding: $pad-three;
+    padding: 3%;
     transition: all 0.5s ease-in;
     color: $white-text;
     border-radius: 3px;
@@ -819,7 +792,7 @@ main picture.hero {
       height: $full-width;
       border: 3px solid $white-text;
       border-radius: 3px;
-      padding: $pad-three;
+      padding: 3%;
 
       h3 {
         font-size: 2rem;
@@ -851,12 +824,12 @@ main picture.hero {
 
   .readMore {
     text-decoration: none;
-    box-shadow: 2px 2px 5px #000;
+    box-shadow: 2px 2px 5px $third-color;
     font-size: 1.5rem;
     border-radius: 3px;
     padding: .5rem .6rem;
-    background-color: white;
-    color: #000;
+    background-color: $sec-color;
+    color: $third-color;
     display: none;
     margin: 0 auto;
     max-width: 400px;
@@ -882,7 +855,7 @@ main picture.hero {
     left: 10%;
     right: 10%;
   }
-  .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
+  .readMore:hover {background-color: $sec-color; color: $third-color; text-shadow: none;}
 }
 
 .card:nth-child(2):hover {
@@ -901,7 +874,7 @@ main picture.hero {
     left: 10%;
     right: 10%;
   }
-  .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
+  .readMore:hover {background-color: $sec-color; color: $third-color; text-shadow: none;}
 }
 
 .card:nth-child(3):hover {
@@ -920,16 +893,14 @@ main picture.hero {
     left: 10%;
     right: 10%;
   }
-  .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
+  .readMore:hover {background-color: $sec-color; color: $third-color; text-shadow: none;}
 
 }
 
 
 /*---- Meet the horses ----*/
 .meetHorses {
-  // background-color: $main-wrapper-color;
-  // background-color: rgb(230, 230, 230);
-  background-color: #fff;
+  background-color: $sec-color;
   border-top: 2px solid $black-text;
   padding: 1rem 3%;
 
@@ -985,7 +956,7 @@ main picture.hero {
       background-color: $main-color;
       font-weight: 700;
       color: $white-text;
-      padding: 0.8rem $pad;
+      padding: 0.8rem 0;
       border: none;
       border-radius: 3px;
     }
@@ -1007,7 +978,7 @@ main picture.hero {
 footer {
   color: $black-text;
   text-align: center;
-  padding: 0.8rem $pad-two;
+  padding: 0.8rem 2%;
 
   h1 {
     font-size: 1.2rem;
