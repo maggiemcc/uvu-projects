@@ -246,7 +246,11 @@ nav ul li ul {
     grid-template-columns: 1fr 1fr 1fr;
 
     .card {
-      height: 400px;    
+      height: 400px;   
+      
+      #thirdPost {
+        bottom: 10%;
+      }
     }
 
     .card:nth-child(3) {
