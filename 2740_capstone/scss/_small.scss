@@ -859,7 +859,7 @@ main picture.hero {
     color: #000;
     display: none;
     margin: 0 auto;
-    border: none;
+    max-width: 400px;
     cursor: pointer;
     }
 }
