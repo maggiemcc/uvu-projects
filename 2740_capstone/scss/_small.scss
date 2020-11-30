@@ -182,15 +182,37 @@ main {
     border-radius: 3px;
   }
 
-  h1:before{
-    left: 0;
+  h1:before {left: 0;}
+
+  h1:after {right: 0;}
+
+  #welcomeTitle {
+    h1:before, h1:after {width: 20%;}
   }
 
-  h1:after {
-    right: 0;
+  #trailsTitle {
+    h1:before, h1:after {
+      width: 17%;
+    }
   }
+
+    #bookTitle {
+      h1:before, h1:after {width: 13%;}
+    }
+
+    #contactTitle {
+      h1:before, h1:after {width: 14%;}
+    }
+
+    #confirmationTitle {
+      h1:before, h1:after {width: 9%;}
+    }
 
   /*---- section h1s ----*/
+  #blogTitle {
+    h1:before, h1:after {width: 17%;}
+  }
+
    .quick, .videoSection {
      h1 {
        color: #fff;
@@ -200,20 +222,16 @@ main {
      h1:before, h1:after {
           background-color: #fff;
           box-shadow: 2px 2px 3px #000;
-          width: 20%;
+          width: 15%;
         }
    }
 
    .videoSection {
-      h1:before, h1:after {
-        width: 30%;
-      }
+      h1:before, h1:after {width: 30%;}
    }
 
    .meetHorses {
-      h1:before, h1:after {
-        width: 14%;
-      }
+      h1:before, h1:after {display: none;}
    }
 
 }
@@ -789,7 +807,7 @@ main picture.hero {
   .card {
     display: block;
     width: $full-width;
-    height: 310px;
+    height: 455px;
     text-align: center;
     text-decoration: none;
     padding: $pad-three;
@@ -803,8 +821,7 @@ main picture.hero {
       border-radius: 3px;
       padding: $pad-three;
 
-      h3,
-      .disappear {
+      h3 {
         font-size: 2rem;
         text-shadow: 1px 1px 5px $third-color;
         text-align: center;
@@ -830,27 +847,16 @@ main picture.hero {
   background-color: $main-color;
   position: relative;
 
-  .disappear {
-    display: none;
-  }
-  .description {
-    display: block;
-
-  }
+  .description {display: block; padding-bottom: .8rem;}
 
   .readMore {
-    display: none; 
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    right: 10%;
     text-decoration: none;
-    color: #fff;
     box-shadow: 2px 2px 5px #000;
     font-size: 1.5rem;
-    background-color: $main-color;
     border-radius: 3px;
-    padding: 2% 0;
+    padding: 2% 2%;
+    background-color: white;
+    color: #000;
     }
 
 }
@@ -866,7 +872,13 @@ main picture.hero {
     display: none;
   }
 
-  .readMore {display: block;}
+  .readMore {
+    display: block;  
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+  }
   .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
 }
 
@@ -879,7 +891,13 @@ main picture.hero {
     display: none;
   }
 
-  .readMore {display: block;}
+  .readMore {
+    display: block;  
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+  }
   .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
 }
 
@@ -892,7 +910,13 @@ main picture.hero {
     display: none;
   }
 
-  .readMore {display: block;}
+  .readMore {
+    display: block; 
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+  }
   .readMore:hover {background-color: #fff; color: #000; text-shadow: none;}
 
 }

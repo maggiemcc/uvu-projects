@@ -98,6 +98,21 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 
 
 /*-------- MAIN --------*/
+main {
+  #welcomeTitle, #galleryTitle, #trailsTitle, #bookTitle, #contactTitle, #confirmationTitle  {
+    h1:before, h1:after {width: 28%;}
+  }
+
+  /*---- section h1s ----*/
+  .quick, #blogTitle {
+    h1:before, h1:after {width: 28%;}
+  }
+
+  .meetHorses {
+    h1:before, h1:after {display: block; width: 20%;}
+ }
+}
+
 /*-------- BUTTONS --------*/
 .trailContent .rideList, .trails, .letter, .contact {
   div {
@@ -114,12 +129,6 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
   }
 }
 
-.trailContent .rideList {
-  .bookNowBtn {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
 
 .trailContent .rideList {
 
@@ -132,6 +141,19 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
       }
     }
 
+  }
+
+
+  .trailContent .rideList .trailBtn {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+
+  
+    .button {
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
   }
 
 /*-------- Gallery--------*/
@@ -341,8 +363,15 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
   
 
   .card {
-    min-height: 397px;
-
+    // min-height: 397px;
+    
+      .readMore {
+        display: none; 
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        right: 10%;
+      }
   }
 }
 
@@ -363,12 +392,6 @@ nav ul li:hover ul {left: auto; margin-left: $margin;}
 
 
 
-
-
-
-
-
-  
 
 
 // /*----- Clearfix: Force an Element not to collapse -----*/
