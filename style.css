@@ -27,7 +27,18 @@
     left: 16px;
     font-weight: 400;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 3px rgb(143, 143, 143);
+    text-shadow: 1px 1px 2px rgb(143, 143, 143);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header h3 {
+  position: absolute;
+  top: 48%;
+  left: 16px;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px rgb(143, 143, 143);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
  
 /*---------- MAIN ----------*/
@@ -58,17 +69,17 @@ main h2{
 .projects-section {
     text-align: center;
     justify-content: center;
-    padding: .5rem 2rem 0 .5rem;
-    /* background:rgb(221, 240, 252); */
+    /* padding: .5rem 2rem 0 .5rem; */
+    padding: 2%;
     margin: 0;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-gap: 2.5rem;
+    grid-gap: 1.5rem;
     width: 100%;
-    max-width: 1250px;
+    max-width: 1000px;
     margin: auto;
     margin-bottom: 6rem;
   }
@@ -94,6 +105,9 @@ main h2{
     font-weight: 400;
     text-align: center;
     height: 400px;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
 }
 
 .code {
@@ -120,9 +134,7 @@ main h2{
 }
 
 .projects-grid > a:hover {
-    /* background:rgb(34, 99, 4); */
-    background: rgb(181, 183, 184);
-
+    background: rgb(229, 229, 229);
     color: black;
     font-weight: bolder;
     /* border-color: #8a8a8a; */
@@ -153,10 +165,12 @@ main h2{
   @media only screen and (max-width: 500px) {
     /* HEADER */
     header {
-      position: relative;
-      height: 200px;
+      /* position: relative; */
+      /* height: 300px; */
       width: 100%;
-      contain: content;
+      display: block;
+      height: 210px;
+  
      }
 
     header img {
@@ -164,18 +178,33 @@ main h2{
     }
     
     header h1 {
-      position: absolute;
-      width: 50%;
-      top: 5px;
-      left: 16px;
+      /* position: absolute; */
+      width: 100%;
+      top: 150px;
+      /* left: 16px; */
       font-weight: 700;
-      font-size: 2rem;
-      text-shadow: 3px 3px 5px rgb(143, 143, 143);
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 3px rgb(143, 143, 143);
+    }
+
+    header h3 {
+      /* position: absolute; */
+      width: 100%;
+      top: 180px;
+      /* left: 16px; */
+      font-weight: 700;
+      font-size: 1rem;
+      text-shadow: 1px 1px 1px rgb(143, 143, 143);
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     header h2 {display: none;}
 
+
     /* MAIN */
+    main {
+      padding-top: 2%;
+    }
     main h2{
       font-size: 1.5rem;
       font-weight: 400;
