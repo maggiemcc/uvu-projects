@@ -1,4 +1,4 @@
 # maggiemcc.github.io
 Website for DGM 2740
 
-https://maggiemcc.github.io/
+https://maggie-uvu-projects.netlify.app/
